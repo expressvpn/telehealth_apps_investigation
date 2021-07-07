@@ -1,0 +1,107 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/net/Socket;->getInetAddress()" [color="#593196" fontcolor=white]
+	"Ljava/net/Socket;->getRemoteSocketAddress()" [color="#593196" fontcolor=white]
+	"Ljava/net/Socket;->getLocalSocketAddress()" [color="#593196" fontcolor=white]
+	"Landroid/net/wifi/WifiInfo;->getMacAddress()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lorg/conscrypt/PreKitKatPlatformOpenSSLSocketImplAdapter;->getInetAddress()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/AbstractConscryptSocket$1;->getHostnameOrIP()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/OpenSSLSocketImpl;->getHostnameOrIP()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/Conscrypt;->getHostnameOrIP()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/OpenSSLSocketImpl;->getInetAddress()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/KitKatPlatformOpenSSLSocketImplAdapter;->getInetAddress()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/KitKatPlatformOpenSSLSocketImplAdapter;->getRemoteSocketAddress()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/PreKitKatPlatformOpenSSLSocketImplAdapter;->getRemoteSocketAddress()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/OpenSSLSocketImpl;->getRemoteSocketAddress()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/okhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+			"Lcom/sendbird/android/shadow/okhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/KitKatPlatformOpenSSLSocketImplAdapter;->getLocalSocketAddress()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/PreKitKatPlatformOpenSSLSocketImplAdapter;->getLocalSocketAddress()" [color="#a991d4" fontcolor=white]
+			"Lorg/conscrypt/OpenSSLSocketImpl;->getLocalSocketAddress()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/login/LoginActivity$initOnClicks$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/signup/SignUpActivity$onSignUpFinished$2;->onResourceReady()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/signup/SignUpActivity$setOnClicks$2;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment_ViewBinding$2;->doClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/rcsignup/RCSignUpActivity;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_fragment {
+			label=Fragment
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lorg/conscrypt/PreKitKatPlatformOpenSSLSocketImplAdapter;->getInetAddress()" -> Lorg [constraint=true]
+	Lorg -> "Ljava/net/Socket;->getInetAddress()" [constraint=true]
+	Lorg -> "Ljava/net/Socket;->getRemoteSocketAddress()" [constraint=true]
+	Lorg -> "Ljava/net/Socket;->getLocalSocketAddress()" [constraint=true]
+	"Lorg/conscrypt/AbstractConscryptSocket$1;->getHostnameOrIP()" -> Lorg [constraint=true]
+	"Lorg/conscrypt/OpenSSLSocketImpl;->getHostnameOrIP()" -> Lorg [constraint=true]
+	"Lorg/conscrypt/Conscrypt;->getHostnameOrIP()" -> Lorg [constraint=true]
+	"Lorg/conscrypt/OpenSSLSocketImpl;->getInetAddress()" -> Lorg [constraint=true]
+	"Lorg/conscrypt/KitKatPlatformOpenSSLSocketImplAdapter;->getInetAddress()" -> Lorg [constraint=true]
+	"Lorg/conscrypt/KitKatPlatformOpenSSLSocketImplAdapter;->getRemoteSocketAddress()" -> Lorg [constraint=true]
+	"Lorg/conscrypt/PreKitKatPlatformOpenSSLSocketImplAdapter;->getRemoteSocketAddress()" -> Lorg [constraint=true]
+	"Lorg/conscrypt/OpenSSLSocketImpl;->getRemoteSocketAddress()" -> Lorg [constraint=true]
+	"Lio/intercom/okhttp3/internal/http2/Http2Connection$Builder;->socket()" -> "Ljava/net/Socket;->getRemoteSocketAddress()" [constraint=true]
+	"Lcom/sendbird/android/shadow/okhttp3/internal/http2/Http2Connection$Builder;->socket()" -> "Ljava/net/Socket;->getRemoteSocketAddress()" [constraint=true]
+	"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" -> "Ljava/net/Socket;->getRemoteSocketAddress()" [constraint=true]
+	"Lorg/conscrypt/KitKatPlatformOpenSSLSocketImplAdapter;->getLocalSocketAddress()" -> Lorg [constraint=true]
+	"Lorg/conscrypt/PreKitKatPlatformOpenSSLSocketImplAdapter;->getLocalSocketAddress()" -> Lorg [constraint=true]
+	"Lorg/conscrypt/OpenSSLSocketImpl;->getLocalSocketAddress()" -> Lorg [constraint=true]
+	"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment;->onRequestPermissionsResult()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid" -> "Landroid/net/wifi/WifiInfo;->getMacAddress()" [constraint=true]
+	"Lcom/sobergrid/view/activity/login/LoginActivity$initOnClicks$1;->onClick()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/activity/signup/SignUpActivity$onSignUpFinished$2;->onResourceReady()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/activity/signup/SignUpActivity$setOnClicks$2;->onClick()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment_ViewBinding$2;->doClick()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/activity/rcsignup/RCSignUpActivity;->onRequestPermissionsResult()" -> "Lcom/sobergrid" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lorg/conscrypt/PreKitKatPlatformOpenSSLSocketImplAdapter;->getInetAddress()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/AbstractConscryptSocket$1;->getHostnameOrIP()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/OpenSSLSocketImpl;->getHostnameOrIP()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/Conscrypt;->getHostnameOrIP()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/OpenSSLSocketImpl;->getInetAddress()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/KitKatPlatformOpenSSLSocketImplAdapter;->getInetAddress()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/KitKatPlatformOpenSSLSocketImplAdapter;->getRemoteSocketAddress()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/PreKitKatPlatformOpenSSLSocketImplAdapter;->getRemoteSocketAddress()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/OpenSSLSocketImpl;->getRemoteSocketAddress()" [color="#a991d4" fontcolor=white]
+		"Lio/intercom/okhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+		"Lcom/sendbird/android/shadow/okhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/KitKatPlatformOpenSSLSocketImplAdapter;->getLocalSocketAddress()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/PreKitKatPlatformOpenSSLSocketImplAdapter;->getLocalSocketAddress()" [color="#a991d4" fontcolor=white]
+		"Lorg/conscrypt/OpenSSLSocketImpl;->getLocalSocketAddress()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/login/LoginActivity$initOnClicks$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/signup/SignUpActivity$onSignUpFinished$2;->onResourceReady()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/signup/SignUpActivity$setOnClicks$2;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment_ViewBinding$2;->doClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/rcsignup/RCSignUpActivity;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+	}
+}

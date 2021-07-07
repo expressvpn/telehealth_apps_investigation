@@ -1,0 +1,42 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/net/HttpURLConnection;->setRequestMethod()" [color="#593196" fontcolor=white]
+	"Ljava/net/HttpURLConnection;->setRequestProperty()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource;->open()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" -> "Lokhttp3/internal" [constraint=true]
+	"Lokhttp3/internal" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lokhttp3/internal" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource;->open()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/google" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" -> "Lokhttp3/internal" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource;->open()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" [color="#a991d4" fontcolor=white]
+	}
+}

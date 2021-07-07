@@ -1,0 +1,60 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/location/Location;->getLatitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/Location;->getLongitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestSingleUpdate()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->getLastKnownLocation()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestSingleUpdate()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" [color="#a991d4" fontcolor=white]
+			"Lcom/stripe/android/stripe3ds2/init/b;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" [color="#a991d4" fontcolor=white]
+			"Landroidx/core/location/LocationKt;->component1()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" [color="#a991d4" fontcolor=white]
+			"Landroidx/core/location/LocationKt;->component2()" [color="#a991d4" fontcolor=white]
+			"Lcom/stripe/android/stripe3ds2/init/i;->b()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/stripe/android/stripe3ds2/init/b;->a()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/stripe/android/stripe3ds2/init/b;->a()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Landroidx/core/location/LocationKt;->component1()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" -> "Landroidx/appcompat" [constraint=true]
+	"Landroidx/core/location/LocationKt;->component2()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/stripe/android/stripe3ds2/init/i;->b()" -> "Landroid/location/LocationManager;->requestSingleUpdate()" [constraint=true]
+	"Lcom/stripe/android/stripe3ds2/init/i;->b()" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" [color="#a991d4" fontcolor=white]
+		"Lcom/stripe/android/stripe3ds2/init/b;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" [color="#a991d4" fontcolor=white]
+		"Landroidx/core/location/LocationKt;->component1()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" [color="#a991d4" fontcolor=white]
+		"Landroidx/core/location/LocationKt;->component2()" [color="#a991d4" fontcolor=white]
+		"Lcom/stripe/android/stripe3ds2/init/i;->b()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,222 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/lang/ClassLoader;->loadClass()" [color="#593196" fontcolor=white]
+	"Ljava/lang/ClassLoader;->loadClass()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/fragment/app/FragmentController;->restoreAllState()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/dynamite/DynamiteModule;->getRemoteVersion()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/DialogFragment;->onGetLayoutInflater()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentManagerImpl;->popBackStackImmediate()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentManagerImpl$3;->onAnimationEnd()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentStatePagerAdapter;->setPrimaryItem()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentManagerImpl;->popBackStackImmediate()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/BackStackRecord;->commitNow()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentTabHost;->onAttachedToWindow()" [color="#a991d4" fontcolor=white]
+			"Landroidx/coordinatorlayout/widget/CoordinatorLayout;->generateLayoutParams()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentController;->dispatchDestroyView()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/BackStackRecord;->commitNowAllowingStateLoss()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentTabHost;->onTabChanged()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentPagerAdapter;->instantiateItem()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentStatePagerAdapter;->instantiateItem()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/Fragment;->instantiate()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentManagerImpl;->popBackStackImmediate()" [color="#a991d4" fontcolor=white]
+			"Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->toString()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/DialogFragment;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/dynamic/RemoteCreator;->getRemoteCreatorInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->isCallerInstantApp()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentPagerAdapter;->setPrimaryItem()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->setUserVisibleHint()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isPackageGoogleSigned()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/dynamite/zza;->getLocalVersion()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/Fragment;->getLayoutInflater()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentManagerImpl;->saveFragmentInstanceState()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentManagerImpl;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/dynamite/zza;->zza()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isUidGoogleSigned()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentManagerImpl;->executePendingTransactions()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactFragment;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/common/api/internal/zzc;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/view/SupportMenuInflater;->inflate()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/AppCompatDelegateImpl;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/FirebaseIidMessengerCompat$HandleOldParcelNameClassLoader;->loadClass()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/fragment/app/FragmentManagerImpl$1;->run()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentManagerImpl$2$1;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/common/zzd;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/security/zza;->doInBackground()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_handler {
+			label=Handler
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/fragment/app/FragmentActivity$1;->handleMessage()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/appcompat/app/AppCompatActivity;->onPostResume()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentActivity;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/AppCompatActivity;->onSaveInstanceState()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentActivity;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/AppCompatActivity;->onStart()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/AppCompatActivity;->onStop()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onDestroy()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentActivity;->onPause()" [color="#a991d4" fontcolor=white]
+			"Lmd/reset/reSETO/MainActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Landroidx/fragment/app/FragmentActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Landroidx/fragment" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Lcom/google" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Landroidx/appcompat" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/Fragment;->instantiate()" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Landroidx/fragment/app/Fragment;->instantiate()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentController;->restoreAllState()" -> "Landroidx/fragment" [constraint=true]
+	"Lcom/google/android/gms/dynamite/DynamiteModule;->getRemoteVersion()" -> "Lcom/google" [constraint=true]
+	"Landroidx/coordinatorlayout" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Landroidx/fragment/app/FragmentManagerImpl$1;->run()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/DialogFragment;->onGetLayoutInflater()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/appcompat/app/AppCompatActivity;->onPostResume()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentManagerImpl;->popBackStackImmediate()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentActivity;->onCreateView()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentManagerImpl$3;->onAnimationEnd()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentStatePagerAdapter;->setPrimaryItem()" -> "Landroidx/fragment" [constraint=true]
+	"Lcom/google/android/gms/common/zzd;->call()" -> "Lcom/google" [constraint=true]
+	"Landroidx/fragment/app/BackStackRecord;->commitNow()" -> "Landroidx/fragment" [constraint=true]
+	"Lkotlin/coroutines" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Landroidx/appcompat/app/AppCompatActivity;->onSaveInstanceState()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentManagerImpl$2$1;->run()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentTabHost;->onAttachedToWindow()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/coordinatorlayout/widget/CoordinatorLayout;->generateLayoutParams()" -> "Landroidx/coordinatorlayout" [constraint=true]
+	"Landroidx/fragment/app/FragmentController;->dispatchDestroyView()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/BackStackRecord;->commitNowAllowingStateLoss()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/appcompat/app/AppCompatActivity;->onStart()" -> "Landroidx/fragment" [constraint=true]
+	"Lcom/google/android/gms/security/zza;->doInBackground()" -> "Lcom/google" [constraint=true]
+	"Landroidx/fragment/app/FragmentTabHost;->onTabChanged()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentPagerAdapter;->instantiateItem()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentStatePagerAdapter;->instantiateItem()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/appcompat/app/AppCompatActivity;->onStop()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentActivity$1;->handleMessage()" -> "Landroidx/fragment" [constraint=true]
+	"Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->toString()" -> "Lkotlin/coroutines" [constraint=true]
+	"Landroidx/fragment/app/DialogFragment;->onCreate()" -> "Landroidx/fragment" [constraint=true]
+	"Lcom/google/android/gms/dynamic/RemoteCreator;->getRemoteCreatorInstance()" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->isCallerInstantApp()" -> "Lcom/google" [constraint=true]
+	"Lcom/facebook" -> "Landroidx/appcompat" [constraint=true]
+	"Landroidx/fragment/app/FragmentPagerAdapter;->setPrimaryItem()" -> "Landroidx/fragment" [constraint=true]
+	"Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->setUserVisibleHint()" -> "Landroidx/fragment" [constraint=true]
+	"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isPackageGoogleSigned()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/dynamite/zza;->getLocalVersion()" -> "Lcom/google" [constraint=true]
+	"Landroidx/fragment/app/Fragment;->getLayoutInflater()" -> "Landroidx/fragment" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onDestroy()" -> "Landroidx/appcompat" [constraint=true]
+	"Landroidx/fragment/app/FragmentManagerImpl;->saveFragmentInstanceState()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentManagerImpl;->onCreateView()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/appcompat/app/AppCompatDelegateImpl;->onCreateView()" -> "Landroidx/appcompat" [constraint=true]
+	"Lcom/google/android/gms/dynamite/zza;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isUidGoogleSigned()" -> "Lcom/google" [constraint=true]
+	"Landroidx/fragment/app/FragmentManagerImpl;->executePendingTransactions()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/fragment/app/FragmentActivity;->onPause()" -> "Landroidx/fragment" [constraint=true]
+	"Lcom/facebook/react/ReactFragment;->onCreate()" -> "Landroidx/fragment" [constraint=true]
+	"Lmd/reset/reSETO/MainActivity;->onCreate()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google/android/gms/common/api/internal/zzc;->onCreate()" -> "Landroidx/fragment" [constraint=true]
+	"Landroidx/appcompat/view/SupportMenuInflater;->inflate()" -> "Landroidx/appcompat" [constraint=true]
+	"Landroidx/fragment/app/FragmentActivity;->onResume()" -> "Landroidx/fragment" [constraint=true]
+	"Lcom/google/firebase/iid/FirebaseIidMessengerCompat$HandleOldParcelNameClassLoader;->loadClass()" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Landroidx/fragment/app/FragmentController;->restoreAllState()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/dynamite/DynamiteModule;->getRemoteVersion()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/DialogFragment;->onGetLayoutInflater()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentManagerImpl;->popBackStackImmediate()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentManagerImpl$3;->onAnimationEnd()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentStatePagerAdapter;->setPrimaryItem()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentManagerImpl;->popBackStackImmediate()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/BackStackRecord;->commitNow()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentTabHost;->onAttachedToWindow()" [color="#a991d4" fontcolor=white]
+		"Landroidx/coordinatorlayout/widget/CoordinatorLayout;->generateLayoutParams()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentController;->dispatchDestroyView()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/BackStackRecord;->commitNowAllowingStateLoss()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentTabHost;->onTabChanged()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentPagerAdapter;->instantiateItem()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentStatePagerAdapter;->instantiateItem()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/Fragment;->instantiate()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentManagerImpl;->popBackStackImmediate()" [color="#a991d4" fontcolor=white]
+		"Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->toString()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/DialogFragment;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/dynamic/RemoteCreator;->getRemoteCreatorInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->isCallerInstantApp()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentPagerAdapter;->setPrimaryItem()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->setUserVisibleHint()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isPackageGoogleSigned()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/dynamite/zza;->getLocalVersion()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/Fragment;->getLayoutInflater()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentManagerImpl;->saveFragmentInstanceState()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentManagerImpl;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/dynamite/zza;->zza()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isUidGoogleSigned()" [color="#a991d4" fontcolor=white]
+		"Landroidx/fragment/app/FragmentManagerImpl;->executePendingTransactions()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/ReactFragment;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/common/api/internal/zzc;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/view/SupportMenuInflater;->inflate()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/app/AppCompatDelegateImpl;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/firebase/iid/FirebaseIidMessengerCompat$HandleOldParcelNameClassLoader;->loadClass()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,40 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/hardware/camera2/CameraManager;->openCamera()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/cameraview/Camera2;->setFacing()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/Camera2Capturer;->createCameraSession()" [color="#a991d4" fontcolor=white]
+			"Ltvi/webrtc/Camera2Capturer;->createCameraSession()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	Ltvi -> "Landroid/hardware/camera2/CameraManager;->openCamera()" [constraint=true]
+	"Lcom/google/android/cameraview/Camera2;->setFacing()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/hardware/camera2/CameraManager;->openCamera()" [constraint=true]
+	Lorg -> "Landroid/hardware/camera2/CameraManager;->openCamera()" [constraint=true]
+	"Lorg/webrtc/Camera2Capturer;->createCameraSession()" -> Lorg [constraint=true]
+	"Ltvi/webrtc/Camera2Capturer;->createCameraSession()" -> Ltvi [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/google/android/cameraview/Camera2;->setFacing()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/Camera2Capturer;->createCameraSession()" [color="#a991d4" fontcolor=white]
+		"Ltvi/webrtc/Camera2Capturer;->createCameraSession()" [color="#a991d4" fontcolor=white]
+	}
+}

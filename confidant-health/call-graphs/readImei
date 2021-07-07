@@ -1,0 +1,62 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/telephony/TelephonyManager;->getDeviceId()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->reset()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->identify()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->disable()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->group()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->getAnonymousId()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->setup()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->screen()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->alias()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->enable()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->flush()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->track()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->reset()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment" -> "Landroid/telephony/TelephonyManager;->getDeviceId()" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->identify()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->disable()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->group()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->getAnonymousId()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->setup()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->screen()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->alias()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->enable()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->flush()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->track()" -> "Lcom/segment" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->reset()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->identify()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->disable()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->group()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->getAnonymousId()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->setup()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->screen()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->alias()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->enable()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->flush()" [color="#a991d4" fontcolor=white]
+		"Lcom/segment/analytics/reactnative/core/RNAnalyticsModule;->track()" [color="#a991d4" fontcolor=white]
+	}
+}

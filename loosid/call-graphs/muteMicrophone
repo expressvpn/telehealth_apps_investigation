@@ -1,0 +1,54 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/media/AudioManager;->setMicrophoneMute()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lorg/jitsi/meet/sdk/AudioModeModule;->onAudioFocusChange()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lorg/jitsi/meet/sdk/e;->run()" [color="#a991d4" fontcolor=white]
+			"Lorg/jitsi/meet/sdk/c;->run()" [color="#a991d4" fontcolor=white]
+			"Lorg/jitsi/meet/sdk/a;->run()" [color="#a991d4" fontcolor=white]
+			"Lorg/jitsi/meet/sdk/f;->run()" [color="#a991d4" fontcolor=white]
+			"Lorg/jitsi/meet/sdk/d;->run()" [color="#a991d4" fontcolor=white]
+			"Lorg/jitsi/meet/sdk/j;->run()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lorg/jitsi" -> "Landroid/media/AudioManager;->setMicrophoneMute()" [constraint=true]
+	"Lorg/jitsi/meet/sdk/e;->run()" -> "Lorg/jitsi" [constraint=true]
+	"Lorg/jitsi/meet/sdk/c;->run()" -> "Lorg/jitsi" [constraint=true]
+	"Lorg/jitsi/meet/sdk/a;->run()" -> "Lorg/jitsi" [constraint=true]
+	"Lorg/jitsi/meet/sdk/f;->run()" -> "Lorg/jitsi" [constraint=true]
+	"Lorg/jitsi/meet/sdk/AudioModeModule;->onAudioFocusChange()" -> "Lorg/jitsi" [constraint=true]
+	"Lorg/jitsi/meet/sdk/d;->run()" -> "Lorg/jitsi" [constraint=true]
+	"Lorg/jitsi/meet/sdk/j;->run()" -> "Lorg/jitsi" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lorg/jitsi/meet/sdk/AudioModeModule;->onAudioFocusChange()" [color="#a991d4" fontcolor=white]
+	}
+}

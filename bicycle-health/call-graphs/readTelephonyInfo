@@ -1,0 +1,317 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperator()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getSimState()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getSimCountryIso()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getSimOperator()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkCountryIso()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getCarrier()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/ServerRequestInitSession;->setPost()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IntegrationActivity;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MMShareActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/NewVersionDialog$3;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IMActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/FeedbackFragment;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/SettingAboutFragment;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/LauncherActivity$2;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MeetingEndMessageActivity$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MMCommentActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/NewVersionDialog$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IMActivity;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/dialog/JoinFailedDialog$2;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/stabilility/JavaCrashHandler;->uncaughtException()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/ForceUpdateDialogFragment$2;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/IMView$StartHangoutFailedDialog$3;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/LauncherActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MinVersionForceUpdateActivity;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MMChatActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IntegrationActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MyProfileActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/dialog/MinimumVersionForceUpdateDialog$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/CallToCarrierFragment;->onCreateDialog()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$2;->Indicate_FetchUserProfileResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/IMAddrBookListAdapter;->getView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/InviteByPhoneFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnPBXUserStatusChange()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/IMDirectoryAdapter$BuddyHolder;->updateUI()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/CallMeByPhoneFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/ZoomSipPhoneAdapter;->getView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/MeetingRunningInfoFragment;->onActivityResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnRegisterResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/MeetingRunningInfoFragment;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnRequestDoneForQueryPBXUserInfo()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/IMAddrSipItemView;->setAddrBookItem()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/IMSearchAdapter;->getView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/mm/PhoneLabelFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/IMAddrBookListView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnSipServiceNeedRegiste()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/MMThreadsFragment;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/mm/MMSelectSessionAndBuddyListAdapter;->getView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AutoConnectAudioFragment;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/IMAddrBookListView;->filter()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/SelectCallOutNumberFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/mm/ReactionEmojiDetailListAdapter;->onBindViewHolder()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/InviteLocalContactsListView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/IMAddrBookListView;->onZoomMessengerConnectReturn()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookSetNumberFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/IMAddrBookListView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/InviteLocalContactsListView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/PBXDirectorySearchAdapter;->getView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment;->onContactsCacheUpdated()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/SettingMeetingFragment;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$2;->onIndicateInfoUpdatedWithJID()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$13;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/InviteLocalContactsListView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$2;->onIndicate_BuddyBigPictureDownloaded()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/IMAddrBookListView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/mm/MMContactsAppAdapter;->getView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AutoConnectAudioFragment;->onBackPressed()" [color="#a991d4" fontcolor=white]
+			"Lus/zoom/androidlib/util/PhoneNumberUtil;->formatNumber()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AddrBookSetNumberFragment$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/AutoConnectAudioFragment;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/MMChatInputFragment;->onActivityCreated()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/MMChatInputFragment;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/cct/CctTransportBackend;->decorate()" [color="#a991d4" fontcolor=white]
+			"Lus/zoom/androidlib/util/AndroidAppUtil;->getSimOperator()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/stabilility/StabilityService$WriteLogFileThread;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/stabilility/DeadLockDetector$DeadLockDetectorThread;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_application {
+			label=Application
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/ZoomApplication;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_handler {
+			label=Handler
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/view/IMAddrBookItemView$1;->handleMessage()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/config/ConfigWriter;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/util/MeetingNotificationBroadcast;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/stabilility/StabilityService;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/ConfService;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getCarrier()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/learnium" -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	"Lio/branch" -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	"Lio/branch/referral/ServerRequestInitSession;->setPost()" -> "Lio/branch" [constraint=true]
+	"Lcom/zipow/videobox/IntegrationActivity;->onNewIntent()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow" -> "Landroid/telephony/TelephonyManager;->getNetworkOperator()" [constraint=true]
+	"Lcom/zipow" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow" -> "Landroid/telephony/TelephonyManager;->getSimCountryIso()" [constraint=true]
+	"Lcom/zipow/videobox/MMShareActivity;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/StabilityService;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/NewVersionDialog$3;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/IMActivity;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/FeedbackFragment;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/SettingAboutFragment;->onRequestPermissionsResult()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/LauncherActivity$2;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lus/zoom" -> "Landroid/telephony/TelephonyManager;->getNetworkOperator()" [constraint=true]
+	"Lus/zoom" -> "Landroid/telephony/TelephonyManager;->getSimOperator()" [constraint=true]
+	"Lus/zoom" -> "Landroid/telephony/TelephonyManager;->getSimState()" [constraint=true]
+	"Lus/zoom" -> "Landroid/telephony/TelephonyManager;->getSimCountryIso()" [constraint=true]
+	"Lus/zoom" -> "Landroid/telephony/TelephonyManager;->getNetworkCountryIso()" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/StabilityService$WriteLogFileThread;->run()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/MeetingEndMessageActivity$1;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/MMCommentActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/NewVersionDialog$1;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/config/ConfigWriter;->onReceive()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/IMActivity;->onRequestPermissionsResult()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/dialog/JoinFailedDialog$2;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/JavaCrashHandler;->uncaughtException()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/util/MeetingNotificationBroadcast;->onReceive()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/ForceUpdateDialogFragment$2;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/IMView$StartHangoutFailedDialog$3;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/LauncherActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/ConfService;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/MinVersionForceUpdateActivity;->onRequestPermissionsResult()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/MMChatActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/IntegrationActivity;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/ZoomApplication;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/MyProfileActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/dialog/MinimumVersionForceUpdateDialog$1;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/DeadLockDetector$DeadLockDetectorThread;->run()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/CallToCarrierFragment;->onCreateDialog()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$2;->Indicate_FetchUserProfileResult()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/IMAddrBookListAdapter;->getView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/InviteByPhoneFragment;->onCreateView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnPBXUserStatusChange()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/IMDirectoryAdapter$BuddyHolder;->updateUI()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/CallMeByPhoneFragment;->onCreateView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/ZoomSipPhoneAdapter;->getView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/MeetingRunningInfoFragment;->onActivityResult()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnRegisterResult()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/MeetingRunningInfoFragment;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnRequestDoneForQueryPBXUserInfo()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/IMAddrSipItemView;->setAddrBookItem()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/IMSearchAdapter;->getView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/mm/PhoneLabelFragment;->onCreateView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/IMAddrBookListView;-><init>()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnSipServiceNeedRegiste()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/MMThreadsFragment;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/mm/MMSelectSessionAndBuddyListAdapter;->getView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AutoConnectAudioFragment;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/IMAddrBookItemView$1;->handleMessage()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/IMAddrBookListView;->filter()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/SelectCallOutNumberFragment;->onCreateView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/mm/ReactionEmojiDetailListAdapter;->onBindViewHolder()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/InviteLocalContactsListView;-><init>()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/IMAddrBookListView;->onZoomMessengerConnectReturn()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookSetNumberFragment;->onCreateView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookSetNumberFragment;->onCreateView()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/PBXDirectorySearchAdapter;->getView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment;->onContactsCacheUpdated()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/SettingMeetingFragment;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$2;->onIndicateInfoUpdatedWithJID()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$13;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$2;->onIndicate_BuddyBigPictureDownloaded()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/mm/MMContactsAppAdapter;->getView()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AutoConnectAudioFragment;->onBackPressed()" -> "Lcom/zipow" [constraint=true]
+	"Lus/zoom/androidlib/util/PhoneNumberUtil;->formatNumber()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AddrBookSetNumberFragment$1;->run()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/AutoConnectAudioFragment;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/MMChatInputFragment;->onActivityCreated()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/MMChatInputFragment;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/google/android/datatransport/cct/CctTransportBackend;->decorate()" -> "Landroid/telephony/TelephonyManager;->getSimOperator()" [constraint=true]
+	"Lus/zoom/androidlib/util/AndroidAppUtil;->getSimOperator()" -> "Landroid/telephony/TelephonyManager;->getSimOperator()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getCarrier()" [color="#a991d4" fontcolor=white]
+		"Lio/branch/referral/ServerRequestInitSession;->setPost()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IntegrationActivity;->onNewIntent()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MMShareActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/NewVersionDialog$3;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IMActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/FeedbackFragment;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/SettingAboutFragment;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/LauncherActivity$2;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MeetingEndMessageActivity$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MMCommentActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/NewVersionDialog$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IMActivity;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/dialog/JoinFailedDialog$2;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/stabilility/JavaCrashHandler;->uncaughtException()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/ForceUpdateDialogFragment$2;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/IMView$StartHangoutFailedDialog$3;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/LauncherActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MinVersionForceUpdateActivity;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MMChatActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IntegrationActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MyProfileActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/dialog/MinimumVersionForceUpdateDialog$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/CallToCarrierFragment;->onCreateDialog()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$2;->Indicate_FetchUserProfileResult()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/IMAddrBookListAdapter;->getView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/InviteByPhoneFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnPBXUserStatusChange()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/IMDirectoryAdapter$BuddyHolder;->updateUI()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/CallMeByPhoneFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/ZoomSipPhoneAdapter;->getView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/MeetingRunningInfoFragment;->onActivityResult()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnRegisterResult()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/MeetingRunningInfoFragment;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnRequestDoneForQueryPBXUserInfo()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/IMAddrSipItemView;->setAddrBookItem()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/IMSearchAdapter;->getView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/mm/PhoneLabelFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/IMAddrBookListView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$1;->OnSipServiceNeedRegiste()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/MMThreadsFragment;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/mm/MMSelectSessionAndBuddyListAdapter;->getView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AutoConnectAudioFragment;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/IMAddrBookListView;->filter()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/SelectCallOutNumberFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/mm/ReactionEmojiDetailListAdapter;->onBindViewHolder()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/InviteLocalContactsListView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/IMAddrBookListView;->onZoomMessengerConnectReturn()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookSetNumberFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/IMAddrBookListView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/InviteLocalContactsListView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/PBXDirectorySearchAdapter;->getView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment;->onContactsCacheUpdated()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/SettingMeetingFragment;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$2;->onIndicateInfoUpdatedWithJID()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$13;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/InviteLocalContactsListView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment$2;->onIndicate_BuddyBigPictureDownloaded()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/IMAddrBookListView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/mm/MMContactsAppAdapter;->getView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookItemDetailsFragment;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AutoConnectAudioFragment;->onBackPressed()" [color="#a991d4" fontcolor=white]
+		"Lus/zoom/androidlib/util/PhoneNumberUtil;->formatNumber()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AddrBookSetNumberFragment$1;->run()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/AutoConnectAudioFragment;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/MMChatInputFragment;->onActivityCreated()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/MMChatInputFragment;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/datatransport/cct/CctTransportBackend;->decorate()" [color="#a991d4" fontcolor=white]
+		"Lus/zoom/androidlib/util/AndroidAppUtil;->getSimOperator()" [color="#a991d4" fontcolor=white]
+	}
+}

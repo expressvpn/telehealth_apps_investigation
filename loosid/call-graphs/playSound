@@ -1,0 +1,41 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/media/AudioManager;->playSoundEffect()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/modules/sound/SoundManagerModule;->playTouchSound()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/x$c;->dispatchKeyEvent()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/uimanager/UIManagerModule;->playTouchSound()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/x$g;->dispatchKeyEvent()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/facebook/react/modules/sound/SoundManagerModule;->playTouchSound()" -> "Landroid/media/AudioManager;->playSoundEffect()" [constraint=true]
+	"Landroidx/appcompat/app/x$c;->dispatchKeyEvent()" -> "Landroidx/appcompat" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/media/AudioManager;->playSoundEffect()" [constraint=true]
+	"Lcom/facebook/react/uimanager/UIManagerModule;->playTouchSound()" -> "Landroid/media/AudioManager;->playSoundEffect()" [constraint=true]
+	"Landroidx/appcompat/app/x$g;->dispatchKeyEvent()" -> "Landroidx/appcompat" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/facebook/react/modules/sound/SoundManagerModule;->playTouchSound()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/app/x$c;->dispatchKeyEvent()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/uimanager/UIManagerModule;->playTouchSound()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/app/x$g;->dispatchKeyEvent()" [color="#a991d4" fontcolor=white]
+	}
+}

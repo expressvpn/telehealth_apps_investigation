@@ -1,0 +1,79 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/hardware/SensorManager;->getSensorList()" [color="#593196" fontcolor=white]
+	"Landroid/hardware/SensorManager;->getDefaultSensor()" [color="#593196" fontcolor=white]
+	"Landroid/hardware/SensorManager;->registerListener()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Le/a/f/t;->onHostResume()" [color="#a991d4" fontcolor=white]
+			"Ld/i/a/c/s$c;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/e/b;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/t;->watchDeviceHeading()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/appsflyer/AFSensorManager$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$b;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/crashlytics/a/c/w;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/crashlytics/a/c/q;->call()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/appsflyer" -> "Landroid/hardware/SensorManager;->getSensorList()" [constraint=true]
+	"Lcom/appsflyer/AFSensorManager$5;->run()" -> "Landroid/hardware/SensorManager;->getSensorList()" [constraint=true]
+	"Lcom/appsflyer/AFSensorManager$5;->run()" -> "Landroid/hardware/SensorManager;->registerListener()" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$b;->run()" -> "Lcom/appsflyer" [constraint=true]
+	"Lcom/google" -> "Landroid/hardware/SensorManager;->getDefaultSensor()" [constraint=true]
+	"Le/a/f/t;->onHostResume()" -> "Le/a" [constraint=true]
+	"Le/a" -> "Landroid/hardware/SensorManager;->getDefaultSensor()" [constraint=true]
+	"Le/a" -> "Landroid/hardware/SensorManager;->registerListener()" [constraint=true]
+	"Ld/i/a/c/s$c;->onActivityResumed()" -> "Ld/i" [constraint=true]
+	"Ld/i" -> "Landroid/hardware/SensorManager;->getDefaultSensor()" [constraint=true]
+	"Ld/i" -> "Landroid/hardware/SensorManager;->registerListener()" [constraint=true]
+	"Lcom/facebook/a/e/b;->onActivityResumed()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> "Landroid/hardware/SensorManager;->getDefaultSensor()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/hardware/SensorManager;->registerListener()" [constraint=true]
+	"Lcom/google/firebase/crashlytics/a/c/w;->run()" -> "Lcom/google" [constraint=true]
+	"Le/a/f/t;->watchDeviceHeading()" -> "Le/a" [constraint=true]
+	"Lcom/google/firebase/crashlytics/a/c/q;->call()" -> "Lcom/google" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Le/a/f/t;->onHostResume()" [color="#a991d4" fontcolor=white]
+		"Ld/i/a/c/s$c;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/a/e/b;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/t;->watchDeviceHeading()" [color="#a991d4" fontcolor=white]
+	}
+}

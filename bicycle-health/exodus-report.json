@@ -1,0 +1,65 @@
+{
+  "application": {
+    "handle": "com.bicyclehealth.patient.app",
+    "version_name": "1.0.5",
+    "version_code": "311",
+    "uaid": "47912B4FC721CF39FAAB80A84719782C45D617AA",
+    "name": "Bicycle Health",
+    "permissions": [
+      "android.permission.CAMERA",
+      "android.permission.BLUETOOTH_ADMIN",
+      "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.READ_PHONE_STATE",
+      "com.google.android.c2dm.permission.RECEIVE",
+      "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+      "com.sonyericsson.home.permission.BROADCAST_BADGE",
+      "com.sec.android.provider.badge.BadgeProvider",
+      "com.oppo.launcher.permission.WRITE_SETTINGS",
+      "android.permission.VIBRATE",
+      "android.permission.BLUETOOTH",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "android.permission.ACCESS_WIFI_STATE",
+      "com.htc.launcher.permission.READ_SETTINGS",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "com.sec.android.provider.badge.permission.READ",
+      "com.htc.launcher.permission.UPDATE_SHORTCUT",
+      "me.everything.badger.permission.BADGE_COUNT_WRITE",
+      "android.permission.CALL_PHONE",
+      "com.majeur.launcher.permission.UPDATE_BADGE",
+      "com.sec.android.provider.badge.permission.WRITE",
+      "android.permission.USE_FINGERPRINT",
+      "android.permission.FOREGROUND_SERVICE",
+      "com.huawei.android.launcher.permission.CHANGE_BADGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.WAKE_LOCK",
+      "me.everything.badger.permission.BADGE_COUNT_READ",
+      "android.permission.BROADCAST_STICKY",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "com.huawei.android.launcher.permission.READ_SETTINGS",
+      "com.oppo.launcher.permission.READ_SETTINGS",
+      "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+      "android.permission.READ_APP_BADGE",
+      "com.anddoes.launcher.permission.UPDATE_COUNT",
+      "android.permission.USE_BIOMETRIC",
+      "android.permission.INTERNET"
+    ],
+    "libraries": []
+  },
+  "apk": {
+    "path": "../AndroCFG/apk/bicycle-health_1.0.5.apk",
+    "checksum": "3d60bd77fab2a4def3bffd99407976b28537e5b4c089fb3f99d778bfa6fb4332"
+  },
+  "trackers": [
+    {
+      "name": "Google Firebase Analytics",
+      "id": 49
+    },
+    {
+      "name": "Branch",
+      "id": 167
+    }
+  ]
+}

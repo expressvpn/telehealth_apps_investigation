@@ -1,0 +1,150 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/net/HttpURLConnection;->setRequestMethod()" [color="#593196" fontcolor=white]
+	"Ljava/net/HttpURLConnection;->setRequestProperty()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/appevents/AppEventsManager$2;->onCompleted()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/lottie/LottieCompositionFactory;->fromUrlSync()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/GraphRequest;->toHttpConnection()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventsManager$4;->onCompleted()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/cct/CctTransportBackend$$Lambda$1;->apply()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/internal/logging/monitor/Monitor$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/suggestedevents/ViewOnClickListener$2;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/codeless/ViewIndexer$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/UserSettingsManager$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/share/internal/VideoUploader$UploadWorkItemBase;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/aam/MetadataIndexer$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/ml/ModelManager$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/login/widget/LoginButton$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventQueue$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventQueue$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/codeless/CodelessManager$2;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OneSignalRestClient$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/FacebookSdk$9;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/internal/ActivityLifecycleTracker$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/installations/FirebaseInstallations$$Lambda$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventQueue$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/ml/ModelManager$2;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventsLoggerImpl$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/suggestedevents/ViewOnClickListener$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/FetchedAppGateKeepersManager$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/FetchedAppSettingsManager$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/SegmentIntegration$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/WebhookIntegration$1;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/FacebookSdk$8;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/installations/FirebaseInstallations$$Lambda$3;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/lottie/LottieCompositionFactory$1;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/segment/analytics/Analytics$12;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/GraphRequestAsyncTask;->doInBackground()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->doInBackground()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	Lcom -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	Lcom -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	Lcom -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> Lcom [constraint=true]
+	"Lcom/facebook/FacebookSdk$8;->call()" -> Lcom [constraint=true]
+	"Lcom/airbnb" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/facebook/internal/logging/monitor/Monitor$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/google" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/facebook/appevents/suggestedevents/ViewOnClickListener$2;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/codeless/ViewIndexer$3;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/UserSettingsManager$1;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/UserSettingsManager$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/share/internal/VideoUploader$UploadWorkItemBase;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/aam/MetadataIndexer$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/GraphRequestAsyncTask;->doInBackground()" -> Lcom [constraint=true]
+	"Lcom/facebook/appevents/ml/ModelManager$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google/firebase/installations/FirebaseInstallations$$Lambda$3;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/facebook/login/widget/LoginButton$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/AppEventQueue$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/AppEventQueue$4;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/codeless/CodelessManager$2;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/GraphRequest;->toHttpConnection()" -> Lcom [constraint=true]
+	"Lcom/facebook/appevents/AppEventsManager$2;->onCompleted()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/onesignal/OneSignalRestClient$4;->run()" -> Lcom [constraint=true]
+	"Lcom/airbnb/lottie/LottieCompositionFactory;->fromUrlSync()" -> "Lcom/airbnb" [constraint=true]
+	"Lcom/facebook/FacebookSdk$9;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/appevents/internal/ActivityLifecycleTracker$5;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google/firebase/installations/FirebaseInstallations$$Lambda$4;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/airbnb/lottie/LottieCompositionFactory$1;->call()" -> "Lcom/airbnb" [constraint=true]
+	"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" -> "Lokhttp3/internal" [constraint=true]
+	"Lokhttp3/internal" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lokhttp3/internal" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/facebook/appevents/AppEventQueue$3;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/ml/ModelManager$2;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/AppEventsLoggerImpl$3;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/suggestedevents/ViewOnClickListener$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/internal/FetchedAppGateKeepersManager$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/AppEventsManager$4;->onCompleted()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google/android/datatransport/cct/CctTransportBackend$$Lambda$1;->apply()" -> "Lcom/google" [constraint=true]
+	"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->doInBackground()" -> "Lio/branch" [constraint=true]
+	"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->doInBackground()" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/facebook/internal/FetchedAppSettingsManager$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/segment/analytics/Analytics$12;->call()" -> "Lcom/segment" [constraint=true]
+	"Lcom/segment" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/segment/analytics/SegmentIntegration$3;->run()" -> "Lcom/segment" [constraint=true]
+	"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" -> "Lokhttp3/internal" [constraint=true]
+	"Lcom/segment/analytics/WebhookIntegration$1;->run()" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/facebook/appevents/AppEventsManager$2;->onCompleted()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/lottie/LottieCompositionFactory;->fromUrlSync()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/GraphRequest;->toHttpConnection()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/appevents/AppEventsManager$4;->onCompleted()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/datatransport/cct/CctTransportBackend$$Lambda$1;->apply()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" [color="#a991d4" fontcolor=white]
+	}
+}

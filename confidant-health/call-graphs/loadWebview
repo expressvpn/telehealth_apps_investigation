@@ -1,0 +1,111 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [color="#593196" fontcolor=white]
+	"Landroid/webkit/WebView;->addJavascriptInterface()" [color="#593196" fontcolor=white]
+	"Landroid/webkit/WebView;->loadUrl()" [color="#593196" fontcolor=white]
+	"Landroid/webkit/WebView;->loadUrl()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lbolts/WebViewAppLinkResolver$2;->then()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/WebDialog;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/BranchActivityLifecycleObserver;->onActivityCreated()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/ServerRequestActionCompleted;->onRequestSucceeded()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setJavaScriptEnabled()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventsLogger;->augmentWebView()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setSource()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/webview/RNCWebViewManager;->receiveCommand()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/FacebookWebFallbackDialog;->cancel()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/WebViewManager$3;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_webview_client {
+			label="Webview Client"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lbolts/WebViewAppLinkResolver$2$1;->onLoadResource()" [color="#a991d4" fontcolor=white]
+			"Lbolts/WebViewAppLinkResolver$2$1;->onPageFinished()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/BranchViewHandler$1;->shouldOverrideUrlLoading()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/branch/referral/Branch$BranchPostTask;->onPostExecute()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/WebDialog$UploadStagingResourcesTask;->onPostExecute()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->onPostExecute()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lbolts/WebViewAppLinkResolver$2;->then()" -> "" [constraint=true]
+	"Lbolts/WebViewAppLinkResolver$2;->then()" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lbolts/WebViewAppLinkResolver$2;->then()" -> "Landroid/webkit/WebView;->addJavascriptInterface()" [constraint=true]
+	"" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lio/branch" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	Lcom -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/webkit/WebView;->addJavascriptInterface()" [constraint=true]
+	"Lcom/facebook/internal/WebDialog;->onCreate()" -> "Lcom/facebook" [constraint=true]
+	"Lio/branch/referral/BranchActivityLifecycleObserver;->onActivityCreated()" -> "Lio/branch" [constraint=true]
+	"Lio/branch/referral/Branch$BranchPostTask;->onPostExecute()" -> "Lio/branch" [constraint=true]
+	"Lio/branch/referral/ServerRequestActionCompleted;->onRequestSucceeded()" -> "Lio/branch" [constraint=true]
+	"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setJavaScriptEnabled()" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->onPostExecute()" -> "Lio/branch" [constraint=true]
+	"Lcom/facebook/internal/WebDialog$UploadStagingResourcesTask;->onPostExecute()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/onesignal/WebViewManager$3;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/appevents/AppEventsLogger;->augmentWebView()" -> "Lcom/facebook" [constraint=true]
+	"Lbolts/WebViewAppLinkResolver$2$1;->onLoadResource()" -> "" [constraint=true]
+	"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setSource()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/reactnativecommunity/webview/RNCWebViewManager;->receiveCommand()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/webview/RNCWebViewManager;->receiveCommand()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lbolts/WebViewAppLinkResolver$2$1;->onPageFinished()" -> "" [constraint=true]
+	"Lio/branch/referral/BranchViewHandler$1;->shouldOverrideUrlLoading()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/facebook/internal/FacebookWebFallbackDialog;->cancel()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lbolts/WebViewAppLinkResolver$2;->then()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/internal/WebDialog;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lio/branch/referral/BranchActivityLifecycleObserver;->onActivityCreated()" [color="#a991d4" fontcolor=white]
+		"Lio/branch/referral/ServerRequestActionCompleted;->onRequestSucceeded()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setJavaScriptEnabled()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/appevents/AppEventsLogger;->augmentWebView()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setSource()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/webview/RNCWebViewManager;->receiveCommand()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/internal/FacebookWebFallbackDialog;->cancel()" [color="#a991d4" fontcolor=white]
+	}
+}

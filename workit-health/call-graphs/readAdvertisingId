@@ -1,0 +1,77 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->getAdvertisingIdInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzga;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfy;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzko;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgg;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzha;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgm;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgh;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgi;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgj;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgb;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgk;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/measurement/internal/zzkm;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgl;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/deeplink/DdlEvent$3;->call()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google" -> "Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->getAdvertisingIdInfo()" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" -> Lcom [constraint=true]
+	Lcom -> "Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->getAdvertisingIdInfo()" [constraint=true]
+	"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" -> Lcom [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" -> Lcom [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzkm;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzga;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfy;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzko;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" -> Lcom [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgl;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgg;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/appsflyer" -> Lcom [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzha;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgm;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgh;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgi;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgj;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/appsflyer/deeplink/DdlEvent$3;->call()" -> "Lcom/appsflyer" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgb;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgk;->run()" -> "Lcom/google" [constraint=true]
+	subgraph cluster_other_entrypoints {
+	}
+}

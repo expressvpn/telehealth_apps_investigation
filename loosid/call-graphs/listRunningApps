@@ -1,0 +1,31 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/app/ActivityManager;->getRunningTasks()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/invertase/firebase/messaging/ReactNativeFirebaseMessagingReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lio/invertase" -> "Landroid/app/ActivityManager;->getRunningTasks()" [constraint=true]
+	"Lio/invertase/firebase/messaging/ReactNativeFirebaseMessagingReceiver;->onReceive()" -> "Lio/invertase" [constraint=true]
+	subgraph cluster_other_entrypoints {
+	}
+}

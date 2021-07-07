@@ -1,0 +1,120 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperator()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getPhoneType()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getSimCountryIso()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkType()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkCountryIso()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/internal/ads/zzub;->zzb()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhonePresenter;->getCountryZipCode()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/localytics/android/AnalyticsHandler$11;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventQueue$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/applinks/AppLinkData$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventQueue$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OneSignal$7;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/FacebookSdk$9;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventQueue$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler$3;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/internal/ads/zzagd;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_handler {
+			label=Handler
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/localytics/android/BaseHandler;->getMap()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->getBool()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->getList()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->upload()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->checkTimestampForUpload()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->getString()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->sendInitMessage()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->getInt()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/localytics" -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	"Lcom/localytics" -> "Landroid/telephony/TelephonyManager;->getSimCountryIso()" [constraint=true]
+	"Lcom/localytics" -> "Landroid/telephony/TelephonyManager;->getNetworkCountryIso()" [constraint=true]
+	"Lcom/localytics" -> "Landroid/telephony/TelephonyManager;->getNetworkType()" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$11;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/facebook" -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	"Lcom/facebook/appevents/AppEventQueue$1;->run()" -> "Lcom/facebook" [constraint=true]
+	Lcom -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	Lcom -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/applinks/AppLinkData$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/appevents/AppEventQueue$4;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$3;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$4;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/onesignal/OneSignal$7;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/FacebookSdk$9;->run()" -> Lcom [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$5;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/facebook/appevents/AppEventQueue$3;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzub;->zzb()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/telephony/TelephonyManager;->getNetworkOperator()" [constraint=true]
+	"Lcom/google" -> "Landroid/telephony/TelephonyManager;->getPhoneType()" [constraint=true]
+	"Lcom/google" -> "Landroid/telephony/TelephonyManager;->getNetworkType()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzagd;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhonePresenter;->getCountryZipCode()" -> "Landroid/telephony/TelephonyManager;->getSimCountryIso()" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getMap()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getBool()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getList()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler$3;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->upload()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->checkTimestampForUpload()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getString()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->sendInitMessage()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getInt()" -> "Lcom/localytics" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/google/android/gms/internal/ads/zzub;->zzb()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhonePresenter;->getCountryZipCode()" [color="#a991d4" fontcolor=white]
+	}
+}

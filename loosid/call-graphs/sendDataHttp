@@ -1,0 +1,169 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/net/HttpURLConnection;->setRequestMethod()" [color="#593196" fontcolor=white]
+	"Ljava/net/HttpURLConnection;->setRequestProperty()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/appsflyer/internal/v;->initRequest()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" [color="#a991d4" fontcolor=white]
+			"Ld/e/a/b/d;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/i/a/b/d;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/y;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/cct/b;->apply()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/w;->a()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/rnfs/r;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/F;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/e/f;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/internal/event/uninstall/Register$2;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AFValidateInAppPurchase;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/applinks/a;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/b/a/b;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/Nc;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/la;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/a/a;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/J;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/g/b;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$InstallAttributionIdFetcher;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/J;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/i/h;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$e;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/k;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/installations/f;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/b/e;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/g/a;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$b;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/i;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/f/e;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/t;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/l;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/i/i;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/login/a/b;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/i/d;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/BackgroundHttpTask$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/b/m;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/auth/api/signin/internal/g;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/rnfs/c;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/I;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/deeplink/DdlEvent$3;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/U;->doInBackground()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/codepush/react/l;->doInBackground()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	Lcom -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	Lcom -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	Lcom -> "Lcom/facebook" [constraint=true]
+	"Lcom/rnfs/r;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/internal/F;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> Lcom [constraint=true]
+	"Lcom/facebook/a/e/f;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/appsflyer/internal/event/uninstall/Register$2;->run()" -> Lcom [constraint=true]
+	"Lcom/appsflyer/internal/v;->initRequest()" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/google" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/google" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/appsflyer/AFValidateInAppPurchase;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/applinks/a;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" -> "Lokhttp3/internal" [constraint=true]
+	"Lokhttp3/internal" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lokhttp3/internal" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/facebook/internal/b/a/b;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/onesignal/Nc;->run()" -> Lcom [constraint=true]
+	"Ld/e/a/b/d;->a()" -> "Ld/e" [constraint=true]
+	"Ld/e/a/b/d;->a()" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/facebook/la;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/la;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/a/a;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/internal/J;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/g/b;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$InstallAttributionIdFetcher;->run()" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/facebook/I;->call()" -> Lcom [constraint=true]
+	"Lcom/facebook/U;->doInBackground()" -> Lcom [constraint=true]
+	"Lcom/facebook/J;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/a/i/h;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$e;->run()" -> Lcom [constraint=true]
+	"Ld/i/a/b/d;->a()" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/facebook/a/k;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google/firebase/installations/f;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/facebook/a/b/e;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/a/y;->a()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/g/a;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google/android/datatransport/cct/b;->apply()" -> "Lcom/google" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$b;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/a/i;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/f/e;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/t;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/w;->a()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/l;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/i/i;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/appsflyer/deeplink/DdlEvent$3;->call()" -> "Lcom/appsflyer" [constraint=true]
+	"Lcom/appsflyer" -> Lcom [constraint=true]
+	"Lcom/facebook/login/a/b;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/i/d;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/appsflyer/BackgroundHttpTask$4;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/a/b/m;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" -> Lcom [constraint=true]
+	"Lcom/microsoft" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" -> "Lokhttp3/internal" [constraint=true]
+	"Lcom/google/android/gms/auth/api/signin/internal/g;->run()" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/microsoft/codepush/react/l;->doInBackground()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/rnfs/c;->run()" -> Lcom [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/appsflyer/internal/v;->initRequest()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" [color="#a991d4" fontcolor=white]
+		"Ld/e/a/b/d;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/i/a/b/d;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/a/y;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/datatransport/cct/b;->apply()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/a/w;->a()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" [color="#a991d4" fontcolor=white]
+	}
+}

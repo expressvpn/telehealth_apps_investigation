@@ -1,0 +1,114 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationListenerService;->onMessageReceived()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->setOptions()" [color="#a991d4" fontcolor=white]
+			"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/taskConsumers/LocationTaskConsumer$3;->onServiceConnected()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/notifications/badge/ExpoBadgeManager;->setBadgeCount()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->presentLocalNotification()" [color="#a991d4" fontcolor=white]
+			"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/messenger/MessengerUtils;->shareToMessenger()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->setApplicationIconBadgeNumber()" [color="#a991d4" fontcolor=white]
+			"Lme/leolin/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1$1;->onReactContextInitialized()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/notifications/service/delegates/ExpoHandlingDelegate;->handleNotificationResponse()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->didRegister()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->scheduleLocalNotification()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationPublisher;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationBootEventReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/messaging/FirebaseMessagingService;->handleIntent()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lexpo/modules" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationListenerService;->onMessageReceived()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/dieam" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/dieam" -> "Lme/leolin" [constraint=true]
+	"Lcom/google" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->setOptions()" -> "Lexpo/modules" [constraint=true]
+	"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount()" -> "Lme/leolin" [constraint=true]
+	"Lme/leolin" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationPublisher;->onReceive()" -> "Lcom/dieam" [constraint=true]
+	"Lexpo/modules/location/taskConsumers/LocationTaskConsumer$3;->onServiceConnected()" -> "Lexpo/modules" [constraint=true]
+	"Lexpo/modules/notifications/badge/ExpoBadgeManager;->setBadgeCount()" -> "Lme/leolin" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->presentLocalNotification()" -> "Lcom/dieam" [constraint=true]
+	"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" -> "Lme/leolin" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1;->run()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/facebook/messenger/MessengerUtils;->shareToMessenger()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->setApplicationIconBadgeNumber()" -> "Lcom/dieam" [constraint=true]
+	"Lme/leolin/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" -> "Lme/leolin" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1$1;->onReactContextInitialized()" -> "Lcom/dieam" [constraint=true]
+	"Lexpo/modules/notifications/service/delegates/ExpoHandlingDelegate;->handleNotificationResponse()" -> "Lexpo/modules" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationBootEventReceiver;->onReceive()" -> "Lcom/dieam" [constraint=true]
+	"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->didRegister()" -> "Lexpo/modules" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->scheduleLocalNotification()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/google/firebase/messaging/FirebaseMessagingService;->handleIntent()" -> "Lcom/google" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationListenerService;->onMessageReceived()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->setOptions()" [color="#a991d4" fontcolor=white]
+		"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/taskConsumers/LocationTaskConsumer$3;->onServiceConnected()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/notifications/badge/ExpoBadgeManager;->setBadgeCount()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->presentLocalNotification()" [color="#a991d4" fontcolor=white]
+		"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/messenger/MessengerUtils;->shareToMessenger()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->setApplicationIconBadgeNumber()" [color="#a991d4" fontcolor=white]
+		"Lme/leolin/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1$1;->onReactContextInitialized()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/notifications/service/delegates/ExpoHandlingDelegate;->handleNotificationResponse()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->didRegister()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->scheduleLocalNotification()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,309 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/lang/Runtime;->exec()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->exec()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$22;->create()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$8$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevServerHelper;->openStackFrameCall()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onNewReactContextCreated()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$10;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->downloadBundleResourceFromUrlSync()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/systeminfo/AndroidInfoModule;->getServerHost()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevServerHelper;->symbolicateStackTrace()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getJSBundleURLForRemoteDebugging()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onReactInstanceDestroyed()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getSourceMapUrl()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$7;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/packagerconnection/JSPackagerClient;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$6;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/ab;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MeetingEndMessageActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/AddrBookVerifyNumberActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/SipIncomeActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/JoinConfActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/JoinMeetingFailActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/CallingActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/sip/DnsUtil;->getDns()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MMShareActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/util/NotificationMgr;->showMessageNotificationMMImpl()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/AddrBookSetNumberActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/FeedbackFragment;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IMChatActivity;->onIMReceived()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/ConfActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MMCommentActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lus/zoom/androidlib/util/UIUtil;->execCmd()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/LauncherActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/CallRoomActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/LauncherActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/AddrBookSettingActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MeetingInfoActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IntegrationActivity;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lus/zoom/androidlib/util/RootCheckUtils;->testIsRooted()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/JoinByURLActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/MMNotificationsFragment;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/SipInCallActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MMChatInfoActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/MMChatSettingsFragment;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IntegrationActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MyProfileActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/LoginActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/ptapp/PTUI;->sinkIMReceived()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IMActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/RCLoginActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lus/zoom/androidlib/app/ZMStorageUtil$AsyncLoadAllStorage;->doInBackground()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/WelcomeActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/photopicker/PhotoPickerActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lus/zoom/androidlib/app/ZMFileListActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IMActivity;->onIMReceived()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/stabilility/JavaCrashHandler;->uncaughtException()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/MMChatActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IMChatActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$18;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$17;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$27;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$26;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/stabilility/StabilityService$LogMonitorThread;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/stabilility/DeadLockDetector$DeadLockDetectorThread;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/stabilility/StabilityService$WriteLogFileThread;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/sentry/android/core/-$$Lambda$DefaultAndroidEventProcessor$ZsPdDrAaOs30gov_5eSNgy_KYe8;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/devsupport/DevServerHelper$3;->doInBackground()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevServerHelper$1;->doInBackground()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_application {
+			label=Application
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/ZoomApplication;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$3;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/config/ConfigWriter;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/util/MeetingNotificationBroadcast;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/stabilility/StabilityService;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/ConfService;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/ZMFirebaseMessagingService;->onMessageReceived()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$18;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$22;->create()" -> "Lcom/facebook" [constraint=true]
+	"Lio/sentry" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$8$1;->onClick()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevServerHelper$3;->doInBackground()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevServerHelper$1;->doInBackground()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/packagerconnection/JSPackagerClient;-><init>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevServerHelper;->openStackFrameCall()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$17;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$3;->onReceive()" -> "Lcom/facebook" [constraint=true]
+	"Lio/sentry/android/core/-$$Lambda$DefaultAndroidEventProcessor$ZsPdDrAaOs30gov_5eSNgy_KYe8;->call()" -> "Lio/sentry" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onNewReactContextCreated()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$10;->onOptionSelected()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->downloadBundleResourceFromUrlSync()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$27;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/systeminfo/AndroidInfoModule;->getServerHost()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$26;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevServerHelper;->symbolicateStackTrace()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getJSBundleURLForRemoteDebugging()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/zipow" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lcom/zipow" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/StabilityService$LogMonitorThread;->run()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onReactInstanceDestroyed()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getSourceMapUrl()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$7;->onOptionSelected()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$6;->onOptionSelected()" -> "Lcom/facebook" [constraint=true]
+	"Lus/zoom" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lus/zoom/androidlib/util/UIUtil;->execCmd()" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lus/zoom/androidlib/util/UIUtil;->execCmd()" -> "Lus/zoom" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/ab;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lcom/zipow/videobox/MeetingEndMessageActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/AddrBookVerifyNumberActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/SipIncomeActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/util/NotificationMgr;->showMessageNotificationMMImpl()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/util/NotificationMgr;->showMessageNotificationMMImpl()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/JoinConfActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/JoinMeetingFailActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/CallingActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/sip/DnsUtil;->getDns()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/MMShareActivity;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/MMShareActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/StabilityService;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/AddrBookSetNumberActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/DeadLockDetector$DeadLockDetectorThread;->run()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/FeedbackFragment;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/IMChatActivity;->onIMReceived()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/ConfActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/StabilityService$WriteLogFileThread;->run()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/MMCommentActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/LauncherActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/CallRoomActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/ZoomApplication;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/LauncherActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/AddrBookSettingActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/MeetingInfoActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/ConfService;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/IntegrationActivity;->onNewIntent()" -> "Lcom/zipow" [constraint=true]
+	"Lus/zoom/androidlib/util/RootCheckUtils;->testIsRooted()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/JoinByURLActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/fragment/MMNotificationsFragment;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/SipInCallActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/MMChatInfoActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/config/ConfigWriter;->onReceive()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/util/MeetingNotificationBroadcast;->onReceive()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/MMChatSettingsFragment;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/IntegrationActivity;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/IntegrationActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/MyProfileActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/LoginActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/ptapp/PTUI;->sinkIMReceived()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/IMActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/RCLoginActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lus/zoom/androidlib/app/ZMStorageUtil$AsyncLoadAllStorage;->doInBackground()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/WelcomeActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/photopicker/PhotoPickerActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lus/zoom/androidlib/app/ZMFileListActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/IMActivity;->onIMReceived()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/JavaCrashHandler;->uncaughtException()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/stabilility/JavaCrashHandler;->uncaughtException()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/ZMFirebaseMessagingService;->onMessageReceived()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/ZMFirebaseMessagingService;->onMessageReceived()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/MMChatActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/IMChatActivity;->onResume()" -> "Lus/zoom" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$22;->create()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$8$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevServerHelper;->openStackFrameCall()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onNewReactContextCreated()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$10;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->downloadBundleResourceFromUrlSync()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/systeminfo/AndroidInfoModule;->getServerHost()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevServerHelper;->symbolicateStackTrace()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getJSBundleURLForRemoteDebugging()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onReactInstanceDestroyed()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getSourceMapUrl()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$7;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/packagerconnection/JSPackagerClient;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$6;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/ab;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MeetingEndMessageActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/AddrBookVerifyNumberActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/SipIncomeActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/JoinConfActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/JoinMeetingFailActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/CallingActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/sip/DnsUtil;->getDns()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MMShareActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/util/NotificationMgr;->showMessageNotificationMMImpl()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/AddrBookSetNumberActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/FeedbackFragment;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IMChatActivity;->onIMReceived()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/ConfActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MMCommentActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lus/zoom/androidlib/util/UIUtil;->execCmd()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/LauncherActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/CallRoomActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/LauncherActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/AddrBookSettingActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MeetingInfoActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IntegrationActivity;->onNewIntent()" [color="#a991d4" fontcolor=white]
+		"Lus/zoom/androidlib/util/RootCheckUtils;->testIsRooted()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/JoinByURLActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/MMNotificationsFragment;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/SipInCallActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MMChatInfoActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/MMChatSettingsFragment;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IntegrationActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MyProfileActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/LoginActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/ptapp/PTUI;->sinkIMReceived()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IMActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/RCLoginActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lus/zoom/androidlib/app/ZMStorageUtil$AsyncLoadAllStorage;->doInBackground()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/WelcomeActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/photopicker/PhotoPickerActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lus/zoom/androidlib/app/ZMFileListActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IMActivity;->onIMReceived()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/stabilility/JavaCrashHandler;->uncaughtException()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/MMChatActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IMChatActivity;->onResume()" [color="#a991d4" fontcolor=white]
+	}
+}

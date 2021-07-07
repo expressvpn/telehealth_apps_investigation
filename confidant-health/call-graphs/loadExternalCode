@@ -1,0 +1,109 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/lang/ClassLoader;->loadClass()" [color="#593196" fontcolor=white]
+	"Ljava/lang/ClassLoader;->loadClass()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/dynamite/zza;->zza()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/internal/InAppPurchaseActivityLifecycleTracker$1;->onServiceConnected()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/Branch;->isInstantApp()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/dynamic/RemoteCreator;->getRemoteCreatorInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/dynamite/DynamiteModule;->getRemoteVersion()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->isCallerInstantApp()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isPackageGoogleSigned()" [color="#a991d4" fontcolor=white]
+			"Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->toString()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/Branch;->showInstallPrompt()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/dynamite/zza;->getLocalVersion()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/Branch;->showInstallPrompt()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isUidGoogleSigned()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/cloudmessaging/zza$zza;->loadClass()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/appevents/internal/InAppPurchaseActivityLifecycleTracker$2$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/internal/InAppPurchaseActivityLifecycleTracker$2$2;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/common/zzd;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/security/zza;->doInBackground()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/facebook" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Lcom/google" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Lcom/google/android/gms/dynamite/zza;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/facebook/appevents/internal/InAppPurchaseActivityLifecycleTracker$1;->onServiceConnected()" -> "Lcom/facebook" [constraint=true]
+	"Lio/branch/referral/Branch;->isInstantApp()" -> "Lio/branch" [constraint=true]
+	"Lio/branch" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Lcom/facebook/appevents/internal/InAppPurchaseActivityLifecycleTracker$2$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lkotlin/coroutines" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Lcom/google/android/gms/dynamic/RemoteCreator;->getRemoteCreatorInstance()" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	"Lcom/google/android/gms/dynamite/DynamiteModule;->getRemoteVersion()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->isCallerInstantApp()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isPackageGoogleSigned()" -> "Lcom/google" [constraint=true]
+	"Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->toString()" -> "Lkotlin/coroutines" [constraint=true]
+	"Lio/branch/referral/Branch;->showInstallPrompt()" -> "Lio/branch" [constraint=true]
+	"Lcom/google/android/gms/security/zza;->doInBackground()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/common/zzd;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/dynamite/zza;->getLocalVersion()" -> "Lcom/google" [constraint=true]
+	"Lcom/facebook/appevents/internal/InAppPurchaseActivityLifecycleTracker$2$2;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isUidGoogleSigned()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/cloudmessaging/zza$zza;->loadClass()" -> "Ljava/lang/ClassLoader;->loadClass()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/google/android/gms/dynamite/zza;->zza()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/appevents/internal/InAppPurchaseActivityLifecycleTracker$1;->onServiceConnected()" [color="#a991d4" fontcolor=white]
+		"Lio/branch/referral/Branch;->isInstantApp()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/dynamic/RemoteCreator;->getRemoteCreatorInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/dynamite/DynamiteModule;->getRemoteVersion()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;->isCallerInstantApp()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isPackageGoogleSigned()" [color="#a991d4" fontcolor=white]
+		"Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->toString()" [color="#a991d4" fontcolor=white]
+		"Lio/branch/referral/Branch;->showInstallPrompt()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/dynamite/zza;->getLocalVersion()" [color="#a991d4" fontcolor=white]
+		"Lio/branch/referral/Branch;->showInstallPrompt()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/common/GoogleSignatureVerifier;->isUidGoogleSigned()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/cloudmessaging/zza$zza;->loadClass()" [color="#a991d4" fontcolor=white]
+	}
+}

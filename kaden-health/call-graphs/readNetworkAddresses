@@ -1,0 +1,63 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/net/NetworkInterface;->getNetworkInterfaces()" [color="#593196" fontcolor=white]
+	"Ljava/net/NetworkInterface;->getInetAddresses()" [color="#593196" fontcolor=white]
+	"Ljava/net/NetworkInterface;->getHardwareAddress()" [color="#593196" fontcolor=white]
+	"Ljava/net/Socket;->getRemoteSocketAddress()" [color="#593196" fontcolor=white]
+	"Landroid/net/wifi/WifiInfo;->getMacAddress()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/stripe/android/stripe3ds2/init/b;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/-$$Lambda$NetworkMonitorAutoDetect$WifiDirectManagerDelegate$PAAk-X-hIXqIjU2H1jOXAR0m8dY;->onGroupInfoAvailable()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/stripe/android/stripe3ds2/init/b;->a()" -> "Lcom/stripe" [constraint=true]
+	"Lcom/stripe/android/stripe3ds2/init/b;->a()" -> "Landroid/net/wifi/WifiInfo;->getMacAddress()" [constraint=true]
+	"Lcom/stripe" -> "Ljava/net/NetworkInterface;->getNetworkInterfaces()" [constraint=true]
+	"Lcom/stripe" -> "Ljava/net/NetworkInterface;->getInetAddresses()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/net/NetworkInterface;->getNetworkInterfaces()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/net/NetworkInterface;->getHardwareAddress()" [constraint=true]
+	"Lcom/learnium" -> "Landroid/net/wifi/WifiInfo;->getMacAddress()" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" -> "Lcom/learnium" [constraint=true]
+	Lorg -> "Ljava/net/NetworkInterface;->getInetAddresses()" [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;->onReceive()" -> Lorg [constraint=true]
+	"Lorg/webrtc/-$$Lambda$NetworkMonitorAutoDetect$WifiDirectManagerDelegate$PAAk-X-hIXqIjU2H1jOXAR0m8dY;->onGroupInfoAvailable()" -> Lorg [constraint=true]
+	"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" -> "Ljava/net/Socket;->getRemoteSocketAddress()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/stripe/android/stripe3ds2/init/b;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/-$$Lambda$NetworkMonitorAutoDetect$WifiDirectManagerDelegate$PAAk-X-hIXqIjU2H1jOXAR0m8dY;->onGroupInfoAvailable()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+	}
+}

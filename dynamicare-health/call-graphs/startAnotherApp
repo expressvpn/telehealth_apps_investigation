@@ -1,0 +1,49 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dynamicarehealth/rewards/activities/-$$Lambda$AppUpdateActivity$CZgpVwbHFEB7ysVrZz7x2jMpsYk;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/email/EmailModule;->open()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/messaging/FirebaseMessagingService;->zzc()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/activities/-$$Lambda$AppUpdateActivity$CZgpVwbHFEB7ysVrZz7x2jMpsYk;->onClick()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/dynamicarehealth" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/google/firebase/messaging/FirebaseMessagingService;->zzc()" -> "Lcom/google" [constraint=true]
+	"Lcom/facebook" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/facebook/react/modules/email/EmailModule;->open()" -> "Lcom/facebook" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/dynamicarehealth/rewards/activities/-$$Lambda$AppUpdateActivity$CZgpVwbHFEB7ysVrZz7x2jMpsYk;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/email/EmailModule;->open()" [color="#a991d4" fontcolor=white]
+	}
+}

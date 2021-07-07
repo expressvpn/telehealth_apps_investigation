@@ -1,0 +1,170 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljavax/crypto/Cipher;->getInstance()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->getInstance()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->doFinal()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->doFinal()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->doFinal()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->getIV()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/securepreferences/SecurePreferences;->getLong()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/capillary/android/WebPushKeyManager;->rawGenerateKeyPair()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences$Editor;->putBoolean()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/aead/AesEaxKeyManager;->getPrimitive()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences;->getBoolean()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences$Editor;->putInt()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/activities/AuthenticationReactActivity$3;->getLaunchOptions()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences;->getAll()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences$Editor;->putFloat()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/subtle/AesEaxJce;->decrypt()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/subtle/AesEaxJce;->encrypt()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences;->getFloat()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/realm/RealmUtils;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/capillary/android/WebPushKeyManager;->rawGetDecrypter()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences$Editor;->putLong()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/subtle/EngineWrapper$TCipher;->getInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/aead/AesEaxKeyManager;->getPrimitive()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences;->getStringSet()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/activities/UpgradeReactActivity$1;->getLaunchOptions()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences$Editor;->putStringSet()" [color="#a991d4" fontcolor=white]
+			"Lcom/securepreferences/SecurePreferences;->getInt()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/apps/webpush/WebPushHybridDecrypt;->decrypt()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/subtle/AesGcmJce;->decrypt()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/subtle/AesCtrJceCipher;->decrypt()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/subtle/AesCtrJceCipher;->encrypt()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/crypto/tink/subtle/AesGcmJce;->encrypt()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_application {
+			label=Application
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dynamicarehealth/rewards/utils/App;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dynamicarehealth/rewards/activities/AuthenticationReactActivity;->onStateChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/MainActivity;->onStateChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/activities/SendFeedbackActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/MainActivity;->onStateRetrievalError()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/tozny" -> "Ljavax/crypto/Cipher;->getInstance()" [constraint=true]
+	"Lcom/tozny" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Lcom/tozny" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	"Lcom/tozny" -> "Ljavax/crypto/Cipher;->getIV()" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/activities/AuthenticationReactActivity;->onStateChanged()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/dynamicarehealth" -> Lcom [constraint=true]
+	"Lcom/dynamicarehealth" -> "Ljavax/crypto/Cipher;->getInstance()" [constraint=true]
+	"Lcom/dynamicarehealth" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Lcom/dynamicarehealth" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	"Lcom/dynamicarehealth" -> "Ljavax/crypto/Cipher;->getIV()" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/MainActivity;->onStateChanged()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/securepreferences/SecurePreferences;->getLong()" -> Lcom [constraint=true]
+	Lcom -> "Lcom/tozny" [constraint=true]
+	"Lcom/google/capillary/android/WebPushKeyManager;->rawGenerateKeyPair()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Ljavax/crypto/Cipher;->getInstance()" [constraint=true]
+	"Lcom/google" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Lcom/google" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	"Lcom/securepreferences/SecurePreferences$Editor;->putBoolean()" -> Lcom [constraint=true]
+	"Lcom/google/crypto/tink/subtle/EngineWrapper$TCipher;->getInstance()" -> "Ljavax/crypto/Cipher;->getInstance()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/EngineWrapper$TCipher;->getInstance()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/crypto/tink/aead/AesEaxKeyManager;->getPrimitive()" -> "Lcom/google" [constraint=true]
+	"Lcom/securepreferences/SecurePreferences;->getBoolean()" -> Lcom [constraint=true]
+	"Lcom/securepreferences/SecurePreferences$Editor;->putInt()" -> Lcom [constraint=true]
+	"Lcom/dynamicarehealth/rewards/activities/SendFeedbackActivity;->onCreate()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/activities/AuthenticationReactActivity$3;->getLaunchOptions()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/securepreferences/SecurePreferences;->getAll()" -> Lcom [constraint=true]
+	"Lcom/dynamicarehealth/rewards/MainActivity;->onStateRetrievalError()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/securepreferences/SecurePreferences$Editor;->putFloat()" -> Lcom [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesEaxJce;->decrypt()" -> "Ljavax/crypto/Cipher;->getInstance()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesEaxJce;->decrypt()" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesEaxJce;->decrypt()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesEaxJce;->decrypt()" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesEaxJce;->encrypt()" -> "Ljavax/crypto/Cipher;->getInstance()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesEaxJce;->encrypt()" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesEaxJce;->encrypt()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesEaxJce;->encrypt()" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	"Lcom/securepreferences/SecurePreferences;->getFloat()" -> Lcom [constraint=true]
+	"Lcom/dynamicarehealth/rewards/realm/RealmUtils;-><clinit>()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/utils/App;->onCreate()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/google/capillary/android/WebPushKeyManager;->rawGetDecrypter()" -> "Lcom/google" [constraint=true]
+	"Lcom/securepreferences/SecurePreferences$Editor;->putLong()" -> Lcom [constraint=true]
+	"Lcom/securepreferences/SecurePreferences;->getStringSet()" -> Lcom [constraint=true]
+	"Lcom/dynamicarehealth/rewards/activities/UpgradeReactActivity$1;->getLaunchOptions()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/securepreferences/SecurePreferences$Editor;->putStringSet()" -> Lcom [constraint=true]
+	"Lcom/securepreferences/SecurePreferences;->getInt()" -> Lcom [constraint=true]
+	"Lcom/google/crypto/tink/apps/webpush/WebPushHybridDecrypt;->decrypt()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/crypto/tink/apps/webpush/WebPushHybridDecrypt;->decrypt()" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Lcom/google/crypto/tink/apps/webpush/WebPushHybridDecrypt;->decrypt()" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesGcmJce;->decrypt()" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesGcmJce;->decrypt()" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesCtrJceCipher;->decrypt()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesCtrJceCipher;->encrypt()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesGcmJce;->encrypt()" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Lcom/google/crypto/tink/subtle/AesGcmJce;->encrypt()" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/securepreferences/SecurePreferences;->getLong()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/capillary/android/WebPushKeyManager;->rawGenerateKeyPair()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences$Editor;->putBoolean()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/aead/AesEaxKeyManager;->getPrimitive()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences;->getBoolean()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences$Editor;->putInt()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/activities/AuthenticationReactActivity$3;->getLaunchOptions()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences;->getAll()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences$Editor;->putFloat()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/subtle/AesEaxJce;->decrypt()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/subtle/AesEaxJce;->encrypt()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences;->getFloat()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/realm/RealmUtils;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/capillary/android/WebPushKeyManager;->rawGetDecrypter()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences$Editor;->putLong()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/subtle/EngineWrapper$TCipher;->getInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/aead/AesEaxKeyManager;->getPrimitive()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences;->getStringSet()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/activities/UpgradeReactActivity$1;->getLaunchOptions()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences$Editor;->putStringSet()" [color="#a991d4" fontcolor=white]
+		"Lcom/securepreferences/SecurePreferences;->getInt()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/apps/webpush/WebPushHybridDecrypt;->decrypt()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/subtle/AesGcmJce;->decrypt()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/subtle/AesCtrJceCipher;->decrypt()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/subtle/AesCtrJceCipher;->encrypt()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/crypto/tink/subtle/AesGcmJce;->encrypt()" [color="#a991d4" fontcolor=white]
+	}
+}

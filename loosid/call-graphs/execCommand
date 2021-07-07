@@ -1,0 +1,37 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/lang/Runtime;->exec()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->exec()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/modules/systeminfo/AndroidInfoModule;->getServerHost()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/shortcutbadger/impl/OPPOHomeBader;->a()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/facebook" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lcom/facebook/react/modules/systeminfo/AndroidInfoModule;->getServerHost()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/onesignal" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lcom/onesignal/shortcutbadger/impl/OPPOHomeBader;->a()" -> "Lcom/onesignal" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/facebook/react/modules/systeminfo/AndroidInfoModule;->getServerHost()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/shortcutbadger/impl/OPPOHomeBader;->a()" [color="#a991d4" fontcolor=white]
+	}
+}

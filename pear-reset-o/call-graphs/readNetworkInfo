@@ -1,0 +1,138 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getAllNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getAllNetworks()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/tonyodev/fetch2/downloader/ParallelFileDownloaderImpl;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/cct/zzc;->decorate()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->register()" [color="#a991d4" fontcolor=white]
+			"Lcom/tonyodev/fetch2/helper/PriorityListProcessorImpl$networkChangeListener$1$onNetworkChanged$1;->invoke()" [color="#a991d4" fontcolor=white]
+			"Lcom/tonyodev/fetch2/downloader/SequentialFileDownloaderImpl;->run()" [color="#a991d4" fontcolor=white]
+			"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLosing()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onUnavailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLost()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/http/HttpClientNetworkStateHandler;->callAsync()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/utils/NetworkStateHelper$1;->onLost()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/iid/SyncTask;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/TopicsSyncTask;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/tonyodev/fetch2/helper/PriorityListProcessorImpl$priorityIteratorRunnable$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader$$Lambda$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/AppCenter$6;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/AppCenter$11;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver$ConnectivityBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/TopicsSyncTask$ConnectivityChangeReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/SyncTask$ConnectivityChangeReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/utils/NetworkStateHelper$ConnectivityReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/tonyodev" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/tonyodev" -> "Landroid/net/ConnectivityManager;->getAllNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver$ConnectivityBroadcastReceiver;->onReceive()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroidx/core" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lcom/google" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/tonyodev/fetch2/helper/PriorityListProcessorImpl$networkChangeListener$1$onNetworkChanged$1;->invoke()" -> "Lcom/tonyodev" [constraint=true]
+	"Lcom/google/firebase/iid/SyncTask;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/messaging/TopicsSyncTask;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/tonyodev/fetch2/helper/PriorityListProcessorImpl$priorityIteratorRunnable$1;->run()" -> "Lcom/tonyodev" [constraint=true]
+	"Lcom/tonyodev/fetch2/downloader/ParallelFileDownloaderImpl;->run()" -> "Lcom/tonyodev" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/datatransport/cct/zzc;->decorate()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->register()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Landroidx/core" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader$$Lambda$1;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/messaging/TopicsSyncTask$ConnectivityChangeReceiver;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/iid/SyncTask$ConnectivityChangeReceiver;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/tonyodev/fetch2/downloader/SequentialFileDownloaderImpl;->run()" -> "Lcom/tonyodev" [constraint=true]
+	"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lcom/microsoft" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lcom/microsoft" -> "Landroid/net/ConnectivityManager;->getAllNetworkInfo()" [constraint=true]
+	"Lcom/microsoft" -> "Landroid/net/ConnectivityManager;->getAllNetworks()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLosing()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/microsoft/appcenter/utils/NetworkStateHelper$ConnectivityReceiver;->onReceive()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/microsoft/appcenter/AppCenter$6;->run()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onUnavailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onAvailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLinkPropertiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/microsoft/appcenter/AppCenter$11;->run()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLost()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/microsoft/appcenter/http/HttpClientNetworkStateHandler;->callAsync()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onCapabilitiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/microsoft/appcenter/utils/NetworkStateHelper$1;->onLost()" -> "Lcom/microsoft" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/tonyodev/fetch2/downloader/ParallelFileDownloaderImpl;->run()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/datatransport/cct/zzc;->decorate()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->register()" [color="#a991d4" fontcolor=white]
+		"Lcom/tonyodev/fetch2/helper/PriorityListProcessorImpl$networkChangeListener$1$onNetworkChanged$1;->invoke()" [color="#a991d4" fontcolor=white]
+		"Lcom/tonyodev/fetch2/downloader/SequentialFileDownloaderImpl;->run()" [color="#a991d4" fontcolor=white]
+		"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLosing()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onUnavailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLost()" [color="#a991d4" fontcolor=white]
+		"Lcom/microsoft/appcenter/http/HttpClientNetworkStateHandler;->callAsync()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/microsoft/appcenter/utils/NetworkStateHelper$1;->onLost()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,66 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/net/NetworkInterface;->getNetworkInterfaces()" [color="#593196" fontcolor=white]
+	"Ljava/net/NetworkInterface;->getInetAddresses()" [color="#593196" fontcolor=white]
+	"Ljava/net/NetworkInterface;->getHardwareAddress()" [color="#593196" fontcolor=white]
+	"Ljava/net/Socket;->getRemoteSocketAddress()" [color="#593196" fontcolor=white]
+	"Ljava/net/Socket;->getLocalSocketAddress()" [color="#593196" fontcolor=white]
+	"Landroid/net/wifi/WifiInfo;->getMacAddress()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lorg/jitsi/meet/sdk/J;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" [color="#a991d4" fontcolor=white]
+			"Ld/i/a/a/a/b;->c()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" -> Lcom [constraint=true]
+	Lcom -> "Ljava/net/NetworkInterface;->getNetworkInterfaces()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/net/NetworkInterface;->getNetworkInterfaces()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/net/NetworkInterface;->getHardwareAddress()" [constraint=true]
+	"Lcom/learnium" -> "Landroid/net/wifi/WifiInfo;->getMacAddress()" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" -> Lcom [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" -> Lcom [constraint=true]
+	"Lorg/jitsi/meet/sdk/J;->run()" -> "Ljava/net/NetworkInterface;->getNetworkInterfaces()" [constraint=true]
+	"Lorg/jitsi/meet/sdk/J;->run()" -> "Ljava/net/NetworkInterface;->getInetAddresses()" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" -> Lcom [constraint=true]
+	"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" -> "Ljava/net/Socket;->getRemoteSocketAddress()" [constraint=true]
+	"Ld/i/a/a/a/b;->c()" -> "Ljava/net/Socket;->getLocalSocketAddress()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+	}
+}

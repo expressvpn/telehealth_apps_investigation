@@ -1,0 +1,56 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/wifi/WifiManager;->getConnectionInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/sobergrid/view/activity/login/LoginActivity$initOnClicks$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/signup/SignUpActivity$onSignUpFinished$2;->onResourceReady()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/signup/SignUpActivity$setOnClicks$2;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment_ViewBinding$2;->doClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/rcsignup/RCSignUpActivity;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_fragment {
+			label=Fragment
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment;->onRequestPermissionsResult()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid" -> "Landroid/net/wifi/WifiManager;->getConnectionInfo()" [constraint=true]
+	"Lcom/sobergrid/view/activity/login/LoginActivity$initOnClicks$1;->onClick()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/activity/signup/SignUpActivity$onSignUpFinished$2;->onResourceReady()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/activity/signup/SignUpActivity$setOnClicks$2;->onClick()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment_ViewBinding$2;->doClick()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/activity/rcsignup/RCSignUpActivity;->onRequestPermissionsResult()" -> "Lcom/sobergrid" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/sobergrid/view/activity/login/LoginActivity$initOnClicks$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/signup/SignUpActivity$onSignUpFinished$2;->onResourceReady()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/signup/SignUpActivity$setOnClicks$2;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/verfication/fragments/phone/VerifyPhoneFragment_ViewBinding$2;->doClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/view/activity/rcsignup/RCSignUpActivity;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+	}
+}

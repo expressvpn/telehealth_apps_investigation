@@ -1,0 +1,292 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/lang/Runtime;->availableProcessors()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->freeMemory()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->maxMemory()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->totalMemory()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/work/WorkManagerInitializer;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/d/e/a;->a()" [color="#a991d4" fontcolor=white]
+			"Lc/b;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/c/a/c;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/d/a/e;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/memory/o;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/c/a/d;->a()" [color="#a991d4" fontcolor=white]
+			"Lorg/unimodules/adapters/react/services/i;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/c/a/c/l;->onAttach()" [color="#a991d4" fontcolor=white]
+			"Ld/c/a/c/q;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/bugsnag/android/i;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/d/a/o;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/d/e/f;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/FastImageViewManager;->createViewInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/bugsnag/BugsnagReactNative;->notify()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getUsedMemory()" [color="#a991d4" fontcolor=white]
+			"Lcom/bugsnag/android/NativeInterface;->notify()" [color="#a991d4" fontcolor=white]
+			"Lcom/bugsnag/android/NativeInterface;->getDeviceData()" [color="#a991d4" fontcolor=white]
+			"Lcom/bugsnag/android/NativeInterface;->getAppData()" [color="#a991d4" fontcolor=white]
+			"Lcom/bugsnag/BugsnagReactNative;->clearUser()" [color="#a991d4" fontcolor=white]
+			"Lcom/bugsnag/android/Z;->uncaughtException()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/AirMapOverlayManager;->setImage()" [color="#a991d4" fontcolor=white]
+			"Lcom/mixpanel/android/mpmetrics/O;->onActivityStarted()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/g;->onSizeChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/l/d/t;->get()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+			"Lcom/kevinejohn/RNMixpanel/RNMixpanelModule;->reset()" [color="#a991d4" fontcolor=white]
+			"Lcom/kevinejohn/RNMixpanel/RNMixpanelModule;->optOutTracking()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/memory/d;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->presentLocalNotification()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMaxMemory()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" [color="#a991d4" fontcolor=white]
+			"Lcom/horcrux/svg/m;->draw()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setIcon()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setImage()" [color="#a991d4" fontcolor=white]
+			"Lcom/kevinejohn/RNMixpanel/RNMixpanelModule;->sharedInstanceWithToken()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/AirMapManager;->setKmlSrc()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/g;->setControllerListener()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/applinks/a;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/J;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/k;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/i;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/a/l;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/n;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/rnfs/r;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/bugsnag/android/b;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/crashlytics/a/c/z;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/crashlytics/a/c/q;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/modules/image/d;->doInBackgroundGuarded()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_handler {
+			label=Handler
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Ld/i/a/c/s$f;->handleMessage()" [color="#a991d4" fontcolor=white]
+			"Lcom/mixpanel/android/mpmetrics/a$i$a;->handleMessage()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/mixpanel/android/mpmetrics/MixpanelNotificationRouteActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/mixpanel/android/takeoverinapp/d;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationBootEventReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationPublisher;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/mixpanel/android/mpmetrics/MixpanelPushNotificationDismissedReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/mixpanel/android/mpmetrics/S;->onMessageReceived()" [color="#a991d4" fontcolor=white]
+			"Lcom/loosidapp/PushNotificationService;->onMessageReceived()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Ld/c" -> "Lcom/bumptech" [constraint=true]
+	"Ld/c/a/c/q;->a()" -> "Ld/c" [constraint=true]
+	"Landroidx/work/WorkManagerInitializer;->a()" -> Landroidx [constraint=true]
+	Landroidx -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/google/firebase/crashlytics/a/c/z;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/bumptech/glide/load/d/e/a;->a()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech" -> "Ld/c" [constraint=true]
+	"Lcom/bumptech" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/facebook" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/facebook" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Lcom/facebook/applinks/a;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lc/b;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/bumptech/glide/load/c/a/c;->a()" -> "Lcom/bumptech" [constraint=true]
+	Lcom -> "Lcom/facebook" [constraint=true]
+	Lcom -> "Ljava/lang/Runtime;->freeMemory()" [constraint=true]
+	"Lcom/bumptech/glide/load/c/a/d;->a()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/google/firebase/crashlytics/a/c/q;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/bumptech/glide/load/d/a/e;->a()" -> "Ld/c" [constraint=true]
+	"Lcom/facebook/imagepipeline/memory/o;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/facebook/J;->run()" -> Lcom [constraint=true]
+	"Lcom/facebook/a/k;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/dylanvann/fastimage/FastImageViewManager;->createViewInstance()" -> "Ld/c" [constraint=true]
+	"Lcom/dylanvann/fastimage/FastImageViewManager;->createViewInstance()" -> "Lcom/dylanvann" [constraint=true]
+	"Lorg/unimodules/adapters/react/services/i;->a()" -> "Ld/c" [constraint=true]
+	"Ld/c/a/c/l;->onAttach()" -> "Ld/c" [constraint=true]
+	"Lcom/bugsnag/android/i;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/bumptech/glide/load/d/a/o;->a()" -> "Ld/c" [constraint=true]
+	"Lcom/bumptech/glide/load/d/e/f;->a()" -> "Ld/c" [constraint=true]
+	"Lcom/facebook/a/i;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/a/l;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/dylanvann/fastimage/n;->run()" -> "Ld/c" [constraint=true]
+	"Lcom/mixpanel" -> "Ld/i" [constraint=true]
+	"Lcom/mixpanel/android/mpmetrics/S;->onMessageReceived()" -> "Lcom/mixpanel" [constraint=true]
+	"Ld/i" -> "Ljava/lang/Runtime;->freeMemory()" [constraint=true]
+	"Ld/i" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Ld/i" -> "Ljava/lang/Runtime;->totalMemory()" [constraint=true]
+	"Lcom/bugsnag" -> "Ljava/lang/Runtime;->freeMemory()" [constraint=true]
+	"Lcom/bugsnag" -> "Ljava/lang/Runtime;->totalMemory()" [constraint=true]
+	"Lcom/bugsnag" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Lcom/bugsnag/BugsnagReactNative;->notify()" -> "Lcom/bugsnag" [constraint=true]
+	"Lcom/rnfs/r;->run()" -> Lcom [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getUsedMemory()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/learnium" -> "Ljava/lang/Runtime;->freeMemory()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/lang/Runtime;->totalMemory()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Lcom/bugsnag/android/b;->run()" -> "Lcom/bugsnag" [constraint=true]
+	"Lcom/bugsnag/android/NativeInterface;->notify()" -> "Lcom/bugsnag" [constraint=true]
+	"Lcom/bugsnag/android/NativeInterface;->getDeviceData()" -> "Lcom/bugsnag" [constraint=true]
+	"Lcom/bugsnag/android/NativeInterface;->getAppData()" -> "Lcom/bugsnag" [constraint=true]
+	"Lcom/loosidapp/PushNotificationService;->onMessageReceived()" -> "Lcom/mixpanel" [constraint=true]
+	"Ld/i/a/c/s$f;->handleMessage()" -> "Ld/i" [constraint=true]
+	"Lcom/mixpanel/android/mpmetrics/a$i$a;->handleMessage()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/bugsnag/BugsnagReactNative;->clearUser()" -> "Lcom/bugsnag" [constraint=true]
+	"Lcom/bugsnag/android/Z;->uncaughtException()" -> "Lcom/bugsnag" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationBootEventReceiver;->onReceive()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/dieam" -> "Lcom/facebook" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapOverlayManager;->setImage()" -> "Lcom/airbnb" [constraint=true]
+	"Lcom/airbnb" -> "Lcom/facebook" [constraint=true]
+	"Lcom/mixpanel/android/mpmetrics/MixpanelNotificationRouteActivity;->onCreate()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/mixpanel/android/mpmetrics/O;->onActivityStarted()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/views/image/g;->onSizeChanged()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/l/d/t;->get()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/kevinejohn/RNMixpanel/RNMixpanelModule;->reset()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/kevinejohn/RNMixpanel/RNMixpanelModule;->optOutTracking()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationPublisher;->onReceive()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/memory/d;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->presentLocalNotification()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMaxMemory()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/horcrux/svg/m;->draw()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setIcon()" -> "Lcom/airbnb" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setImage()" -> "Lcom/airbnb" [constraint=true]
+	"Lcom/mixpanel/android/mpmetrics/MixpanelPushNotificationDismissedReceiver;->onReceive()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/mixpanel/android/takeoverinapp/d;->onCreate()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/kevinejohn/RNMixpanel/RNMixpanelModule;->sharedInstanceWithToken()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/facebook/react/modules/image/d;->doInBackgroundGuarded()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapManager;->setKmlSrc()" -> "Lcom/airbnb" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/views/image/g;->setControllerListener()" -> "Lcom/facebook" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Landroidx/work/WorkManagerInitializer;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/d/e/a;->a()" [color="#a991d4" fontcolor=white]
+		"Lc/b;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/c/a/c;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/d/a/e;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/memory/o;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/c/a/d;->a()" [color="#a991d4" fontcolor=white]
+		"Lorg/unimodules/adapters/react/services/i;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/c/a/c/l;->onAttach()" [color="#a991d4" fontcolor=white]
+		"Ld/c/a/c/q;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/bugsnag/android/i;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/d/a/o;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/d/e/f;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/FastImageViewManager;->createViewInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/bugsnag/BugsnagReactNative;->notify()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getUsedMemory()" [color="#a991d4" fontcolor=white]
+		"Lcom/bugsnag/android/NativeInterface;->notify()" [color="#a991d4" fontcolor=white]
+		"Lcom/bugsnag/android/NativeInterface;->getDeviceData()" [color="#a991d4" fontcolor=white]
+		"Lcom/bugsnag/android/NativeInterface;->getAppData()" [color="#a991d4" fontcolor=white]
+		"Lcom/bugsnag/BugsnagReactNative;->clearUser()" [color="#a991d4" fontcolor=white]
+		"Lcom/bugsnag/android/Z;->uncaughtException()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/AirMapOverlayManager;->setImage()" [color="#a991d4" fontcolor=white]
+		"Lcom/mixpanel/android/mpmetrics/O;->onActivityStarted()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/g;->onSizeChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/l/d/t;->get()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+		"Lcom/kevinejohn/RNMixpanel/RNMixpanelModule;->reset()" [color="#a991d4" fontcolor=white]
+		"Lcom/kevinejohn/RNMixpanel/RNMixpanelModule;->optOutTracking()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/memory/d;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->presentLocalNotification()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMaxMemory()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" [color="#a991d4" fontcolor=white]
+		"Lcom/horcrux/svg/m;->draw()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setIcon()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setImage()" [color="#a991d4" fontcolor=white]
+		"Lcom/kevinejohn/RNMixpanel/RNMixpanelModule;->sharedInstanceWithToken()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/AirMapManager;->setKmlSrc()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/g;->setControllerListener()" [color="#a991d4" fontcolor=white]
+	}
+}

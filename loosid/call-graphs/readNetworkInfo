@@ -1,0 +1,249 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getAllNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getAllNetworks()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Ld/i/a/b/d;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/crashlytics/b;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/d;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/d;->c()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Landroidx/work/impl/b/b/g;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/Xd;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/s$b;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+			"Landroidx/work/impl/b/b/g$b;->onLost()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onUnavailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore;->updateServerUninstallToken()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+			"Le/a/a/a/h;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onLosing()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/cct/d;->a()" [color="#a991d4" fontcolor=white]
+			"Landroidx/work/impl/b/b/g$b;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/be;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/bugsnag/android/I;->c()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onAvailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/d;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/c/a/c/f;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/ce;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onLost()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/b/i;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/f/f;->onLost()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/measurement/internal/ac;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/uc;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/Yb;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/oc;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/Kd;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/ub;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/_b;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$e;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/ae;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/gc;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/ga;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/i;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$b;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/ub$c;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/bc;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/v;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/Tb;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/ba;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/Sb;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/fe;->run()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/p;->run()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/i;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_handler {
+			label=Handler
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/mixpanel/android/mpmetrics/a$i$a;->handleMessage()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/bugsnag/android/I$a;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/v$a;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Ld/c/a/c/e;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/vb;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Landroidx/work/impl/b/b/g$a;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/ga$a;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/d$a;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/ba$a;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/f/g$a;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/appsflyer/FirebaseMessagingServiceListener;->onNewToken()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Ld/i/a/b/d;->a()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/mixpanel" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/bugsnag/android/I$a;->onReceive()" -> "Lcom/bugsnag" [constraint=true]
+	"Lcom/bugsnag" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	Lcom -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	Lcom -> "Lcom/appsflyer" [constraint=true]
+	Lcom -> "Landroid/net/ConnectivityManager;->getAllNetworks()" [constraint=true]
+	"Lcom/google/firebase/iid/v$a;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/ac;->run()" -> "Lcom/google" [constraint=true]
+	"Ld/c/a/c/e;->onReceive()" -> "Ld/c" [constraint=true]
+	"Ld/c" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/uc;->run()" -> "Lcom/google" [constraint=true]
+	"Ld/g" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Lb/g" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lb/g" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/Yb;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/crashlytics/b;->a()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/vb;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/d;->a()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/oc;->run()" -> Lcom [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/Kd;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/d;->c()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/ub;->run()" -> "Lcom/google" [constraint=true]
+	"Landroidx/work/impl/b/b/g;->a()" -> "Landroidx/work" [constraint=true]
+	"Landroidx/work" -> "Lb/g" [constraint=true]
+	"Landroidx/work" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Landroidx/work/impl/b/b/g$a;->onReceive()" -> "Landroidx/work" [constraint=true]
+	"Lcom/google/firebase/messaging/ga$a;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/Xd;->a()" -> "Lcom/google" [constraint=true]
+	"Lcom/onesignal/s$b;->a()" -> Lcom [constraint=true]
+	"Lcom/appsflyer" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/appsflyer" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lcom/appsflyer" -> "Landroid/net/ConnectivityManager;->getAllNetworks()" [constraint=true]
+	"Lcom/appsflyer" -> Lcom [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/_b;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$e;->run()" -> Lcom [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onCapabilitiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" -> Lcom [constraint=true]
+	"Landroidx/work/impl/b/b/g$b;->onLost()" -> "Landroidx/work" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" -> Lcom [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onUnavailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/ae;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/gc;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/messaging/ga;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/d$a;->onReceive()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore;->updateServerUninstallToken()" -> "Lcom/appsflyer" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onLinkPropertiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/mixpanel/android/mpmetrics/a$i$a;->handleMessage()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/i;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/appsflyer/FirebaseMessagingServiceListener;->onNewToken()" -> "Lcom/appsflyer" [constraint=true]
+	"Le/a/a/a/h;->a()" -> "Ld/g" [constraint=true]
+	"Lcom/google/firebase/messaging/ba$a;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onLosing()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/datatransport/cct/d;->a()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$b;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/ub$c;->run()" -> Lcom [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/bc;->run()" -> "Lcom/google" [constraint=true]
+	"Landroidx/work/impl/b/b/g$b;->onCapabilitiesChanged()" -> "Landroidx/work" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/be;->a()" -> "Lcom/google" [constraint=true]
+	"Lcom/bugsnag/android/I;->c()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/firebase/iid/v;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onAvailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/Tb;->run()" -> "Lcom/google" [constraint=true]
+	"Ld/c/a/c/f;->b()" -> "Ld/c" [constraint=true]
+	"Lcom/google/firebase/messaging/ba;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" -> Lcom [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/ce;->a()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onLost()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/Sb;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/fe;->run()" -> "Lcom/google" [constraint=true]
+	"Ld/h" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Ld/h" -> "Landroid/net/ConnectivityManager;->getAllNetworkInfo()" [constraint=true]
+	"Ld/h" -> "Landroid/net/ConnectivityManager;->getAllNetworks()" [constraint=true]
+	"Ld/h/a/b/i;->a()" -> "Ld/h" [constraint=true]
+	"Ld/h/a/p;->run()" -> "Ld/h" [constraint=true]
+	"Ld/h/a/f/g$a;->onReceive()" -> "Ld/h" [constraint=true]
+	"Ld/h/a/i;->run()" -> "Ld/h" [constraint=true]
+	"Ld/h/a/f/f;->onLost()" -> "Ld/h" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Ld/i/a/b/d;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/firebase/crashlytics/b;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/d;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/d;->c()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Landroidx/work/impl/b/b/g;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/Xd;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/s$b;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+		"Landroidx/work/impl/b/b/g$b;->onLost()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onUnavailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/appsflyer/AppsFlyerLibCore;->updateServerUninstallToken()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+		"Le/a/a/a/h;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onLosing()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/datatransport/cct/d;->a()" [color="#a991d4" fontcolor=white]
+		"Landroidx/work/impl/b/b/g$b;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/be;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/bugsnag/android/I;->c()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onAvailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/d;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/c/a/c/f;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/ce;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onLost()" [color="#a991d4" fontcolor=white]
+		"Ld/h/a/b/i;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/h/a/f/f;->onLost()" [color="#a991d4" fontcolor=white]
+	}
+}

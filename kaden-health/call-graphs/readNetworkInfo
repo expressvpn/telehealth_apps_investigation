@@ -1,0 +1,217 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getAllNetworks()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/sentry/android/core/AndroidTransportGate;->isConnected()" [color="#a991d4" fontcolor=white]
+			"Lio/sentry/android/core/DefaultAndroidEventProcessor;->process()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitor;->startMonitoring()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitor;->startMonitoring()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzjl;->zza()" [color="#a991d4" fontcolor=white]
+			"Lcom/crashlytics/android/core/CrashlyticsCore;->onPreExecute()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitor;->getCurrentDefaultNetId()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzjf;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/AppMeasurementDynamiteService;->getDeepLink()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->register()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitor;->createAndSetAutoDetectForTest()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzji;->zza()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+			"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onUnavailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/RNFetchBlob/RNFetchBlob;->fetchBlobForm()" [color="#a991d4" fontcolor=white]
+			"Lcom/RNFetchBlob/RNFetchBlob;->fetchBlob()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLost()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLosing()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/measurement/internal/zzfm;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzjj;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzep;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgb;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfu;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfn;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfr;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zziu;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfo;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/zzax;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/crashlytics/android/core/CrashlyticsController$SendReportRunnable;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfx;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfp;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfw;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfy;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgd;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/measurement/internal/zzfq;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfs;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzft;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfv;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfz;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzga;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/measurement/internal/zzem;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitorAutoDetect;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/zzba;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver$ConnectivityBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lio/sentry" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lio/sentry/android/core/AndroidTransportGate;->isConnected()" -> "Lio/sentry" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfm;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	Lorg -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	Lorg -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	Lorg -> "Landroid/net/ConnectivityManager;->getAllNetworks()" [constraint=true]
+	"Lio/sentry/android/core/DefaultAndroidEventProcessor;->process()" -> "Lio/sentry" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfq;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzem;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lorg/webrtc/NetworkMonitor;->startMonitoring()" -> Lorg [constraint=true]
+	"Lcom/bumptech" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfs;->call()" -> "Lcom/google" [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect;->onReceive()" -> Lorg [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroidx/core" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Landroidx/core" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzjl;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzjj;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzep;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgb;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/crashlytics/android/core/CrashlyticsCore;->onPreExecute()" -> "Lcom/crashlytics" [constraint=true]
+	"Lcom/crashlytics/android/core/CrashlyticsCore;->onPreExecute()" -> "Lio/fabric" [constraint=true]
+	"Lio/fabric" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lorg/webrtc/NetworkMonitor;->getCurrentDefaultNetId()" -> Lorg [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzjf;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfu;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/iid/zzba;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfn;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/AppMeasurementDynamiteService;->getDeepLink()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfr;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zziu;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzft;->call()" -> "Lcom/google" [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onAvailable()" -> Lorg [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfv;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfo;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/iid/zzax;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/crashlytics/android/core/CrashlyticsController$SendReportRunnable;->run()" -> "Lio/fabric" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfx;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfz;->call()" -> "Lcom/google" [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onCapabilitiesChanged()" -> Lorg [constraint=true]
+	"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfp;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfw;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->register()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onLinkPropertiesChanged()" -> Lorg [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfy;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzga;->call()" -> "Lcom/google" [constraint=true]
+	"Lorg/webrtc/NetworkMonitor;->createAndSetAutoDetectForTest()" -> Lorg [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgd;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzji;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver$ConnectivityBroadcastReceiver;->onReceive()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onUnavailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	Lcom -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	Lcom -> "Landroid/net/ConnectivityManager;->getAllNetworks()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLinkPropertiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onAvailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/RNFetchBlob/RNFetchBlob;->fetchBlobForm()" -> Lcom [constraint=true]
+	"Lcom/RNFetchBlob/RNFetchBlob;->fetchBlob()" -> Lcom [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLost()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onCapabilitiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLosing()" -> "Lcom/reactnativecommunity" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lio/sentry/android/core/AndroidTransportGate;->isConnected()" [color="#a991d4" fontcolor=white]
+		"Lio/sentry/android/core/DefaultAndroidEventProcessor;->process()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitor;->startMonitoring()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitor;->startMonitoring()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/zzjl;->zza()" [color="#a991d4" fontcolor=white]
+		"Lcom/crashlytics/android/core/CrashlyticsCore;->onPreExecute()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitor;->getCurrentDefaultNetId()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/zzjf;->run()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/AppMeasurementDynamiteService;->getDeepLink()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->register()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitor;->createAndSetAutoDetectForTest()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/zzji;->zza()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+		"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onUnavailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/RNFetchBlob/RNFetchBlob;->fetchBlobForm()" [color="#a991d4" fontcolor=white]
+		"Lcom/RNFetchBlob/RNFetchBlob;->fetchBlob()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLost()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLosing()" [color="#a991d4" fontcolor=white]
+	}
+}

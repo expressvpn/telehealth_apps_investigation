@@ -1,0 +1,79 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkCountryIso()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/microsoft/appcenter/crashes/Crashes;->applyEnabledState()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/crashes/WrapperSdkExceptionManager;->buildHandledErrorReport()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/channel/DefaultChannel;->enqueue()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/crashes/utils/ErrorLogHelper;->createErrorLog()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/crashes/UncaughtExceptionHandler;->uncaughtException()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/appcenter/crashes/WrapperSdkExceptionManager;->saveWrapperException()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getCarrier()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/microsoft/appcenter/crashes/Crashes$1;->run()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/microsoft" -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	"Lcom/microsoft" -> "Landroid/telephony/TelephonyManager;->getNetworkCountryIso()" [constraint=true]
+	"Lcom/learnium" -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	"Lcom/microsoft/appcenter/crashes/utils/ErrorLogHelper;->createErrorLog()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/microsoft/appcenter/crashes/Crashes;->applyEnabledState()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/microsoft/appcenter/crashes/WrapperSdkExceptionManager;->buildHandledErrorReport()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/microsoft/appcenter/channel/DefaultChannel;->enqueue()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/microsoft/appcenter/crashes/UncaughtExceptionHandler;->uncaughtException()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/microsoft/appcenter/crashes/Crashes$1;->run()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/microsoft/appcenter/crashes/WrapperSdkExceptionManager;->saveWrapperException()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getCarrier()" -> "Lcom/learnium" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/microsoft/appcenter/crashes/Crashes;->applyEnabledState()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/microsoft/appcenter/crashes/WrapperSdkExceptionManager;->buildHandledErrorReport()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/microsoft/appcenter/channel/DefaultChannel;->enqueue()" [color="#a991d4" fontcolor=white]
+		"Lcom/microsoft/appcenter/crashes/utils/ErrorLogHelper;->createErrorLog()" [color="#a991d4" fontcolor=white]
+		"Lcom/microsoft/appcenter/crashes/UncaughtExceptionHandler;->uncaughtException()" [color="#a991d4" fontcolor=white]
+		"Lcom/microsoft/appcenter/crashes/WrapperSdkExceptionManager;->saveWrapperException()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getCarrier()" [color="#a991d4" fontcolor=white]
+	}
+}

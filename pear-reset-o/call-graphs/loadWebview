@@ -1,0 +1,40 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [color="#593196" fontcolor=white]
+	"Landroid/webkit/WebView;->loadUrl()" [color="#593196" fontcolor=white]
+	"Landroid/webkit/WebView;->loadUrl()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setJavaScriptEnabled()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/webview/RNCWebViewManager;->receiveCommand()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setSource()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setJavaScriptEnabled()" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/reactnativecommunity/webview/RNCWebViewManager;->receiveCommand()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/webview/RNCWebViewManager;->receiveCommand()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setSource()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setJavaScriptEnabled()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/webview/RNCWebViewManager;->receiveCommand()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/webview/RNCWebViewManager;->setSource()" [color="#a991d4" fontcolor=white]
+	}
+}

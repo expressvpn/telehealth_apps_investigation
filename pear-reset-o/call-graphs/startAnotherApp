@@ -1,0 +1,79 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->scheduleLocalNotification()" [color="#a991d4" fontcolor=white]
+			"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->invokeApp()" [color="#a991d4" fontcolor=white]
+			"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" [color="#a991d4" fontcolor=white]
+			"Lme/leolin/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationHelper$1;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->setApplicationIconBadgeNumber()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationActions;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/messaging/FirebaseMessagingService;->handleIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationListenerService;->onMessageReceived()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google/firebase/messaging/FirebaseMessagingService;->handleIntent()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/dieam" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/dieam" -> "Lme/leolin" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->scheduleLocalNotification()" -> "Lcom/dieam" [constraint=true]
+	"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount()" -> "Lme/leolin" [constraint=true]
+	"Lme/leolin" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationListenerService;->onMessageReceived()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->invokeApp()" -> "Lcom/dieam" [constraint=true]
+	"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" -> "Lme/leolin" [constraint=true]
+	"Lme/leolin/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" -> "Lme/leolin" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationHelper$1;->call()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationActions;->onReceive()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->setApplicationIconBadgeNumber()" -> "Lcom/dieam" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->scheduleLocalNotification()" [color="#a991d4" fontcolor=white]
+		"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->invokeApp()" [color="#a991d4" fontcolor=white]
+		"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" [color="#a991d4" fontcolor=white]
+		"Lme/leolin/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationHelper$1;->call()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->setApplicationIconBadgeNumber()" [color="#a991d4" fontcolor=white]
+	}
+}

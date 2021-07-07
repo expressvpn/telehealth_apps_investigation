@@ -1,0 +1,244 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLost()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onUnavailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/RedeemCoinsFragment$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/substancetest/breathalyzer/-$$Lambda$AttachMouthPieceFragment$wiymeXCSX8eJ1CRI-4k7HO_EaSo;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/substancetest/breathalyzer/BreathalyzerRecordingFragment;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/cct/zzc;->decorate()" [color="#a991d4" fontcolor=white]
+			"Landroidx/work/impl/constraints/trackers/NetworkStateTracker$NetworkStateCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->register()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$10;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzkh;->zza()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+			"Landroidx/work/impl/constraints/trackers/NetworkStateTracker$NetworkStateCallback;->onLost()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzkb;->zza()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/crashlytics/CrashlyticsRegistrar$$Lambda$1;->create()" [color="#a991d4" fontcolor=white]
+			"Landroidx/work/impl/constraints/trackers/NetworkStateTracker;->getInitialState()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLosing()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$9;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzki;->zza()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/substancetest/breathalyzer/ConnectBreathalyzerFragment;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/jobs/substancetestupload/callbacks/UpdateSubstanceTestVideoOnServerCallback;->onResponse()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$SendReportRunnable;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader$$Lambda$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzhe;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgn;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgk;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgp;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfg;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgh;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzgj;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzkf;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzjq;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/zzbb;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzge;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/zzad;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/jobs/substancetestupload/SubstanceTestUploadService$2;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_application {
+			label=Application
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dynamicarehealth/rewards/utils/App;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dynamicarehealth/rewards/activities/substancetest/BreathalyzerTestActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver$ConnectivityBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$2;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfd;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$1;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/datadog/android/core/internal/net/info/BroadcastReceiverNetworkInfoProvider;->register()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$5;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$3;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/receivers/NetworkConnectionReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Landroidx/work/impl/constraints/trackers/NetworkStateTracker$NetworkStateBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$4;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/activities/mainscreen/MainScreenActivity$2;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$6;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/zzac;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/zzba;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/jobs/substancetestupload/SubstanceTestUploadService$1;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dynamicarehealth/rewards/jobs/substancetestupload/SubstanceTestUploadService;->onStartCommand()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/dynamicarehealth" -> LBACtrackAPI [constraint=true]
+	"Lcom/dynamicarehealth" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/dynamicarehealth" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLost()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroidx/core" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver$ConnectivityBroadcastReceiver;->onReceive()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$SendReportRunnable;->run()" -> "Lcom/google" [constraint=true]
+	"Landroidx/core" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$2;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader$$Lambda$1;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onUnavailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/RedeemCoinsFragment$1;->onClick()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfd;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzhe;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/substancetest/breathalyzer/-$$Lambda$AttachMouthPieceFragment$wiymeXCSX8eJ1CRI-4k7HO_EaSo;->onClick()" -> "Lcom/dynamicarehealth" [constraint=true]
+	LBACtrackAPI -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgn;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/substancetest/breathalyzer/BreathalyzerRecordingFragment;->onCreate()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/google/android/datatransport/cct/zzc;->decorate()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgk;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgp;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$1;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Landroidx/work" -> "Landroidx/core" [constraint=true]
+	"Landroidx/work" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/datadog/android/core/internal/net/info/BroadcastReceiverNetworkInfoProvider;->register()" -> "Lcom/datadog" [constraint=true]
+	"Lcom/datadog" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$5;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/activities/substancetest/BreathalyzerTestActivity;->onCreate()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$3;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfg;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgh;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/utils/App;->onCreate()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzgj;->run()" -> "Lcom/google" [constraint=true]
+	"Landroidx/work/impl/constraints/trackers/NetworkStateTracker$NetworkStateCallback;->onCapabilitiesChanged()" -> "Landroidx/work" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzkf;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment;->onCreateView()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onCapabilitiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment;->onResume()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/receivers/NetworkConnectionReceiver;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Landroidx/work/impl/constraints/trackers/NetworkStateTracker$NetworkStateBroadcastReceiver;->onReceive()" -> "Landroidx/work" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$4;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->register()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/activities/mainscreen/MainScreenActivity$2;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLinkPropertiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$10;->onClick()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzkh;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Landroidx/work/impl/constraints/trackers/NetworkStateTracker;->getInitialState()" -> "Landroidx/work" [constraint=true]
+	"Landroidx/work/impl/constraints/trackers/NetworkStateTracker$NetworkStateCallback;->onLost()" -> "Landroidx/work" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzkb;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzjq;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/crashlytics/CrashlyticsRegistrar$$Lambda$1;->create()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/iid/zzbb;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$6;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLosing()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzge;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onAvailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/google/firebase/messaging/zzac;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$9;->onClick()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzki;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/firebase/iid/zzba;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/fragments/substancetest/breathalyzer/ConnectBreathalyzerFragment;->onCreate()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/google/firebase/messaging/zzad;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/jobs/substancetestupload/SubstanceTestUploadService;->onStartCommand()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/jobs/substancetestupload/callbacks/UpdateSubstanceTestVideoOnServerCallback;->onResponse()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/jobs/substancetestupload/SubstanceTestUploadService$1;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/jobs/substancetestupload/SubstanceTestUploadService$2;->run()" -> "Lcom/dynamicarehealth" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLost()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onUnavailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/fragments/RedeemCoinsFragment$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/fragments/substancetest/breathalyzer/-$$Lambda$AttachMouthPieceFragment$wiymeXCSX8eJ1CRI-4k7HO_EaSo;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/fragments/substancetest/breathalyzer/BreathalyzerRecordingFragment;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/datatransport/cct/zzc;->decorate()" [color="#a991d4" fontcolor=white]
+		"Landroidx/work/impl/constraints/trackers/NetworkStateTracker$NetworkStateCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->register()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$10;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/zzkh;->zza()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+		"Landroidx/work/impl/constraints/trackers/NetworkStateTracker$NetworkStateCallback;->onLost()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/zzkb;->zza()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/firebase/crashlytics/CrashlyticsRegistrar$$Lambda$1;->create()" [color="#a991d4" fontcolor=white]
+		"Landroidx/work/impl/constraints/trackers/NetworkStateTracker;->getInitialState()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onLosing()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetworkCallbackConnectivityReceiver$ConnectivityNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/fragments/UploadVideoFragment$9;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/zzki;->zza()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/fragments/substancetest/breathalyzer/ConnectBreathalyzerFragment;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/jobs/substancetestupload/callbacks/UpdateSubstanceTestVideoOnServerCallback;->onResponse()" [color="#a991d4" fontcolor=white]
+	}
+}

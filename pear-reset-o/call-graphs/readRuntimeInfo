@@ -1,0 +1,134 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/lang/Runtime;->availableProcessors()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->freeMemory()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->maxMemory()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->totalMemory()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lbolts/AndroidExecutors;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getUsedMemory()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->presentLocalNotification()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageView;->setControllerListener()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/drawee/backends/pipeline/PipelineDraweeControllerBuilderSupplier;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/cache/DefaultEncodedMemoryCacheParamsSupplier;->get()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMaxMemory()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1$1;->onReactContextInitialized()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+			"Lcom/horcrux/svg/ImageView;->draw()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageView;->onSizeChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/rnfs/Uploader$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/modules/image/ImageLoaderModule$4;->doInBackgroundGuarded()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationPublisher;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationBootEventReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lbolts/AndroidExecutors;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/lang/Runtime;->freeMemory()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/lang/Runtime;->totalMemory()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	Lcom -> "Ljava/lang/Runtime;->freeMemory()" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getUsedMemory()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/rnfs/Uploader$1;->run()" -> Lcom [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->presentLocalNotification()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/dieam" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageView;->setControllerListener()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1;->run()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/drawee/backends/pipeline/PipelineDraweeControllerBuilderSupplier;-><init>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/cache/DefaultEncodedMemoryCacheParamsSupplier;->get()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationPublisher;->onReceive()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMaxMemory()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1$1;->onReactContextInitialized()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotificationBootEventReceiver;->onReceive()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule$4;->doInBackgroundGuarded()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/horcrux/svg/ImageView;->draw()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageView;->onSizeChanged()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" -> "Lcom/facebook" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lbolts/AndroidExecutors;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getUsedMemory()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->presentLocalNotification()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageView;->setControllerListener()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/drawee/backends/pipeline/PipelineDraweeControllerBuilderSupplier;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/cache/DefaultEncodedMemoryCacheParamsSupplier;->get()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMaxMemory()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNReceivedMessageHandler$1$1;->onReactContextInitialized()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+		"Lcom/horcrux/svg/ImageView;->draw()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageView;->onSizeChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,89 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/wifi/WifiManager;->getConnectionInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/IntegrationActivity;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/sip/server/CmmSIPLineManager;->suspendToResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/ptapp/PTUI;->onWebLogin()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getIpAddress()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/IntegrationActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/ConfActivity$47;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_handler {
+			label=Handler
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lus/zoom/androidlib/util/NetworkStatusReceiver$1;->handleMessage()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lus/zoom/androidlib/util/NetworkStatusReceiver;->notifyStatusChanged()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/zipow" -> "Landroid/net/wifi/WifiManager;->getConnectionInfo()" [constraint=true]
+	"Lcom/zipow" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/IntegrationActivity;->onNewIntent()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/learnium" -> "Landroid/net/wifi/WifiManager;->getConnectionInfo()" [constraint=true]
+	"Lcom/zipow/videobox/sip/server/CmmSIPLineManager;->suspendToResume()" -> "Lus/zoom" [constraint=true]
+	"Lus/zoom" -> "Landroid/net/wifi/WifiManager;->getConnectionInfo()" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/zipow/videobox/ptapp/PTUI;->onWebLogin()" -> "Lcom/zipow" [constraint=true]
+	"Lus/zoom/androidlib/util/NetworkStatusReceiver$1;->handleMessage()" -> "Lus/zoom" [constraint=true]
+	"Lus/zoom/androidlib/util/NetworkStatusReceiver;->notifyStatusChanged()" -> "Lus/zoom" [constraint=true]
+	"Lcom/zipow/videobox/ConfActivity$47;->run()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getIpAddress()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/zipow/videobox/IntegrationActivity;->onResume()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onCreate()" -> "Lcom/zipow" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/zipow/videobox/IntegrationActivity;->onNewIntent()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/sip/server/CmmSIPLineManager;->suspendToResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/ptapp/PTUI;->onWebLogin()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getIpAddress()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/IntegrationActivity;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/SipIncomePopActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+	}
+}

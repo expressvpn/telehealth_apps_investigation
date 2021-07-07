@@ -1,0 +1,59 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljavax/crypto/Cipher;->getInstance()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->getInstance()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->doFinal()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->doFinal()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->getIV()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Ld/g/a/c/j/d/c;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/f/c/g;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/f/c/f;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/f/c/f;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/f/c/f;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/f/c/f;->a()" [color="#a991d4" fontcolor=white]
+			"Ld/h/a/f/c/f;->b()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Ld/g" -> "Ljavax/crypto/Cipher;->getInstance()" [constraint=true]
+	"Ld/g/a/c/j/d/c;->a()" -> "Ld/g" [constraint=true]
+	"Ld/g/a/c/j/d/c;->a()" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Ld/h/a/f/c/g;->a()" -> "Ljavax/crypto/Cipher;->getInstance()" [constraint=true]
+	"Ld/h/a/f/c/f;->a()" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Ld/h/a/f/c/f;->a()" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	"Ld/h/a/f/c/f;->b()" -> "Ljavax/crypto/Cipher;->getIV()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Ld/g/a/c/j/d/c;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/h/a/f/c/g;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/h/a/f/c/f;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/h/a/f/c/f;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/h/a/f/c/f;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/h/a/f/c/f;->a()" [color="#a991d4" fontcolor=white]
+		"Ld/h/a/f/c/f;->b()" [color="#a991d4" fontcolor=white]
+	}
+}

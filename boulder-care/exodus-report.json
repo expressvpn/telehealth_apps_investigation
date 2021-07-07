@@ -1,0 +1,71 @@
+{
+  "application": {
+    "handle": "bouldercare.patient",
+    "version_name": "1.141.0",
+    "version_code": "11",
+    "uaid": "1EFCC8DCFE98DCC2C2F91DDD65F297758CE553D8",
+    "name": "Boulder",
+    "permissions": [
+      "android.permission.CAMERA",
+      "com.huawei.android.launcher.permission.READ_SETTINGS",
+      "com.htc.launcher.permission.UPDATE_SHORTCUT",
+      "android.permission.WAKE_LOCK",
+      "android.permission.BLUETOOTH",
+      "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "com.anddoes.launcher.permission.UPDATE_COUNT",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.STORAGE",
+      "android.permission.READ_PHONE_STATE",
+      "me.everything.badger.permission.BADGE_COUNT_WRITE",
+      "me.everything.badger.permission.BADGE_COUNT_READ",
+      "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "com.sec.android.provider.badge.permission.WRITE",
+      "com.oppo.launcher.permission.READ_SETTINGS",
+      "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+      "com.sonyericsson.home.permission.BROADCAST_BADGE",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.VIBRATE",
+      "com.oppo.launcher.permission.WRITE_SETTINGS",
+      "android.permission.BROADCAST_STICKY",
+      "com.huawei.android.launcher.permission.CHANGE_BADGE",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "com.sec.android.provider.badge.permission.READ",
+      "android.permission.INTERNET",
+      "com.htc.launcher.permission.READ_SETTINGS",
+      "com.google.android.c2dm.permission.RECEIVE",
+      "android.permission.READ_INTERNAL_STORAGE",
+      "android.permission.READ_APP_BADGE",
+      "com.majeur.launcher.permission.UPDATE_BADGE"
+    ],
+    "libraries": [
+      "android.test.runner"
+    ]
+  },
+  "apk": {
+    "path": "../AndroCFG/apk/boulder-care_1.141.0.apk",
+    "checksum": "9782b4c2ea1e1fc87c9939ebd40c9d70b6f7bc773a47d226fc16e71d41e83fde"
+  },
+  "trackers": [
+    {
+      "name": "Google Firebase Analytics",
+      "id": 49
+    },
+    {
+      "name": "Amplitude",
+      "id": 125
+    },
+    {
+      "name": "Bugsnag",
+      "id": 207
+    },
+    {
+      "name": "Google AdMob",
+      "id": 312
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getAllNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzex;->run()" [color="#a991d4" fontcolor=white]
+			"Landroidx/core/net/ConnectivityManagerCompat;->isActiveNetworkMetered()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/FocusTimeController$FocusTimeProcessorBase;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/crashlytics/android/core/CrashlyticsCore;->a_()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzub;->zzb()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfc;->zza()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/com/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfd;->zza()" [color="#a991d4" fontcolor=white]
+			"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/InAppManager$2;->onFirstDownloaded()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/measurement/internal/zzck;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzeo;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcm;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzca;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzbz;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/zzay;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcj;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzbw;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OneSignalSyncServiceUtils$SyncRunnable;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OneSignal$7;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzaz;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcf;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzbx;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzch;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfb;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcg;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzafp;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$SendSessionRunnable;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzby;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$11;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/MarketingHandler$21;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/MarketingHandler$5;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/measurement/internal/zzci;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcd;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcl;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzagd;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzce;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcb;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcc;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_handler {
+			label=Handler
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->handleMessage()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->getMap()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->getBool()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->getList()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->upload()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->checkTimestampForUpload()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->getString()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->sendInitMessage()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/BaseHandler;->getInt()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/sobergrid/view/activity/monkeysurvey/MonkeySurveyOpener;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zopim/android/sdk/data/ConnectionPath$ConnectivityReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment$ConnectivityMonitor;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/iid/zzaz;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/com/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzay;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/sendbird/android/SendBird$NetworkReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google/android/gms/measurement/internal/zzci;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzck;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/surveymonkey" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzeo;->run()" -> "Lcom/google" [constraint=true]
+	Lcom -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcd;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcm;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/crashlytics" -> "Lio/fabric" [constraint=true]
+	"Lio/fabric" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzex;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/onesignal/FocusTimeController$FocusTimeProcessorBase;->a()" -> Lcom [constraint=true]
+	"Landroidx/core/net/ConnectivityManagerCompat;->isActiveNetworkMetered()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzca;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzbz;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/zopim/android/sdk/data/ConnectionPath$ConnectivityReceiver;->onReceive()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/firebase/iid/zzay;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment$ConnectivityMonitor;->onReceive()" -> "Lcom/surveymonkey" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcj;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcl;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/squareup/picasso/Dispatcher$DispatcherHandler;->handleMessage()" -> "Lcom/squareup" [constraint=true]
+	"Lcom/squareup" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/crashlytics/android/core/CrashlyticsCore;->a_()" -> "Lcom/crashlytics" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzagd;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzce;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzub;->zzb()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcb;->call()" -> "Lcom/google" [constraint=true]
+	"Lio/intercom" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzbw;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/sobergrid/view/activity/monkeysurvey/MonkeySurveyOpener;->onCreate()" -> "Lcom/surveymonkey" [constraint=true]
+	"Lcom/google/firebase/iid/zzaz;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/squareup/picasso/Dispatcher$NetworkBroadcastReceiver;->onReceive()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/onesignal/OneSignalSyncServiceUtils$SyncRunnable;->run()" -> Lcom [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfc;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/onesignal/OneSignal$7;->run()" -> Lcom [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzaz;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcf;->run()" -> "Lcom/google" [constraint=true]
+	"Lio/intercom/com/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" -> "Lio/intercom" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzay;->onReceive()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzbx;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzch;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcc;->call()" -> "Lcom/google" [constraint=true]
+	"Lio/intercom/com/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" -> "Lio/intercom" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfd;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfb;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/sendbird/android/SendBird$NetworkReceiver;->onReceive()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcg;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzafp;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$SendSessionRunnable;->run()" -> "Lio/fabric" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzby;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/localytics" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lcom/localytics" -> "Landroid/net/ConnectivityManager;->getAllNetworkInfo()" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$11;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getMap()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getBool()" -> "Lcom/localytics" [constraint=true]
+	"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getList()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler$3;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->upload()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->checkTimestampForUpload()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getString()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->sendInitMessage()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$3;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$4;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/BaseHandler;->getInt()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$5;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/InAppManager$2;->onFirstDownloaded()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/MarketingHandler$21;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/MarketingHandler$5;->run()" -> "Lcom/localytics" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/zzex;->run()" [color="#a991d4" fontcolor=white]
+		"Landroidx/core/net/ConnectivityManagerCompat;->isActiveNetworkMetered()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/FocusTimeController$FocusTimeProcessorBase;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/crashlytics/android/core/CrashlyticsCore;->a_()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzub;->zzb()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/zzfc;->zza()" [color="#a991d4" fontcolor=white]
+		"Lio/intercom/com/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/measurement/internal/zzfd;->zza()" [color="#a991d4" fontcolor=white]
+		"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" [color="#a991d4" fontcolor=white]
+		"Lcom/localytics/android/InAppManager$2;->onFirstDownloaded()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,36 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/system/Os;->readlink()" [color="#593196" fontcolor=white]
+	"Landroid/system/Os;->stat()" [color="#593196" fontcolor=white]
+	"Landroid/system/OsConstants;->S_ISREG()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromFontInfo()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromFontInfo()" -> "Landroidx/core" [constraint=true]
+	"Landroidx/core" -> "Landroid/system/Os;->readlink()" [constraint=true]
+	"Landroidx/core" -> "Landroid/system/Os;->stat()" [constraint=true]
+	"Landroidx/core" -> "Landroid/system/OsConstants;->S_ISREG()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromFontInfo()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,222 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/location/Location;->getLatitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/Location;->getLongitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestSingleUpdate()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestLocationUpdates()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->getLastKnownLocation()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestSingleUpdate()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/lc;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/geektime/rnonesignalandroid/RNOneSignal;->onHostResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OSNotificationRestoreWorkManager$NotificationRestoreWorker;->n()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/l;->a()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/x$f;->c()" [color="#a991d4" fontcolor=white]
+			"Lcom/geektime/rnonesignalandroid/RNOneSignal;->promptLocation()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/c;->onConfigurationChanged()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/e;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/geektime/rnonesignalandroid/RNOneSignal;->provideUserConsent()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/Ea;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/v$b;->h()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/SyncJobService;->onStartJob()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/o;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/geektime/rnonesignalandroid/RNOneSignal;->setAppId()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/FocusDelaySyncJobService;->onStartJob()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/a;->a()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/t;->watchDeviceHeading()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/d;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+			"Lf/b/a/e/b/f;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/f;->a()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/b/b;->onHostResume()" [color="#a991d4" fontcolor=white]
+			"Lf/b/a/e/b/c;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/j;->a()" [color="#a991d4" fontcolor=white]
+			"Le/a/f/t;->onHostResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/C;->a()" [color="#a991d4" fontcolor=white]
+			"Lf/b/a/e/b/f;->a()" [color="#a991d4" fontcolor=white]
+			"Lf/b/a/e/b/f;->a()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Ld/a/a/g;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/bc;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/Xc;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/ub$c;->run()" [color="#a991d4" fontcolor=white]
+			"Ld/a/a/h;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/NotificationOpenedReceiver;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedReceiver;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedActivityHMS;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedActivityHMS;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/PermissionsActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/NotificationDismissReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/FCMBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/FocusDelaySyncService;->onStartCommand()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/SyncService;->onStartCommand()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_intent_service {
+			label="Intent Service"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/nlopez/smartlocation/geocoding/providers/AndroidGeocodingProvider$AndroidGeocodingService;->onHandleIntent()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lio/nlopez/smartlocation/geocoding/providers/AndroidGeocodingProvider$AndroidGeocodingService;->onHandleIntent()" -> "Lio/nlopez" [constraint=true]
+	"Lio/nlopez" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lio/nlopez" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/onesignal/NotificationDismissReceiver;->onReceive()" -> Lcom [constraint=true]
+	Lcom -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	Lcom -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	Lcom -> "Lcom/appsflyer" [constraint=true]
+	"Ld/a" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Ld/a" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Ld/a" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Lcom/onesignal/lc;->a()" -> Lcom [constraint=true]
+	"Lcom/geektime/rnonesignalandroid/RNOneSignal;->onHostResume()" -> "Lcom/geektime" [constraint=true]
+	"Lcom/geektime" -> Lcom [constraint=true]
+	"Lcom/onesignal/FocusDelaySyncService;->onStartCommand()" -> Lcom [constraint=true]
+	"Lcom/onesignal/NotificationOpenedReceiver;->onCreate()" -> Lcom [constraint=true]
+	"Lcom/onesignal/OSNotificationRestoreWorkManager$NotificationRestoreWorker;->n()" -> Lcom [constraint=true]
+	"Le/a/f/l;->a()" -> "Le/a" [constraint=true]
+	"Le/a" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Le/a" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/onesignal/NotificationOpenedReceiver;->onNewIntent()" -> Lcom [constraint=true]
+	"Landroidx/appcompat/app/x$f;->c()" -> "Landroidx/appcompat" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Lcom/geektime/rnonesignalandroid/RNOneSignal;->promptLocation()" -> Lcom [constraint=true]
+	"Lcom/onesignal/c;->onConfigurationChanged()" -> Lcom [constraint=true]
+	"Le/a/f/e;->a()" -> "Le/a" [constraint=true]
+	"Lcom/geektime/rnonesignalandroid/RNOneSignal;->provideUserConsent()" -> Lcom [constraint=true]
+	"Ld/a/a/g;->run()" -> "Ld/a" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/NotificationOpenedActivityHMS;->onCreate()" -> Lcom [constraint=true]
+	"Lcom/onesignal/Ea;->a()" -> Lcom [constraint=true]
+	"Lcom/onesignal/v$b;->h()" -> Lcom [constraint=true]
+	"Lcom/onesignal/NotificationOpenedActivityHMS;->onNewIntent()" -> Lcom [constraint=true]
+	"Lcom/onesignal/SyncService;->onStartCommand()" -> Lcom [constraint=true]
+	"Lcom/onesignal/SyncJobService;->onStartJob()" -> Lcom [constraint=true]
+	"Le/a/f/o;->a()" -> "Le/a" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/bc;->run()" -> Lcom [constraint=true]
+	"Lcom/appsflyer" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Lcom/onesignal/PermissionsActivity;->onCreate()" -> Lcom [constraint=true]
+	"Lcom/geektime/rnonesignalandroid/RNOneSignal;->setAppId()" -> Lcom [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/FocusDelaySyncJobService;->onStartJob()" -> Lcom [constraint=true]
+	"Lf/b" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lf/b" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Le/a/f/a;->a()" -> "Le/a" [constraint=true]
+	"Le/a/f/t;->watchDeviceHeading()" -> "Le/a" [constraint=true]
+	"Lcom/onesignal/Xc;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/d;->onActivityResumed()" -> Lcom [constraint=true]
+	"Lcom/onesignal/ub$c;->run()" -> Lcom [constraint=true]
+	"Lf/b/a/e/b/f;->onLocationChanged()" -> "Lf/b" [constraint=true]
+	"Le/a/f/f;->a()" -> "Le/a" [constraint=true]
+	"Le/a/f/b/b;->onHostResume()" -> "Le/a" [constraint=true]
+	"Ld/a/a/h;->run()" -> "Ld/a" [constraint=true]
+	"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" -> Lcom [constraint=true]
+	"Lf/b/a/e/b/c;->onLocationChanged()" -> "Lf/b" [constraint=true]
+	"Le/a/f/j;->a()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Le/a/f/j;->a()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Le/a/f/t;->onHostResume()" -> "Le/a" [constraint=true]
+	"Lcom/airbnb/android/react/maps/C;->a()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/airbnb/android/react/maps/C;->a()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/onesignal/FCMBroadcastReceiver;->onReceive()" -> Lcom [constraint=true]
+	"Lf/b/a/e/b/f;->a()" -> "Landroid/location/LocationManager;->requestSingleUpdate()" [constraint=true]
+	"Lf/b/a/e/b/f;->a()" -> "Landroid/location/LocationManager;->requestLocationUpdates()" [constraint=true]
+	"Lf/b/a/e/b/f;->a()" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/onesignal/lc;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/geektime/rnonesignalandroid/RNOneSignal;->onHostResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/OSNotificationRestoreWorkManager$NotificationRestoreWorker;->n()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/l;->a()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/app/x$f;->c()" [color="#a991d4" fontcolor=white]
+		"Lcom/geektime/rnonesignalandroid/RNOneSignal;->promptLocation()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/c;->onConfigurationChanged()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/e;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/geektime/rnonesignalandroid/RNOneSignal;->provideUserConsent()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/Ea;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/v$b;->h()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/SyncJobService;->onStartJob()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/o;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/geektime/rnonesignalandroid/RNOneSignal;->setAppId()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/FocusDelaySyncJobService;->onStartJob()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/a;->a()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/t;->watchDeviceHeading()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/d;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+		"Lf/b/a/e/b/f;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/f;->a()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/b/b;->onHostResume()" [color="#a991d4" fontcolor=white]
+		"Lf/b/a/e/b/c;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/j;->a()" [color="#a991d4" fontcolor=white]
+		"Le/a/f/t;->onHostResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/C;->a()" [color="#a991d4" fontcolor=white]
+		"Lf/b/a/e/b/f;->a()" [color="#a991d4" fontcolor=white]
+		"Lf/b/a/e/b/f;->a()" [color="#a991d4" fontcolor=white]
+	}
+}

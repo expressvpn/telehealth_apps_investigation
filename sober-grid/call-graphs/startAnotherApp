@@ -1,0 +1,193 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/shortcutbadger/ShortcutBadger;->removeCount()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/ADMMessageHandler;->onMessage()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/Localytics;->onActivityResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/Localytics;->inboxListItemTapped()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OneSignal;->init()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OSPermissionChangedInternalObserver;->changed()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/GenerateNotification$1$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OneSignal;->init()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/GenerateNotification$1$2;->onCancel()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/LocalyticsActivityLifecycleCallbacks;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OneSignal;->provideUserConsent()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/RestoreKickoffJobService;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/MarketingWebViewManager$JavaScriptEventReceiver;->navigate()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/activities/App;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/GcmBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/messenger/MessengerUtils;->shareToMessenger()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/android/sdk/push/IntercomPushClient;->handlePush()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/HmsMessageServiceOneSignal;->onMessageReceived()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/OneSignal$22;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OneSignal$24;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationRestorer$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OneSignal$23;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_webview_client {
+			label="Webview Client"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/localytics/android/MarketingWebView$MarketingWebViewClient;->shouldOverrideUrlLoading()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/localytics/android/PushTrackingActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedActivityHMS;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedActivityHMS;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedActivity;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/main/MainActivity;->onNewIntent()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/intercom/android/sdk/push/IntercomPushBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/RestoreJobService;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/GcmIntentJobService;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationExtenderService;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/FirebaseMessagingService;->zzd()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_intent_service {
+			label="Intent Service"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/GcmIntentService;->onHandleIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationRestoreService;->onHandleIntent()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/onesignal/GcmIntentService;->onHandleIntent()" -> Lcom [constraint=true]
+	Lcom -> "Lcom/onesignal" [constraint=true]
+	Lcom -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/localytics" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/onesignal" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/localytics/android/PushTrackingActivity;->onCreate()" -> "Lcom/localytics" [constraint=true]
+	"Lio/intercom" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/onesignal/RestoreJobService;->a()" -> Lcom [constraint=true]
+	"Lcom/onesignal/shortcutbadger/ShortcutBadger;->removeCount()" -> "Lcom/onesignal" [constraint=true]
+	"Lcom/onesignal/ADMMessageHandler;->onMessage()" -> Lcom [constraint=true]
+	"Lcom/localytics/android/Localytics;->onActivityResume()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/onesignal/OneSignal;->init()" -> Lcom [constraint=true]
+	"Lcom/google" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/localytics/android/Localytics;->inboxListItemTapped()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/onesignal/OSPermissionChangedInternalObserver;->changed()" -> Lcom [constraint=true]
+	"Lcom/onesignal/NotificationExtenderService;->a()" -> Lcom [constraint=true]
+	"Lcom/onesignal/OneSignal$22;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/NotificationOpenedActivityHMS;->onCreate()" -> Lcom [constraint=true]
+	"Lcom/onesignal/GenerateNotification$1$1;->onClick()" -> Lcom [constraint=true]
+	"Lcom/onesignal/GenerateNotification$1$2;->onCancel()" -> Lcom [constraint=true]
+	"Lcom/localytics/android/LocalyticsActivityLifecycleCallbacks;->onActivityResumed()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/onesignal/NotificationOpenedActivity;->onCreate()" -> Lcom [constraint=true]
+	"Lcom/onesignal/NotificationOpenedActivityHMS;->onNewIntent()" -> Lcom [constraint=true]
+	"Lcom/onesignal/GcmIntentJobService;->a()" -> Lcom [constraint=true]
+	"Lio/intercom/android/sdk/push/IntercomPushBroadcastReceiver;->onReceive()" -> "Lio/intercom" [constraint=true]
+	"Lcom/onesignal/OneSignal;->provideUserConsent()" -> Lcom [constraint=true]
+	"Lcom/onesignal/NotificationOpenedActivity;->onNewIntent()" -> Lcom [constraint=true]
+	"Lcom/onesignal/RestoreKickoffJobService;->a()" -> Lcom [constraint=true]
+	"Lcom/onesignal/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" -> "Lcom/onesignal" [constraint=true]
+	"Lcom/localytics/android/MarketingWebViewManager$JavaScriptEventReceiver;->navigate()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/onesignal/OneSignal$24;->run()" -> Lcom [constraint=true]
+	"Lcom/sobergrid/view/activity/main/MainActivity;->onNewIntent()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/onesignal/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" -> "Lcom/onesignal" [constraint=true]
+	"Lcom/onesignal/NotificationRestoreService;->onHandleIntent()" -> Lcom [constraint=true]
+	"Lcom/sobergrid/activities/App;->onCreate()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid" -> Lcom [constraint=true]
+	"Lio/intercom/android/sdk/push/IntercomPushClient;->handlePush()" -> "Lio/intercom" [constraint=true]
+	"Lcom/onesignal/GcmBroadcastReceiver;->onReceive()" -> Lcom [constraint=true]
+	"Lcom/localytics/android/MarketingWebView$MarketingWebViewClient;->shouldOverrideUrlLoading()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/facebook/messenger/MessengerUtils;->shareToMessenger()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/onesignal/NotificationOpenedReceiver;->onReceive()" -> Lcom [constraint=true]
+	"Lcom/google/firebase/messaging/FirebaseMessagingService;->zzd()" -> "Lcom/google" [constraint=true]
+	"Lcom/onesignal/NotificationRestorer$1;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/OneSignal$23;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/HmsMessageServiceOneSignal;->onMessageReceived()" -> Lcom [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/onesignal/shortcutbadger/ShortcutBadger;->removeCount()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/ADMMessageHandler;->onMessage()" [color="#a991d4" fontcolor=white]
+		"Lcom/localytics/android/Localytics;->onActivityResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/localytics/android/Localytics;->inboxListItemTapped()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/OneSignal;->init()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/OSPermissionChangedInternalObserver;->changed()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/GenerateNotification$1$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/OneSignal;->init()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/GenerateNotification$1$2;->onCancel()" [color="#a991d4" fontcolor=white]
+		"Lcom/localytics/android/LocalyticsActivityLifecycleCallbacks;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/OneSignal;->provideUserConsent()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/RestoreKickoffJobService;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" [color="#a991d4" fontcolor=white]
+		"Lcom/localytics/android/MarketingWebViewManager$JavaScriptEventReceiver;->navigate()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/activities/App;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/GcmBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/messenger/MessengerUtils;->shareToMessenger()" [color="#a991d4" fontcolor=white]
+		"Lio/intercom/android/sdk/push/IntercomPushClient;->handlePush()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/HmsMessageServiceOneSignal;->onMessageReceived()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,51 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/net/NetworkInterface;->getNetworkInterfaces()" [color="#593196" fontcolor=white]
+	"Ljava/net/NetworkInterface;->getInetAddresses()" [color="#593196" fontcolor=white]
+	"Ljava/net/Socket;->getRemoteSocketAddress()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/branch/referral/ServerRequestInitSession;->setPost()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lio/branch" -> "Ljava/net/NetworkInterface;->getNetworkInterfaces()" [constraint=true]
+	"Lio/branch" -> "Ljava/net/NetworkInterface;->getInetAddresses()" [constraint=true]
+	"Lio/branch/referral/ServerRequestInitSession;->setPost()" -> "Lio/branch" [constraint=true]
+	Lorg -> "Ljava/net/NetworkInterface;->getInetAddresses()" [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect$WifiDirectManagerDelegate;->onReceive()" -> Lorg [constraint=true]
+	"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" -> "Ljava/net/Socket;->getRemoteSocketAddress()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lio/branch/referral/ServerRequestInitSession;->setPost()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/http2/Http2Connection$Builder;->socket()" [color="#a991d4" fontcolor=white]
+	}
+}

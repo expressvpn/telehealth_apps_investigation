@@ -1,0 +1,28 @@
+{
+  "application": {
+    "handle": "com.mobileapp.production",
+    "version_name": "1.0.0",
+    "version_code": "12",
+    "uaid": "E4A2B47AE964F6302BE4C937797FCCF25F86C96C",
+    "name": "PursueCare",
+    "permissions": [
+      "android.permission.USE_FINGERPRINT",
+      "android.permission.INTERNET",
+      "android.permission.STORAGE",
+      "android.permission.BROADCAST_STICKY",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "android.permission.BLUETOOTH",
+      "android.permission.CAMERA",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.READ_EXTERNAL_STORAGE"
+    ],
+    "libraries": []
+  },
+  "apk": {
+    "path": "../AndroCFG/apk/pursuecare_1.0.0.apk",
+    "checksum": "3eb3456ecff683a23cea00fc047fc752c3ac67ee65949bfc6c19d81fa3b5e31f"
+  },
+  "trackers": []
+}

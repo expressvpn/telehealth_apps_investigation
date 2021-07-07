@@ -1,0 +1,79 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount()" [color="#a991d4" fontcolor=white]
+			"Lcom/github/amarcruz/rnshortcutbadge/RNAppBadgeModule;->getConstants()" [color="#a991d4" fontcolor=white]
+			"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" [color="#a991d4" fontcolor=white]
+			"Lcom/github/amarcruz/rnshortcutbadge/RNAppBadgeModule;->setCount()" [color="#a991d4" fontcolor=white]
+			"Lme/leolin/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/ServerRequest;->updateEnvironment()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/gcm/GcmListenerService;->handleIntent()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/freshchat/consumer/sdk/activity/ConversationDetailActivity;->onBackPressed()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/activity/DeeplinkInterstitialActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/messaging/FirebaseMessagingService;->handleIntent()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount()" -> "Lme/leolin" [constraint=true]
+	"Lme/leolin" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/activity/ConversationDetailActivity;->onBackPressed()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lio/branch" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/google" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/github/amarcruz/rnshortcutbadge/RNAppBadgeModule;->getConstants()" -> "Lme/leolin" [constraint=true]
+	"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" -> "Lme/leolin" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/activity/DeeplinkInterstitialActivity;->onCreate()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/github/amarcruz/rnshortcutbadge/RNAppBadgeModule;->setCount()" -> "Lme/leolin" [constraint=true]
+	"Lme/leolin/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" -> "Lme/leolin" [constraint=true]
+	"Lcom/google/firebase/messaging/FirebaseMessagingService;->handleIntent()" -> "Lcom/google" [constraint=true]
+	"Lio/branch/referral/ServerRequest;->updateEnvironment()" -> "Lio/branch" [constraint=true]
+	"Lcom/google/android/gms/gcm/GcmListenerService;->handleIntent()" -> "Lcom/google" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount()" [color="#a991d4" fontcolor=white]
+		"Lcom/github/amarcruz/rnshortcutbadge/RNAppBadgeModule;->getConstants()" [color="#a991d4" fontcolor=white]
+		"Lme/leolin/shortcutbadger/ShortcutBadger;->removeCountOrThrow()" [color="#a991d4" fontcolor=white]
+		"Lcom/github/amarcruz/rnshortcutbadge/RNAppBadgeModule;->setCount()" [color="#a991d4" fontcolor=white]
+		"Lme/leolin/shortcutbadger/ShortcutBadger;->isBadgeCounterSupported()" [color="#a991d4" fontcolor=white]
+		"Lio/branch/referral/ServerRequest;->updateEnvironment()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/gcm/GcmListenerService;->handleIntent()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,128 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/lang/Runtime;->exec()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$7;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$6;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$22;->create()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevServerHelper;->symbolicateStackTrace()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onNewReactContextCreated()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->downloadBundleResourceFromUrlSync()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$8$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$10;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevServerHelper;->openStackFrameCall()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/packagerconnection/JSPackagerClient;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getJSBundleURLForRemoteDebugging()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/systeminfo/AndroidInfoModule;->getServerHost()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onReactInstanceDestroyed()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getSourceMapUrl()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$26;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$18;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$17;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$27;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/sentry/android/core/-$$Lambda$DefaultAndroidEventProcessor$ZsPdDrAaOs30gov_5eSNgy_KYe8;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/devsupport/DevServerHelper$3;->doInBackground()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevServerHelper$1;->doInBackground()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/devsupport/DevSupportManagerBase$3;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/facebook" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$26;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$7;->onOptionSelected()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$6;->onOptionSelected()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$22;->create()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevServerHelper;->symbolicateStackTrace()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevServerHelper$3;->doInBackground()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevServerHelper$1;->doInBackground()" -> "Lcom/facebook" [constraint=true]
+	"Lio/sentry/android/core/-$$Lambda$DefaultAndroidEventProcessor$ZsPdDrAaOs30gov_5eSNgy_KYe8;->call()" -> "Lio/sentry" [constraint=true]
+	"Lio/sentry" -> "Ljava/lang/Runtime;->exec()" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onNewReactContextCreated()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->downloadBundleResourceFromUrlSync()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$18;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$8$1;->onClick()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$10;->onOptionSelected()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/packagerconnection/JSPackagerClient;-><init>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevServerHelper;->openStackFrameCall()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$17;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$3;->onReceive()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getJSBundleURLForRemoteDebugging()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/systeminfo/AndroidInfoModule;->getServerHost()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onReactInstanceDestroyed()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getSourceMapUrl()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerBase$27;->run()" -> "Lcom/facebook" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$7;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$6;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$22;->create()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevServerHelper;->symbolicateStackTrace()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onNewReactContextCreated()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->downloadBundleResourceFromUrlSync()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$8$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase$10;->onOptionSelected()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevServerHelper;->openStackFrameCall()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/packagerconnection/JSPackagerClient;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getJSBundleURLForRemoteDebugging()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/systeminfo/AndroidInfoModule;->getServerHost()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->onReactInstanceDestroyed()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerBase;->getSourceMapUrl()" [color="#a991d4" fontcolor=white]
+	}
+}

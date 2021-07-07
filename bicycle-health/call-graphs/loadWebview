@@ -1,0 +1,129 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [color="#593196" fontcolor=white]
+	"Landroid/webkit/WebView;->loadUrl()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/dialog/conf/SelectURLDialog$2;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/ZMCodeView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/ServerRequestActionCompleted;->onRequestSucceeded()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/share/ShareWebView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/PrivacyPolicyFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/share/ShareWebView$5;->onKey()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/ZMCodeView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/WebViewFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/ZMCodeView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/confapp/component/ZMAudioConfComponentMgr;->onActivityResult()" [color="#a991d4" fontcolor=white]
+			"Lus/zoom/sdk/MobileRTCShareView;->setShareWebview()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/ZMCodeView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/sdk/SDKShareView;->setUrl()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/ConfCmrFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/dialog/SharePermissionAlertDialog$2;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/BranchActivityLifecycleObserver;->onActivityCreated()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/share/ShareWebView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/ConfCmrFragment;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/PrivacyPolicyFragment;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/fragment/WebViewFragment;->onResume()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_webview_client {
+			label="Webview Client"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/branch/referral/BranchViewHandler$1;->shouldOverrideUrlLoading()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/activity/ArticleDetailActivity$1;->onPageFinished()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->onPostExecute()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/Branch$BranchPostTask;->onPostExecute()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/freshchat/consumer/sdk/activity/ArticleDetailActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lio/branch" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/zipow" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/zipow" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/freshchat" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/zipow/videobox/dialog/conf/SelectURLDialog$2;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->onPostExecute()" -> "Lio/branch" [constraint=true]
+	"Lcom/zipow/videobox/view/ZMCodeView;-><init>()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/activity/ArticleDetailActivity;->onCreate()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/zipow/videobox/sdk/SDKShareView;->setUrl()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/share/ShareWebView;-><init>()" -> "Lcom/zipow" [constraint=true]
+	"Lio/branch/referral/ServerRequestActionCompleted;->onRequestSucceeded()" -> "Lio/branch" [constraint=true]
+	"Lcom/zipow/videobox/fragment/PrivacyPolicyFragment;->onCreateView()" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/zipow/videobox/share/ShareWebView$5;->onKey()" -> "Lcom/zipow" [constraint=true]
+	"Lio/branch/referral/Branch$BranchPostTask;->onPostExecute()" -> "Lio/branch" [constraint=true]
+	"Lcom/zipow/videobox/fragment/WebViewFragment;->onCreateView()" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/zipow/videobox/confapp/component/ZMAudioConfComponentMgr;->onActivityResult()" -> "Lcom/zipow" [constraint=true]
+	"Lus/zoom/sdk/MobileRTCShareView;->setShareWebview()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/fragment/ConfCmrFragment;->onCreateView()" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/zipow/videobox/dialog/SharePermissionAlertDialog$2;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lio/branch/referral/BranchActivityLifecycleObserver;->onActivityCreated()" -> "Lio/branch" [constraint=true]
+	"Lcom/zipow/videobox/fragment/ConfCmrFragment;->onResume()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lio/branch/referral/BranchViewHandler$1;->shouldOverrideUrlLoading()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/zipow/videobox/fragment/PrivacyPolicyFragment;->onResume()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/zipow/videobox/fragment/WebViewFragment;->onResume()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/activity/ArticleDetailActivity$1;->onPageFinished()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/zipow/videobox/dialog/conf/SelectURLDialog$2;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/ZMCodeView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lio/branch/referral/ServerRequestActionCompleted;->onRequestSucceeded()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/share/ShareWebView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/PrivacyPolicyFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/share/ShareWebView$5;->onKey()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/ZMCodeView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/WebViewFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/ZMCodeView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/confapp/component/ZMAudioConfComponentMgr;->onActivityResult()" [color="#a991d4" fontcolor=white]
+		"Lus/zoom/sdk/MobileRTCShareView;->setShareWebview()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/ZMCodeView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/sdk/SDKShareView;->setUrl()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/ConfCmrFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/dialog/SharePermissionAlertDialog$2;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lio/branch/referral/BranchActivityLifecycleObserver;->onActivityCreated()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/share/ShareWebView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/ConfCmrFragment;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/PrivacyPolicyFragment;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/fragment/WebViewFragment;->onResume()" [color="#a991d4" fontcolor=white]
+	}
+}

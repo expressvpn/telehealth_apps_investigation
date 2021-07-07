@@ -1,0 +1,139 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/view/accessibility/AccessibilityManager;->isEnabled()" [color="#593196" fontcolor=white]
+	"Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()" [color="#593196" fontcolor=white]
+	"Landroid/view/accessibility/AccessibilityManager;->sendAccessibilityEvent()" [color="#593196" fontcolor=white]
+	"Landroid/view/accessibility/AccessibilityManager;->addTouchExplorationStateChangeListener()" [color="#593196" fontcolor=white]
+	"Landroid/view/accessibility/AccessibilityManager;->removeTouchExplorationStateChangeListener()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/recyclerview/widget/D;->onGenericMotionEvent()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/D;->focusSearch()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/D;->onLayout()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/GridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+			"Lb/g/i/C$a;->onGlobalLayout()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/GridLayoutManager;->b()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/GridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/D;->onMeasure()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/D$f;->a()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/n;->a()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/D;->requestChildRectangleOnScreen()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/GridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/widget/Ka;->onHover()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->e()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/D;->setAdapter()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/D;->requestChildFocus()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->announceForAccessibility()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/GridLayoutManager;->e()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/p/e/c;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->initialize()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->onHostResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->onHostPause()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/material/snackbar/e;->onDetachedFromWindow()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/recyclerview/widget/D$v;->run()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/x;->run()" [color="#a991d4" fontcolor=white]
+			"Landroidx/recyclerview/widget/p;->run()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Landroidx/recyclerview/widget/D;->onGenericMotionEvent()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview" -> "Landroid/view/accessibility/AccessibilityManager;->isEnabled()" [constraint=true]
+	"Landroidx/recyclerview/widget/D;->focusSearch()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/D;->onLayout()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->a()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/D$v;->run()" -> "Landroidx/recyclerview" [constraint=true]
+	"Lb/g" -> "Landroid/view/accessibility/AccessibilityManager;->isEnabled()" [constraint=true]
+	"Lb/g" -> "Landroid/view/accessibility/AccessibilityManager;->sendAccessibilityEvent()" [constraint=true]
+	"Lb/g" -> "Landroid/view/accessibility/AccessibilityManager;->addTouchExplorationStateChangeListener()" [constraint=true]
+	"Lb/g" -> "Landroid/view/accessibility/AccessibilityManager;->removeTouchExplorationStateChangeListener()" [constraint=true]
+	"Landroidx/recyclerview/widget/GridLayoutManager;->a()" -> "Landroidx/recyclerview" [constraint=true]
+	"Lb/g/i/C$a;->onGlobalLayout()" -> "Lb/g" [constraint=true]
+	"Landroidx/recyclerview/widget/GridLayoutManager;->b()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/D;->onMeasure()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/D$f;->a()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/x;->run()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/n;->a()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/D;->requestChildRectangleOnScreen()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/appcompat/widget/Ka;->onHover()" -> "Landroid/view/accessibility/AccessibilityManager;->isEnabled()" [constraint=true]
+	"Landroidx/appcompat/widget/Ka;->onHover()" -> "Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()" [constraint=true]
+	"Landroidx/recyclerview/widget/p;->run()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->e()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/D;->setAdapter()" -> "Landroidx/recyclerview" [constraint=true]
+	"Landroidx/recyclerview/widget/D;->requestChildFocus()" -> "Landroidx/recyclerview" [constraint=true]
+	"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->announceForAccessibility()" -> "Landroid/view/accessibility/AccessibilityManager;->isEnabled()" [constraint=true]
+	"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->announceForAccessibility()" -> "Landroid/view/accessibility/AccessibilityManager;->sendAccessibilityEvent()" [constraint=true]
+	"Landroidx/recyclerview/widget/GridLayoutManager;->e()" -> "Landroidx/recyclerview" [constraint=true]
+	"Lcom/facebook/p/e/c;->a()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> "Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()" [constraint=true]
+	"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->initialize()" -> "Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()" [constraint=true]
+	"Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;-><init>()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()" [constraint=true]
+	"Lcom/google" -> "Lb/g" [constraint=true]
+	"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->onHostResume()" -> "Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()" [constraint=true]
+	"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->onHostResume()" -> "Landroid/view/accessibility/AccessibilityManager;->addTouchExplorationStateChangeListener()" [constraint=true]
+	"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->onHostPause()" -> "Landroid/view/accessibility/AccessibilityManager;->removeTouchExplorationStateChangeListener()" [constraint=true]
+	"Lcom/google/android/material/snackbar/e;->onDetachedFromWindow()" -> "Lb/g" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Landroidx/recyclerview/widget/D;->onGenericMotionEvent()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/D;->focusSearch()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/D;->onLayout()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/GridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+		"Lb/g/i/C$a;->onGlobalLayout()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/GridLayoutManager;->b()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/GridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/D;->onMeasure()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/D$f;->a()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/n;->a()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/D;->requestChildRectangleOnScreen()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/GridLayoutManager;->a()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/widget/Ka;->onHover()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->e()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/D;->setAdapter()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/D;->requestChildFocus()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->announceForAccessibility()" [color="#a991d4" fontcolor=white]
+		"Landroidx/recyclerview/widget/GridLayoutManager;->e()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/p/e/c;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->initialize()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->onHostResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/material/snackbar/Snackbar$SnackbarLayout;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/accessibilityinfo/AccessibilityInfoModule;->onHostPause()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/material/snackbar/e;->onDetachedFromWindow()" [color="#a991d4" fontcolor=white]
+	}
+}

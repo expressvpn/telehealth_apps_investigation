@@ -1,0 +1,65 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/hardware/SensorManager;->getDefaultSensor()" [color="#593196" fontcolor=white]
+	"Landroid/hardware/SensorManager;->registerListener()" [color="#593196" fontcolor=white]
+	"Landroid/hardware/SensorManager;->registerListener()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/appevents/internal/ActivityLifecycleTracker$2;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/internal/ads/zzapu;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$7;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$5;->call()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google/android/gms/internal/ads/zzapu;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/hardware/SensorManager;->getDefaultSensor()" [constraint=true]
+	"Lcom/google" -> "Landroid/hardware/SensorManager;->registerListener()" [constraint=true]
+	"Lcom/crashlytics" -> "Lio/fabric" [constraint=true]
+	"Lcom/facebook" -> "Landroid/hardware/SensorManager;->getDefaultSensor()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/hardware/SensorManager;->registerListener()" [constraint=true]
+	"Lio/fabric" -> "Landroid/hardware/SensorManager;->getDefaultSensor()" [constraint=true]
+	"Lcom/facebook/appevents/internal/ActivityLifecycleTracker$2;->onActivityResumed()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$7;->run()" -> "Lcom/crashlytics" [constraint=true]
+	"Lcom/crashlytics/android/core/CrashlyticsUncaughtExceptionHandler$5;->call()" -> "Lcom/crashlytics" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/facebook/appevents/internal/ActivityLifecycleTracker$2;->onActivityResumed()" [color="#a991d4" fontcolor=white]
+	}
+}

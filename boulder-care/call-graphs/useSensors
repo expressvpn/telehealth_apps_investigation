@@ -1,0 +1,67 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/hardware/SensorManager;->getDefaultSensor()" [color="#593196" fontcolor=white]
+	"Landroid/hardware/SensorManager;->registerListener()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/exoplayer2/ui/SimpleExoPlayerView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerImpl;->onInternalSettingsChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerImpl;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ui/SimpleExoPlayerView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerImpl;->onNewReactContextCreated()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ui/SimpleExoPlayerView;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/devsupport/DevSupportManagerImpl;->onReactInstanceDestroyed()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ui/PlayerView;->onResume()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/devsupport/DevSupportManagerImpl$17;->run()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google" -> "Landroid/hardware/SensorManager;->getDefaultSensor()" [constraint=true]
+	"Lcom/google" -> "Landroid/hardware/SensorManager;->registerListener()" [constraint=true]
+	"Lcom/google/android/exoplayer2/ui/SimpleExoPlayerView;-><init>()" -> "Lcom/google" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerImpl;->onInternalSettingsChanged()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> "Landroid/hardware/SensorManager;->getDefaultSensor()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/hardware/SensorManager;->registerListener()" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerImpl$17;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerImpl;-><init>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerImpl;->onNewReactContextCreated()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/devsupport/DevSupportManagerImpl;->onReactInstanceDestroyed()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/google/android/exoplayer2/ui/PlayerView;->onResume()" -> "Lcom/google" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/google/android/exoplayer2/ui/SimpleExoPlayerView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerImpl;->onInternalSettingsChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerImpl;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ui/SimpleExoPlayerView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerImpl;->onNewReactContextCreated()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ui/SimpleExoPlayerView;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/devsupport/DevSupportManagerImpl;->onReactInstanceDestroyed()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ui/PlayerView;->onResume()" [color="#a991d4" fontcolor=white]
+	}
+}

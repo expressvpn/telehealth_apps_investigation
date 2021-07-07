@@ -1,0 +1,94 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getPhoneType()" [color="#593196" fontcolor=white]
+	"Landroid/telephony/TelephonyManager;->getNetworkCountryIso()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/amplitude/api/AmplitudeClient;->logEventSync()" [color="#a991d4" fontcolor=white]
+			"Lcom/amplitude/api/AmplitudeClient;->logEventSync()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/av/player/SimpleExoPlayerData;->load()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/amplitude/api/AmplitudeClient$7;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/amplitude/api/AmplitudeClient$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/amplitude/api/AmplitudeClient$8;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/amplitude/api/AmplitudeClient$1;->run()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/amplitude" -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	"Lcom/amplitude" -> "Landroid/telephony/TelephonyManager;->getPhoneType()" [constraint=true]
+	"Lcom/amplitude" -> "Landroid/telephony/TelephonyManager;->getNetworkCountryIso()" [constraint=true]
+	"Lcom/amplitude/api/AmplitudeClient;->logEventSync()" -> "Lcom/amplitude" [constraint=true]
+	"Lcom/amplitude/api/AmplitudeClient$7;->run()" -> "Lcom/amplitude" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/amplitude/api/AmplitudeClient$5;->run()" -> "Lcom/amplitude" [constraint=true]
+	"Lcom/amplitude/api/AmplitudeClient$8;->run()" -> "Lcom/amplitude" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/amplitude/api/AmplitudeClient$1;->run()" -> "Lcom/amplitude" [constraint=true]
+	"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/telephony/TelephonyManager;->getNetworkCountryIso()" [constraint=true]
+	"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newInstance()" -> "Lcom/google" [constraint=true]
+	"Lexpo/modules/av/player/SimpleExoPlayerData;->load()" -> "Lcom/google" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/amplitude/api/AmplitudeClient;->logEventSync()" [color="#a991d4" fontcolor=white]
+		"Lcom/amplitude/api/AmplitudeClient;->logEventSync()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/av/player/SimpleExoPlayerData;->load()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/exoplayer2/ExoPlayerFactory;->newSimpleInstance()" [color="#a991d4" fontcolor=white]
+	}
+}

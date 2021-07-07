@@ -1,0 +1,169 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/geektime/rnonesignalandroid/RNOneSignal;->onHostResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/lc;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/h;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/ADMMessageHandler;->onMessage()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OSNotificationRestoreWorkManager$NotificationRestoreWorker;->n()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->setApplicationIconBadgeNumber()" [color="#a991d4" fontcolor=white]
+			"Lcom/geektime/rnonesignalandroid/RNOneSignal;->provideUserConsent()" [color="#a991d4" fontcolor=white]
+			"Lcom/loosidapp/c;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/geektime/rnonesignalandroid/RNOneSignal;->completeNotificationEvent()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->invokeApp()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/ADMMessageHandlerJob;->onMessage()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OSNotificationWorkManager$NotificationWorker;->n()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/SyncJobService;->onStartJob()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/OSPermissionChangedInternalObserver;->changed()" [color="#a991d4" fontcolor=white]
+			"Lcom/geektime/rnonesignalandroid/RNOneSignal;->setAppId()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/FocusDelaySyncJobService;->onStartJob()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->scheduleLocalNotification()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/Wa;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/Yb;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/dc;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/loosidapp/d;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/ec;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/Va;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/NotificationOpenedReceiver;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/mixpanel/android/mpmetrics/MixpanelNotificationRouteActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedReceiver;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedActivityHMS;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/NotificationOpenedActivityHMS;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/PermissionsActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/NotificationDismissReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/loosidapp/i;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/dieam/reactnativepushnotification/modules/d;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/FCMBroadcastReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/FocusDelaySyncService;->onStartCommand()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/messaging/FirebaseMessagingService;->handleIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/loosidapp/PushNotificationService;->onMessageReceived()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/SyncService;->onStartCommand()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/onesignal/NotificationDismissReceiver;->onReceive()" -> Lcom [constraint=true]
+	Lcom -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	Lcom -> "Lcom/onesignal" [constraint=true]
+	"Lcom/geektime/rnonesignalandroid/RNOneSignal;->onHostResume()" -> "Lcom/geektime" [constraint=true]
+	"Lcom/geektime" -> Lcom [constraint=true]
+	"Lcom/onesignal/lc;->a()" -> Lcom [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/h;->a()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/dieam" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/onesignal/ADMMessageHandler;->onMessage()" -> Lcom [constraint=true]
+	"Lcom/onesignal/FocusDelaySyncService;->onStartCommand()" -> Lcom [constraint=true]
+	"Lcom/onesignal/NotificationOpenedReceiver;->onCreate()" -> Lcom [constraint=true]
+	"Lcom/onesignal/OSNotificationRestoreWorkManager$NotificationRestoreWorker;->n()" -> Lcom [constraint=true]
+	"Lcom/google" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/google/firebase/messaging/FirebaseMessagingService;->handleIntent()" -> "Lcom/google" [constraint=true]
+	"Lcom/loosidapp/i;->onReceive()" -> Lcom [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/d;->onReceive()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/mixpanel/android/mpmetrics/MixpanelNotificationRouteActivity;->onCreate()" -> "Lcom/mixpanel" [constraint=true]
+	"Lcom/mixpanel" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/loosidapp/PushNotificationService;->onMessageReceived()" -> "Ld/d" [constraint=true]
+	"Ld/d" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Ld/d" -> "Lh/a" [constraint=true]
+	"Lcom/onesignal/NotificationOpenedReceiver;->onNewIntent()" -> Lcom [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->setApplicationIconBadgeNumber()" -> "Ld/d" [constraint=true]
+	"Lcom/onesignal" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lh/a" -> "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage()" [constraint=true]
+	"Lcom/onesignal/Wa;->run()" -> Lcom [constraint=true]
+	"Lcom/geektime/rnonesignalandroid/RNOneSignal;->provideUserConsent()" -> Lcom [constraint=true]
+	"Lcom/loosidapp/c;->a()" -> Lcom [constraint=true]
+	"Lcom/onesignal/NotificationOpenedActivityHMS;->onCreate()" -> Lcom [constraint=true]
+	"Lcom/geektime/rnonesignalandroid/RNOneSignal;->completeNotificationEvent()" -> Lcom [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->invokeApp()" -> "Lcom/dieam" [constraint=true]
+	"Lcom/onesignal/NotificationOpenedActivityHMS;->onNewIntent()" -> Lcom [constraint=true]
+	"Lcom/onesignal/SyncService;->onStartCommand()" -> Lcom [constraint=true]
+	"Lcom/onesignal/ADMMessageHandlerJob;->onMessage()" -> Lcom [constraint=true]
+	"Lcom/onesignal/OSNotificationWorkManager$NotificationWorker;->n()" -> Lcom [constraint=true]
+	"Lcom/onesignal/Yb;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/SyncJobService;->onStartJob()" -> Lcom [constraint=true]
+	"Lcom/onesignal/FCMBroadcastReceiver;->onReceive()" -> Lcom [constraint=true]
+	"Lcom/onesignal/dc;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/OSPermissionChangedInternalObserver;->changed()" -> Lcom [constraint=true]
+	"Lcom/onesignal/PermissionsActivity;->onCreate()" -> Lcom [constraint=true]
+	"Lcom/geektime/rnonesignalandroid/RNOneSignal;->setAppId()" -> Lcom [constraint=true]
+	"Lcom/loosidapp/d;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/FocusDelaySyncJobService;->onStartJob()" -> Lcom [constraint=true]
+	"Lcom/onesignal/ec;->run()" -> Lcom [constraint=true]
+	"Lcom/onesignal/Va;->run()" -> Lcom [constraint=true]
+	"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->scheduleLocalNotification()" -> "Lcom/dieam" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/geektime/rnonesignalandroid/RNOneSignal;->onHostResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/lc;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/h;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/ADMMessageHandler;->onMessage()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/OSNotificationRestoreWorkManager$NotificationRestoreWorker;->n()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->setApplicationIconBadgeNumber()" [color="#a991d4" fontcolor=white]
+		"Lcom/geektime/rnonesignalandroid/RNOneSignal;->provideUserConsent()" [color="#a991d4" fontcolor=white]
+		"Lcom/loosidapp/c;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/geektime/rnonesignalandroid/RNOneSignal;->completeNotificationEvent()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->invokeApp()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/ADMMessageHandlerJob;->onMessage()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/OSNotificationWorkManager$NotificationWorker;->n()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/SyncJobService;->onStartJob()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/OSPermissionChangedInternalObserver;->changed()" [color="#a991d4" fontcolor=white]
+		"Lcom/geektime/rnonesignalandroid/RNOneSignal;->setAppId()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/FocusDelaySyncJobService;->onStartJob()" [color="#a991d4" fontcolor=white]
+		"Lcom/dieam/reactnativepushnotification/modules/RNPushNotification;->scheduleLocalNotification()" [color="#a991d4" fontcolor=white]
+	}
+}

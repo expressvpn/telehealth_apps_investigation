@@ -1,0 +1,43 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljavax/crypto/Cipher;->getInstance()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->doFinal()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->getIV()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	"Ljavax/crypto/Cipher;->init()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/oblador/keychain/cipherStorage/CipherStorageKeystoreAESCBC;->decrypt()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/oblador" -> "Ljavax/crypto/Cipher;->getInstance()" [constraint=true]
+	"Lcom/oblador" -> "Ljavax/crypto/Cipher;->init()" [constraint=true]
+	"Lcom/oblador" -> "Ljavax/crypto/Cipher;->doFinal()" [constraint=true]
+	"Lcom/oblador" -> "Ljavax/crypto/Cipher;->getIV()" [constraint=true]
+	"Lcom/oblador/keychain/cipherStorage/CipherStorageKeystoreAESCBC;->decrypt()" -> "Lcom/oblador" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/oblador/keychain/cipherStorage/CipherStorageKeystoreAESCBC;->decrypt()" [color="#a991d4" fontcolor=white]
+	}
+}

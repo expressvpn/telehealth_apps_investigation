@@ -1,0 +1,151 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/location/Location;->getLatitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/Location;->getLongitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestSingleUpdate()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestLocationUpdates()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestLocationUpdates()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->getLastKnownLocation()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestSingleUpdate()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lexpo/modules/location/-$$Lambda$LocationModule$XfffbxRUhSsF_9AFVEbFVLpZb6c;->onLocationResolved()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" [color="#a991d4" fontcolor=white]
+			"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+			"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/LocationModule;->onHostResume()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/LocationModule;->watchDeviceHeading()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/LocationHelpers$1;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->didReceiveBroadcast()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/taskConsumers/LocationTaskConsumer$1;->onComplete()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/-$$Lambda$LocationModule$9p1vh9BJaP8qZUHKVqkPsDoyi6Q;->onLocationUpdated()" [color="#a991d4" fontcolor=white]
+			"Lio/nlopez/smartlocation/location/providers/LocationGooglePlayServicesProvider;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/AirMapView$3;->onMyLocationChange()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/places/PlaceManager$1;->onLocationPackage()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/-$$Lambda$LocationModule$FRnLskhjmQX6YVHD67fhwPOf-vQ;->onResult()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->onHostResume()" [color="#a991d4" fontcolor=white]
+			"Lio/nlopez/smartlocation/location/LocationStore;->put()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/location/LocationHelpers$2;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/places/PlaceManager$2;->onLocationPackage()" [color="#a991d4" fontcolor=white]
+			"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->start()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/places/internal/LocationScannerImpl;->getLocation()" [color="#a991d4" fontcolor=white]
+			"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->getLastLocation()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_intent_service {
+			label="Intent Service"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/nlopez/smartlocation/geocoding/providers/AndroidGeocodingProvider$AndroidGeocodingService;->onHandleIntent()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$3;->run()" -> Lcom [constraint=true]
+	Lcom -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	Lcom -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	Lcom -> "Lcom/appsflyer" [constraint=true]
+	"Lcom/facebook" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/location/LocationManager;->requestLocationUpdates()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Lexpo/modules/location/-$$Lambda$LocationModule$XfffbxRUhSsF_9AFVEbFVLpZb6c;->onLocationResolved()" -> "Lexpo/modules" [constraint=true]
+	"Lexpo/modules" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lexpo/modules" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/appsflyer/AFValidateInAppPurchase$2;->run()" -> Lcom [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$5;->run()" -> Lcom [constraint=true]
+	"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" -> "Landroidx/appcompat" [constraint=true]
+	"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->onLocationChanged()" -> "Lio/nlopez" [constraint=true]
+	"Lio/nlopez" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lio/nlopez" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lio/nlopez/smartlocation/location/LocationStore;->put()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lio/nlopez/smartlocation/location/LocationStore;->put()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lio/nlopez/smartlocation/location/LocationStore;->put()" -> "Lio/nlopez" [constraint=true]
+	"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/appsflyer/AppsFlyerLibCore$c;->run()" -> Lcom [constraint=true]
+	"Lcom/appsflyer" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Lexpo/modules/location/LocationModule;->onHostResume()" -> "Lexpo/modules" [constraint=true]
+	"Lexpo/modules/location/LocationModule;->watchDeviceHeading()" -> "Lexpo/modules" [constraint=true]
+	"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lexpo/modules/location/LocationHelpers$1;->onLocationChanged()" -> "Lexpo/modules" [constraint=true]
+	"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->didReceiveBroadcast()" -> "Lexpo/modules" [constraint=true]
+	"Lexpo/modules/location/taskConsumers/LocationTaskConsumer$1;->onComplete()" -> "Lexpo/modules" [constraint=true]
+	"Lexpo/modules/location/-$$Lambda$LocationModule$9p1vh9BJaP8qZUHKVqkPsDoyi6Q;->onLocationUpdated()" -> "Lexpo/modules" [constraint=true]
+	"Lio/nlopez/smartlocation/location/providers/LocationGooglePlayServicesProvider;->onLocationChanged()" -> "Lio/nlopez" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapView$3;->onMyLocationChange()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapView$3;->onMyLocationChange()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/facebook/places/PlaceManager$1;->onLocationPackage()" -> "Lcom/facebook" [constraint=true]
+	"Lexpo/modules/location/-$$Lambda$LocationModule$FRnLskhjmQX6YVHD67fhwPOf-vQ;->onResult()" -> "Lexpo/modules" [constraint=true]
+	"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->onHostResume()" -> "Lexpo/modules" [constraint=true]
+	"Lio/nlopez/smartlocation/geocoding/providers/AndroidGeocodingProvider$AndroidGeocodingService;->onHandleIntent()" -> "Lio/nlopez" [constraint=true]
+	"Lexpo/modules/location/LocationHelpers$2;->onLocationChanged()" -> "Lexpo/modules" [constraint=true]
+	"Lcom/facebook/places/PlaceManager$2;->onLocationPackage()" -> "Lcom/facebook" [constraint=true]
+	"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->start()" -> "Landroid/location/LocationManager;->requestSingleUpdate()" [constraint=true]
+	"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->start()" -> "Landroid/location/LocationManager;->requestLocationUpdates()" [constraint=true]
+	"Lcom/facebook/places/internal/LocationScannerImpl;->getLocation()" -> "Lcom/facebook" [constraint=true]
+	"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->getLastLocation()" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lexpo/modules/location/-$$Lambda$LocationModule$XfffbxRUhSsF_9AFVEbFVLpZb6c;->onLocationResolved()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" [color="#a991d4" fontcolor=white]
+		"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+		"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/LocationModule;->onHostResume()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/LocationModule;->watchDeviceHeading()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/LocationHelpers$1;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->didReceiveBroadcast()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/taskConsumers/LocationTaskConsumer$1;->onComplete()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/-$$Lambda$LocationModule$9p1vh9BJaP8qZUHKVqkPsDoyi6Q;->onLocationUpdated()" [color="#a991d4" fontcolor=white]
+		"Lio/nlopez/smartlocation/location/providers/LocationGooglePlayServicesProvider;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/AirMapView$3;->onMyLocationChange()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/places/PlaceManager$1;->onLocationPackage()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/-$$Lambda$LocationModule$FRnLskhjmQX6YVHD67fhwPOf-vQ;->onResult()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/taskConsumers/LocationTaskConsumer;->onHostResume()" [color="#a991d4" fontcolor=white]
+		"Lio/nlopez/smartlocation/location/LocationStore;->put()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/location/LocationHelpers$2;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/places/PlaceManager$2;->onLocationPackage()" [color="#a991d4" fontcolor=white]
+		"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->start()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/places/internal/LocationScannerImpl;->getLocation()" [color="#a991d4" fontcolor=white]
+		"Lio/nlopez/smartlocation/location/providers/LocationManagerProvider;->getLastLocation()" [color="#a991d4" fontcolor=white]
+	}
+}

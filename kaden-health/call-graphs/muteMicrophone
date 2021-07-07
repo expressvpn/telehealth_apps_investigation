@@ -1,0 +1,55 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/media/AudioManager;->setMicrophoneMute()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zxcpoiu/incallmanager/InCallManagerModule$11;->onCompletion()" [color="#a991d4" fontcolor=white]
+			"Lcom/zxcpoiu/incallmanager/InCallManagerModule;->startRingtone()" [color="#a991d4" fontcolor=white]
+			"Lcom/zxcpoiu/incallmanager/InCallManagerModule;->start()" [color="#a991d4" fontcolor=white]
+			"Lcom/zxcpoiu/incallmanager/InCallManagerModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zxcpoiu/incallmanager/InCallManagerModule$7;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/zxcpoiu/incallmanager/InCallManagerModule$myToneGenerator;->run()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/zxcpoiu/incallmanager/InCallManagerModule$11;->onCompletion()" -> "Lcom/zxcpoiu" [constraint=true]
+	"Lcom/zxcpoiu" -> "Landroid/media/AudioManager;->setMicrophoneMute()" [constraint=true]
+	"Lcom/zxcpoiu/incallmanager/InCallManagerModule$7;->run()" -> "Lcom/zxcpoiu" [constraint=true]
+	"Lcom/zxcpoiu/incallmanager/InCallManagerModule$myToneGenerator;->run()" -> "Lcom/zxcpoiu" [constraint=true]
+	"Lcom/zxcpoiu/incallmanager/InCallManagerModule;->startRingtone()" -> "Lcom/zxcpoiu" [constraint=true]
+	"Lcom/zxcpoiu/incallmanager/InCallManagerModule;->start()" -> "Lcom/zxcpoiu" [constraint=true]
+	"Lcom/zxcpoiu/incallmanager/InCallManagerModule;->onHostDestroy()" -> "Lcom/zxcpoiu" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/zxcpoiu/incallmanager/InCallManagerModule$11;->onCompletion()" [color="#a991d4" fontcolor=white]
+		"Lcom/zxcpoiu/incallmanager/InCallManagerModule;->startRingtone()" [color="#a991d4" fontcolor=white]
+		"Lcom/zxcpoiu/incallmanager/InCallManagerModule;->start()" [color="#a991d4" fontcolor=white]
+		"Lcom/zxcpoiu/incallmanager/InCallManagerModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+	}
+}

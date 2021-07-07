@@ -1,0 +1,80 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getAllNetworks()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	"Landroid/net/ConnectivityManager;->getNetworkInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lorg/webrtc/NetworkMonitor;->getCurrentDefaultNetId()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+			"Landroidx/core/net/ConnectivityManagerCompat;->isActiveNetworkMetered()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitor;->startMonitoring()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitor;->startMonitoring()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitor;->createAndSetAutoDetectForTest()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+			"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lorg/webrtc/NetworkMonitorAutoDetect;->onReceive()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/bumptech" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect;->onReceive()" -> Lorg [constraint=true]
+	Lorg -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	Lorg -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	Lorg -> "Landroid/net/ConnectivityManager;->getAllNetworks()" [constraint=true]
+	"Lorg/webrtc/NetworkMonitor;->getCurrentDefaultNetId()" -> Lorg [constraint=true]
+	"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" -> "Lcom/bumptech" [constraint=true]
+	"Landroidx/core/net/ConnectivityManagerCompat;->isActiveNetworkMetered()" -> "Landroid/net/ConnectivityManager;->getActiveNetworkInfo()" [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onCapabilitiesChanged()" -> Lorg [constraint=true]
+	"Lorg/webrtc/NetworkMonitor;->startMonitoring()" -> Lorg [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onAvailable()" -> Lorg [constraint=true]
+	"Lorg/webrtc/NetworkMonitor;->createAndSetAutoDetectForTest()" -> Lorg [constraint=true]
+	"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onLinkPropertiesChanged()" -> Lorg [constraint=true]
+	"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor$1;->onReceive()" -> "Lcom/bumptech" [constraint=true]
+	"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" -> "Landroid/net/ConnectivityManager;->getNetworkInfo()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lorg/webrtc/NetworkMonitor;->getCurrentDefaultNetId()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;->onStart()" [color="#a991d4" fontcolor=white]
+		"Landroidx/core/net/ConnectivityManagerCompat;->isActiveNetworkMetered()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitor;->startMonitoring()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitor;->startMonitoring()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onAvailable()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitor;->createAndSetAutoDetectForTest()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/NetworkMonitorAutoDetect$SimpleNetworkCallback;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+		"Landroidx/core/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast()" [color="#a991d4" fontcolor=white]
+	}
+}

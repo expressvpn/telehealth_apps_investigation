@@ -1,0 +1,83 @@
+{
+  "application": {
+    "handle": "live.safeopioidusecoalition.confidant",
+    "version_name": "2.0.14",
+    "version_code": "28",
+    "uaid": "9760689878BAE79F1CEFFB20BA782849A8B13160",
+    "name": "Confidant",
+    "permissions": [
+      "android.permission.INTERNET",
+      "com.sec.android.provider.badge.permission.WRITE",
+      "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+      "android.permission.WRITE_CALENDAR",
+      "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "com.google.android.c2dm.permission.RECEIVE",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.BROADCAST_STICKY",
+      "com.htc.launcher.permission.READ_SETTINGS",
+      "com.htc.launcher.permission.UPDATE_SHORTCUT",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.WAKE_LOCK",
+      "live.safeopioidusecoalition.confidant.permission.C2D_MESSAGE",
+      "android.permission.READ_PHONE_STATE",
+      "com.sec.android.provider.badge.permission.READ",
+      "android.permission.BLUETOOTH",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "com.majeur.launcher.permission.UPDATE_BADGE",
+      "me.everything.badger.permission.BADGE_COUNT_READ",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "android.permission.ACCESS_WIFI_STATE",
+      "com.anddoes.launcher.permission.UPDATE_COUNT",
+      "com.huawei.android.launcher.permission.READ_SETTINGS",
+      "android.permission.VIBRATE",
+      "com.oppo.launcher.permission.READ_SETTINGS",
+      "com.oppo.launcher.permission.WRITE_SETTINGS",
+      "android.permission.READ_APP_BADGE",
+      "com.sonyericsson.home.permission.BROADCAST_BADGE",
+      "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+      "com.huawei.android.launcher.permission.CHANGE_BADGE",
+      "android.permission.READ_CALENDAR",
+      "android.permission.CAMERA",
+      "android.permission.USE_FINGERPRINT",
+      "me.everything.badger.permission.BADGE_COUNT_WRITE",
+      "android.permission.RECORD_AUDIO"
+    ],
+    "libraries": []
+  },
+  "apk": {
+    "path": "../AndroCFG/apk/confidant-health_2.0.14.apk",
+    "checksum": "07904935c1e592977e1dbd3b51be6adf833ac57e8afb71d1825fe5e86ed1eb41"
+  },
+  "trackers": [
+    {
+      "name": "Google Firebase Analytics",
+      "id": 49
+    },
+    {
+      "name": "Segment",
+      "id": 62
+    },
+    {
+      "name": "Facebook Analytics",
+      "id": 66
+    },
+    {
+      "name": "Facebook Login",
+      "id": 67
+    },
+    {
+      "name": "Facebook Share",
+      "id": 70
+    },
+    {
+      "name": "Branch",
+      "id": 167
+    },
+    {
+      "name": "OneSignal",
+      "id": 193
+    }
+  ]
+}

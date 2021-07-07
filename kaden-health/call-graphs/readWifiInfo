@@ -1,0 +1,51 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/wifi/WifiManager;->getConnectionInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getIpAddress()" [color="#a991d4" fontcolor=white]
+			"Lcom/stripe/android/stripe3ds2/init/b;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/wifi/WifiManager;->getConnectionInfo()" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getIpAddress()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/learnium" -> "Landroid/net/wifi/WifiManager;->getConnectionInfo()" [constraint=true]
+	"Lcom/stripe/android/stripe3ds2/init/b;->a()" -> "Landroid/net/wifi/WifiManager;->getConnectionInfo()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" -> "Lcom/learnium" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getIpAddress()" [color="#a991d4" fontcolor=white]
+		"Lcom/stripe/android/stripe3ds2/init/b;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/BroadcastReceiverConnectivityReceiver;->setIsInternetReachableOverride()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMacAddress()" [color="#a991d4" fontcolor=white]
+	}
+}

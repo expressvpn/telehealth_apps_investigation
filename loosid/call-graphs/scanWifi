@@ -1,0 +1,90 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/net/wifi/WifiManager;->calculateSignalLevel()" [color="#593196" fontcolor=white]
+	"Landroid/net/wifi/WifiInfo;->getBSSID()" [color="#593196" fontcolor=white]
+	"Landroid/net/wifi/WifiInfo;->getRssi()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/reactnativecommunity/netinfo/i$a;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onLosing()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/d;->c()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onUnavailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onAvailable()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/d;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/i$a;->onLost()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/netinfo/d;->a()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lorg/jitsi/meet/sdk/J;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/reactnativecommunity/netinfo/d$a;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/reactnativecommunity/netinfo/i$a;->onCapabilitiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/wifi/WifiManager;->calculateSignalLevel()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/wifi/WifiInfo;->getBSSID()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/net/wifi/WifiInfo;->getRssi()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onLosing()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/d;->c()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onUnavailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lorg/jitsi/meet/sdk/J;->run()" -> "Landroid/net/wifi/WifiManager;->calculateSignalLevel()" [constraint=true]
+	"Lorg/jitsi/meet/sdk/J;->run()" -> "Landroid/net/wifi/WifiInfo;->getRssi()" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/d$a;->onReceive()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/d;->a()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onAvailable()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onLinkPropertiesChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/netinfo/i$a;->onLost()" -> "Lcom/reactnativecommunity" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/reactnativecommunity/netinfo/i$a;->onCapabilitiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onLosing()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/d;->c()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onUnavailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->getCurrentState()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onAvailable()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onLinkPropertiesChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/NetInfoModule;->onAmazonFireDeviceConnectivityChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/d;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/i$a;->onLost()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/netinfo/d;->a()" [color="#a991d4" fontcolor=white]
+	}
+}

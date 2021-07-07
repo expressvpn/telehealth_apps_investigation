@@ -1,0 +1,83 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/location/Location;->getLatitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/Location;->getLongitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestLocationUpdates()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->getLastKnownLocation()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/airbnb/android/react/maps/AirMapView$3;->onMyLocationChange()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/geolocation/GeolocationModule$1;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/geolocation/GeolocationModule$SingleUpdateRequest$2;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/rest/interceptors/HealthCheckInterceptor;->intercept()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/geolocation/GeolocationModule$5;->invoke()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/geolocation/GeolocationModule$2;->invoke()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/jobs/appointment/AppointmentMonitoringService$3;->onLocationResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/geolocation/GeolocationModule;->getCurrentPosition()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativecommunity/geolocation/GeolocationModule;->startObserving()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dynamicarehealth/rewards/jobs/appointment/AppointmentMonitoringService$1;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/airbnb/android/react/maps/AirMapView$3;->onMyLocationChange()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapView$3;->onMyLocationChange()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Lcom/reactnativecommunity" -> "Landroid/location/LocationManager;->requestLocationUpdates()" [constraint=true]
+	"Lcom/dynamicarehealth" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/dynamicarehealth" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/reactnativecommunity/geolocation/GeolocationModule$1;->onLocationChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/reactnativecommunity/geolocation/GeolocationModule$SingleUpdateRequest$2;->onLocationChanged()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/rest/interceptors/HealthCheckInterceptor;->intercept()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/reactnativecommunity/geolocation/GeolocationModule$5;->invoke()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" -> "Landroidx/appcompat" [constraint=true]
+	"Lcom/reactnativecommunity/geolocation/GeolocationModule$2;->invoke()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/jobs/appointment/AppointmentMonitoringService$3;->onLocationResult()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/reactnativecommunity/geolocation/GeolocationModule;->getCurrentPosition()" -> "Lcom/reactnativecommunity" [constraint=true]
+	"Lcom/dynamicarehealth/rewards/jobs/appointment/AppointmentMonitoringService$1;->onReceive()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/reactnativecommunity/geolocation/GeolocationModule;->startObserving()" -> "Landroid/location/LocationManager;->requestLocationUpdates()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/airbnb/android/react/maps/AirMapView$3;->onMyLocationChange()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/geolocation/GeolocationModule$1;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/geolocation/GeolocationModule$SingleUpdateRequest$2;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/rest/interceptors/HealthCheckInterceptor;->intercept()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/geolocation/GeolocationModule$5;->invoke()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/geolocation/GeolocationModule$2;->invoke()" [color="#a991d4" fontcolor=white]
+		"Lcom/dynamicarehealth/rewards/jobs/appointment/AppointmentMonitoringService$3;->onLocationResult()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/geolocation/GeolocationModule;->getCurrentPosition()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativecommunity/geolocation/GeolocationModule;->startObserving()" [color="#a991d4" fontcolor=white]
+	}
+}

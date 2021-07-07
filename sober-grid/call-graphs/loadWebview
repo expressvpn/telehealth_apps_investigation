@@ -1,0 +1,257 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [color="#593196" fontcolor=white]
+	"Landroid/webkit/WebView;->addJavascriptInterface()" [color="#593196" fontcolor=white]
+	"Landroid/webkit/WebView;->loadUrl()" [color="#593196" fontcolor=white]
+	"Landroid/webkit/WebView;->loadUrl()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/ads/internal/ClientApi;->createSearchAdManager()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/WebDialog;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/InboxDetailFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lbolts/WebViewAppLinkResolver$2;->then()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/InAppDialogFragment;->onCreateDialog()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/android/sdk/homescreen/HomeCardAdapter;->onBindViewHolder()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/android/sdk/blocks/messengercard/MessengerCard;->addCard()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventsLogger;->augmentWebView()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/VideoEnabledWebChromeClient;->onShowCustomView()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzuf;->destroy()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->zztz()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/android/sdk/blocks/messengercard/MessengerCardAlertDialogBuilder$1;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->zzb()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->onMeasure()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->zza()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->onAttachedToWindow()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/internal/FacebookWebFallbackDialog;->cancel()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->zzty()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->zzbe()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->zzno()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzasq;->onMeasure()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzasv;->loadUrl()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->destroy()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->zzai()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzari;->onDetachedFromWindow()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/WebViewManager$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzvg;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/zopim/android/sdk/api/WebBinder$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzul;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzuj;->run()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/android/sdk/conversation/JavascriptRunner$1;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/internal/ads/zzasp;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzare;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_fragment {
+			label=Fragment
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/localytics/android/InboxDetailSupportFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+			"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment;->onViewCreated()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_webview_client {
+			label="Webview Client"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/sobergrid/activities/WebViewActivity$MyBrowser;->shouldOverrideUrlLoading()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/android/sdk/blocks/messengercard/MessengerCardWebViewClient;->shouldOverrideUrlLoading()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/InboxWebViewController$InboxWebViewClient;->onPageFinished()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/InAppDialogFragment$InAppDialog$InAppWebViewClient;->onPageFinished()" [color="#a991d4" fontcolor=white]
+			"Lbolts/WebViewAppLinkResolver$2$1;->onLoadResource()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/android/sdk/sheets/SheetWebViewClient;->shouldOverrideUrlLoading()" [color="#a991d4" fontcolor=white]
+			"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment$SMWebviewClient;->onPageStarted()" [color="#a991d4" fontcolor=white]
+			"Lbolts/WebViewAppLinkResolver$2$1;->onPageFinished()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/android/sdk/helpcenter/HelpCenterWebViewClient;->shouldOverrideUrlLoading()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/internal/WebDialog$UploadStagingResourcesTask;->onPostExecute()" [color="#a991d4" fontcolor=white]
+			"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment$1;->onPostExecute()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/ads/internal/zzbt;->onPostExecute()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/intercom/android/sdk/activities/IntercomHelpCenterActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/activities/WebViewActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lio/intercom/android/sdk/activities/IntercomSheetActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zopim/android/sdk/api/ChatService;->onStartCommand()" [color="#a991d4" fontcolor=white]
+			"Lcom/zopim/android/sdk/api/ChatService;->onBind()" [color="#a991d4" fontcolor=white]
+			"Lcom/zopim/android/sdk/api/ChatService;->setPushToken()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/google" -> "Landroid/webkit/WebView;->addJavascriptInterface()" [constraint=true]
+	"Lcom/google" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzasp;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/localytics" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/localytics" -> "Landroid/webkit/WebView;->addJavascriptInterface()" [constraint=true]
+	"Lcom/zopim/android/sdk/api/ChatService;->onStartCommand()" -> "Lcom/zopim" [constraint=true]
+	"Lcom/zopim" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/zopim" -> "Landroid/webkit/WebView;->addJavascriptInterface()" [constraint=true]
+	"Lcom/google/android/gms/ads/internal/ClientApi;->createSearchAdManager()" -> "Lcom/google" [constraint=true]
+	"Lio/intercom/android/sdk/activities/IntercomHelpCenterActivity;->onCreate()" -> "Lio/intercom" [constraint=true]
+	"Lio/intercom" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lio/intercom" -> "Landroid/webkit/WebView;->addJavascriptInterface()" [constraint=true]
+	"Lio/intercom" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/localytics/android/InboxDetailSupportFragment;->onCreateView()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/facebook/internal/WebDialog$UploadStagingResourcesTask;->onPostExecute()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/facebook" -> "Landroid/webkit/WebView;->addJavascriptInterface()" [constraint=true]
+	"Lcom/facebook/internal/WebDialog;->onCreate()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/surveymonkey" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/localytics/android/InboxDetailFragment;->onCreateView()" -> "Lcom/localytics" [constraint=true]
+	"Lbolts/WebViewAppLinkResolver$2;->then()" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lbolts/WebViewAppLinkResolver$2;->then()" -> "Landroid/webkit/WebView;->addJavascriptInterface()" [constraint=true]
+	"Lbolts/WebViewAppLinkResolver$2;->then()" -> "" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzare;->call()" -> "Lcom/google" [constraint=true]
+	"" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/zopim/android/sdk/api/ChatService;->onBind()" -> "Lcom/zopim" [constraint=true]
+	"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment$1;->onPostExecute()" -> "Lcom/surveymonkey" [constraint=true]
+	Lcom -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment;->onCreate()" -> "Lcom/surveymonkey" [constraint=true]
+	"Lcom/localytics/android/InAppDialogFragment;->onCreateDialog()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/sobergrid/activities/WebViewActivity;->onCreate()" -> "Landroid/webkit/WebSettings;->setJavaScriptEnabled()" [constraint=true]
+	"Lcom/sobergrid/activities/WebViewActivity;->onCreate()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lio/intercom/android/sdk/activities/IntercomSheetActivity;->onCreate()" -> "Lio/intercom" [constraint=true]
+	"Lcom/onesignal/WebViewManager$3;->run()" -> Lcom [constraint=true]
+	"Lio/intercom/android/sdk/homescreen/HomeCardAdapter;->onBindViewHolder()" -> "Lio/intercom" [constraint=true]
+	"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment;->onViewCreated()" -> "Lcom/surveymonkey" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzvg;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/zopim/android/sdk/api/ChatService;->setPushToken()" -> "Lcom/zopim" [constraint=true]
+	"Lio/intercom/android/sdk/blocks/messengercard/MessengerCard;->addCard()" -> "Lio/intercom" [constraint=true]
+	"Lcom/facebook/appevents/AppEventsLogger;->augmentWebView()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/localytics/android/VideoEnabledWebChromeClient;->onShowCustomView()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/VideoEnabledWebChromeClient;->onShowCustomView()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzuf;->destroy()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->zztz()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->zza()" -> "Lcom/google" [constraint=true]
+	"Lcom/zopim/android/sdk/api/WebBinder$1;->run()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lio/intercom/android/sdk/blocks/messengercard/MessengerCardAlertDialogBuilder$1;->onClick()" -> "Lio/intercom" [constraint=true]
+	"Lcom/sobergrid/activities/WebViewActivity$MyBrowser;->shouldOverrideUrlLoading()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lio/intercom/android/sdk/sheets/SheetWebViewClient;->shouldOverrideUrlLoading()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lio/intercom/android/sdk/sheets/SheetWebViewClient;->shouldOverrideUrlLoading()" -> "Lio/intercom" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->zzb()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->onMeasure()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/ads/internal/zzbt;->onPostExecute()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->onAttachedToWindow()" -> "Lcom/google" [constraint=true]
+	"Lcom/facebook/internal/FacebookWebFallbackDialog;->cancel()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lio/intercom/android/sdk/blocks/messengercard/MessengerCardWebViewClient;->shouldOverrideUrlLoading()" -> "Lio/intercom" [constraint=true]
+	"Lio/intercom/android/sdk/blocks/messengercard/MessengerCardWebViewClient;->shouldOverrideUrlLoading()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzul;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/localytics/android/InboxWebViewController$InboxWebViewClient;->onPageFinished()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->zzty()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->zzbe()" -> "Lcom/google" [constraint=true]
+	"Lcom/localytics/android/InAppDialogFragment$InAppDialog$InAppWebViewClient;->onPageFinished()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lbolts/WebViewAppLinkResolver$2$1;->onLoadResource()" -> "" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->zzno()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzasq;->onMeasure()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzuj;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/surveymonkey/surveymonkeyandroidsdk/SMFeedbackFragment$SMWebviewClient;->onPageStarted()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzasv;->loadUrl()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->destroy()" -> "Lcom/google" [constraint=true]
+	"Lio/intercom/android/sdk/conversation/JavascriptRunner$1;->run()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->zzai()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzari;->onDetachedFromWindow()" -> "Lcom/google" [constraint=true]
+	"Lbolts/WebViewAppLinkResolver$2$1;->onPageFinished()" -> "" [constraint=true]
+	"Lio/intercom/android/sdk/helpcenter/HelpCenterWebViewClient;->shouldOverrideUrlLoading()" -> "Landroid/webkit/WebView;->loadUrl()" [constraint=true]
+	"Lio/intercom/android/sdk/helpcenter/HelpCenterWebViewClient;->shouldOverrideUrlLoading()" -> "Lio/intercom" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/google/android/gms/ads/internal/ClientApi;->createSearchAdManager()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/internal/WebDialog;->onCreate()" [color="#a991d4" fontcolor=white]
+		"Lcom/localytics/android/InboxDetailFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		"Lbolts/WebViewAppLinkResolver$2;->then()" [color="#a991d4" fontcolor=white]
+		"Lcom/localytics/android/InAppDialogFragment;->onCreateDialog()" [color="#a991d4" fontcolor=white]
+		"Lio/intercom/android/sdk/homescreen/HomeCardAdapter;->onBindViewHolder()" [color="#a991d4" fontcolor=white]
+		"Lio/intercom/android/sdk/blocks/messengercard/MessengerCard;->addCard()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/appevents/AppEventsLogger;->augmentWebView()" [color="#a991d4" fontcolor=white]
+		"Lcom/localytics/android/VideoEnabledWebChromeClient;->onShowCustomView()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzuf;->destroy()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->zztz()" [color="#a991d4" fontcolor=white]
+		"Lio/intercom/android/sdk/blocks/messengercard/MessengerCardAlertDialogBuilder$1;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->zzb()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->onMeasure()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->zza()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->onAttachedToWindow()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/internal/FacebookWebFallbackDialog;->cancel()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->zzty()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->zzbe()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->zzno()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzasq;->onMeasure()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzasv;->loadUrl()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->destroy()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->zzai()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzari;->onDetachedFromWindow()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,81 @@
+{
+  "application": {
+    "handle": "com.thrivee",
+    "version_name": "21.3.30",
+    "version_code": "123",
+    "uaid": "E81C1CD3A8EB3AAC76DEF957F083B21BF618F945",
+    "name": "Kaden",
+    "permissions": [
+      "android.permission.INTERNET",
+      "com.google.android.c2dm.permission.RECEIVE",
+      "android.permission.WRITE_CALENDAR",
+      "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "me.everything.badger.permission.BADGE_COUNT_READ",
+      "android.permission.CAMERA",
+      "com.sonyericsson.home.permission.BROADCAST_BADGE",
+      "com.majeur.launcher.permission.UPDATE_BADGE",
+      "com.oppo.launcher.permission.READ_SETTINGS",
+      "android.permission.READ_CALENDAR",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "com.sec.android.provider.badge.permission.WRITE",
+      "com.sec.android.provider.badge.permission.READ",
+      "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+      "android.permission.WAKE_LOCK",
+      "com.htc.launcher.permission.UPDATE_SHORTCUT",
+      "com.huawei.android.launcher.permission.CHANGE_BADGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "me.everything.badger.permission.BADGE_COUNT_WRITE",
+      "android.permission.VIBRATE",
+      "com.anddoes.launcher.permission.UPDATE_COUNT",
+      "android.permission.READ_APP_BADGE",
+      "com.htc.launcher.permission.READ_SETTINGS",
+      "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION",
+      "android.permission.RNFB_ANDROID_PERMISSIONS",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.RECORD_AUDIO",
+      "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+      "com.huawei.android.launcher.permission.READ_SETTINGS",
+      "com.android.vending.CHECK_LICENSE",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "com.oppo.launcher.permission.WRITE_SETTINGS"
+    ],
+    "libraries": [
+      "org.apache.http.legacy"
+    ]
+  },
+  "apk": {
+    "path": "../AndroCFG/apk/kaden-health_21.3.30.apk",
+    "checksum": "1ac4daec9cfdbf7479730fb9ffa5fcecbe2ada290558c2dad3c3a6ed1a7f9f39"
+  },
+  "trackers": [
+    {
+      "name": "Google CrashLytics",
+      "id": 27
+    },
+    {
+      "name": "Google Firebase Analytics",
+      "id": 49
+    },
+    {
+      "name": "Facebook Analytics",
+      "id": 66
+    },
+    {
+      "name": "Facebook Login",
+      "id": 67
+    },
+    {
+      "name": "Facebook Share",
+      "id": 70
+    },
+    {
+      "name": "Google AdMob",
+      "id": 312
+    }
+  ]
+}

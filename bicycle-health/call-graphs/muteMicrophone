@@ -1,0 +1,47 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/media/AudioManager;->setMicrophoneMute()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/zipow/videobox/view/sip/PhonePBXHistoryListView$3;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/PhonePBXListCoverView;->onBluetoothScoAudioStatus()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/PhonePBXListCoverView;->onHeadsetStatusChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/PhonePBXListCoverView;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/PhonePBXVoiceMailListView;->onItemClick()" [color="#a991d4" fontcolor=white]
+			"Lcom/zipow/videobox/view/sip/PhonePBXCallHistoryAdapter;->onClick()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/zipow" -> "Landroid/media/AudioManager;->setMicrophoneMute()" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/PhonePBXHistoryListView$3;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/PhonePBXListCoverView;->onBluetoothScoAudioStatus()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/PhonePBXListCoverView;->onHeadsetStatusChanged()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/PhonePBXListCoverView;->onClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/PhonePBXVoiceMailListView;->onItemClick()" -> "Lcom/zipow" [constraint=true]
+	"Lcom/zipow/videobox/view/sip/PhonePBXCallHistoryAdapter;->onClick()" -> "Lcom/zipow" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/zipow/videobox/view/sip/PhonePBXHistoryListView$3;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/PhonePBXListCoverView;->onBluetoothScoAudioStatus()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/PhonePBXListCoverView;->onHeadsetStatusChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/PhonePBXListCoverView;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/PhonePBXVoiceMailListView;->onItemClick()" [color="#a991d4" fontcolor=white]
+		"Lcom/zipow/videobox/view/sip/PhonePBXCallHistoryAdapter;->onClick()" [color="#a991d4" fontcolor=white]
+	}
+}

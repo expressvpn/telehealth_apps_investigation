@@ -1,0 +1,55 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/hardware/camera2/CameraManager;->openCamera()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/opentok/android/v3/Camera2VideoCapturer;->resume()" [color="#a991d4" fontcolor=white]
+			"Lcom/opentok/android/Camera2VideoCapturer;->init()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/cameraview/Camera2;->setFacing()" [color="#a991d4" fontcolor=white]
+			"Lcom/opentok/android/v3/Camera2VideoCapturer;->cycleCamera()" [color="#a991d4" fontcolor=white]
+			"Lcom/opentok/android/Camera2VideoCapturer;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/opentok/android/Camera2VideoCapturer;->cycleCamera()" [color="#a991d4" fontcolor=white]
+			"Lcom/opentok/android/v3/Camera2VideoCapturer;->initialize()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/Camera2Capturer;->createCameraSession()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google" -> "Landroid/hardware/camera2/CameraManager;->openCamera()" [constraint=true]
+	"Lcom/opentok/android/v3/Camera2VideoCapturer;->resume()" -> "Lcom/opentok" [constraint=true]
+	"Lcom/opentok" -> "Landroid/hardware/camera2/CameraManager;->openCamera()" [constraint=true]
+	"Lcom/opentok/android/Camera2VideoCapturer;->init()" -> "Lcom/opentok" [constraint=true]
+	"Lcom/google/android/cameraview/Camera2;->setFacing()" -> "Lcom/google" [constraint=true]
+	Lorg -> "Landroid/hardware/camera2/CameraManager;->openCamera()" [constraint=true]
+	"Lcom/opentok/android/v3/Camera2VideoCapturer;->cycleCamera()" -> "Lcom/opentok" [constraint=true]
+	"Lcom/opentok/android/Camera2VideoCapturer;->onResume()" -> "Lcom/opentok" [constraint=true]
+	"Lcom/opentok/android/Camera2VideoCapturer;->cycleCamera()" -> "Lcom/opentok" [constraint=true]
+	"Lcom/opentok/android/v3/Camera2VideoCapturer;->initialize()" -> "Lcom/opentok" [constraint=true]
+	"Lorg/webrtc/Camera2Capturer;->createCameraSession()" -> Lorg [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/opentok/android/v3/Camera2VideoCapturer;->resume()" [color="#a991d4" fontcolor=white]
+		"Lcom/opentok/android/Camera2VideoCapturer;->init()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/cameraview/Camera2;->setFacing()" [color="#a991d4" fontcolor=white]
+		"Lcom/opentok/android/v3/Camera2VideoCapturer;->cycleCamera()" [color="#a991d4" fontcolor=white]
+		"Lcom/opentok/android/Camera2VideoCapturer;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/opentok/android/Camera2VideoCapturer;->cycleCamera()" [color="#a991d4" fontcolor=white]
+		"Lcom/opentok/android/v3/Camera2VideoCapturer;->initialize()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/Camera2Capturer;->createCameraSession()" [color="#a991d4" fontcolor=white]
+	}
+}

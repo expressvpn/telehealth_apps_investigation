@@ -1,0 +1,69 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/media/AudioRecord;->startRecording()" [color="#593196" fontcolor=white]
+	"Landroid/media/AudioRecord;->read()" [color="#593196" fontcolor=white]
+	"Landroid/media/AudioRecord;->read()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lorg/webrtc/audio/WebRtcAudioRecord;->startRecording()" [color="#a991d4" fontcolor=white]
+			"Lcom/opentok/android/v3/DefaultAudioInputFactory;->create()" [color="#a991d4" fontcolor=white]
+			"Lcom/opentok/android/DefaultAudioDevice$3;->onCallStateChanged()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/voiceengine/WebRtcAudioRecord;->startRecording()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/voiceengine61/WebRtcAudioRecord;->startRecording()" [color="#a991d4" fontcolor=white]
+			"Lcom/opentok/android/v3/DefaultAudioInputFactory$AudioInputStream;->read()" [color="#a991d4" fontcolor=white]
+			"Lcom/opentok/android/v3/DefaultAudioInputFactory$AudioInputStream;->read()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/opentok/android/DefaultAudioDevice$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/voiceengine61/WebRtcAudioRecord$AudioRecordThread;->run()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->run()" [color="#a991d4" fontcolor=white]
+			"Lorg/webrtc/voiceengine/WebRtcAudioRecord$AudioRecordThread;->run()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lorg/webrtc/audio/WebRtcAudioRecord;->startRecording()" -> "Landroid/media/AudioRecord;->startRecording()" [constraint=true]
+	"Lcom/opentok" -> "Landroid/media/AudioRecord;->startRecording()" [constraint=true]
+	"Lcom/opentok/android/v3/DefaultAudioInputFactory;->create()" -> "Lcom/opentok" [constraint=true]
+	"Lcom/opentok/android/DefaultAudioDevice$3;->onCallStateChanged()" -> "Lcom/opentok" [constraint=true]
+	"Lorg/webrtc/voiceengine/WebRtcAudioRecord;->startRecording()" -> "Landroid/media/AudioRecord;->startRecording()" [constraint=true]
+	"Lorg/webrtc/voiceengine61/WebRtcAudioRecord;->startRecording()" -> "Landroid/media/AudioRecord;->startRecording()" [constraint=true]
+	"Lcom/opentok/android/v3/DefaultAudioInputFactory$AudioInputStream;->read()" -> "Landroid/media/AudioRecord;->read()" [constraint=true]
+	"Lcom/opentok/android/DefaultAudioDevice$5;->run()" -> "Landroid/media/AudioRecord;->read()" [constraint=true]
+	"Lorg/webrtc/voiceengine61/WebRtcAudioRecord$AudioRecordThread;->run()" -> "Landroid/media/AudioRecord;->read()" [constraint=true]
+	"Lorg/webrtc/audio/WebRtcAudioRecord$AudioRecordThread;->run()" -> "Landroid/media/AudioRecord;->read()" [constraint=true]
+	"Lorg/webrtc/voiceengine/WebRtcAudioRecord$AudioRecordThread;->run()" -> "Landroid/media/AudioRecord;->read()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lorg/webrtc/audio/WebRtcAudioRecord;->startRecording()" [color="#a991d4" fontcolor=white]
+		"Lcom/opentok/android/v3/DefaultAudioInputFactory;->create()" [color="#a991d4" fontcolor=white]
+		"Lcom/opentok/android/DefaultAudioDevice$3;->onCallStateChanged()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/voiceengine/WebRtcAudioRecord;->startRecording()" [color="#a991d4" fontcolor=white]
+		"Lorg/webrtc/voiceengine61/WebRtcAudioRecord;->startRecording()" [color="#a991d4" fontcolor=white]
+		"Lcom/opentok/android/v3/DefaultAudioInputFactory$AudioInputStream;->read()" [color="#a991d4" fontcolor=white]
+		"Lcom/opentok/android/v3/DefaultAudioInputFactory$AudioInputStream;->read()" [color="#a991d4" fontcolor=white]
+	}
+}

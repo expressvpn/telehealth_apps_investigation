@@ -1,0 +1,237 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/lang/Runtime;->availableProcessors()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->freeMemory()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->maxMemory()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->totalMemory()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->newAnimationExecutor()" [color="#a991d4" fontcolor=white]
+			"Lkotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/RequestManagerFragment;->onAttach()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;->buildLoadData()" [color="#a991d4" fontcolor=white]
+			"Lkotlinx/coroutines/CommonPool;->getExecutor()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lio/fabric/sdk/android/services/concurrency/PriorityThreadPoolExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lkotlinx/coroutines/CommonPool;->dispatch()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->transform()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/SupportRequestManagerFragment;->onAttach()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;->decode()" [color="#a991d4" fontcolor=white]
+			"Lbolts/AndroidExecutors;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/model/stream/MediaStoreImageThumbLoader;->buildLoadData()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/FastImageViewManager;->createViewInstance()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->newSourceExecutor()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;->transform()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;->transform()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+			"Lio/fabric/sdk/android/services/concurrency/AsyncTask;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/gif/GifDrawable;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/GlideApp;->get()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/bitmap/VideoBitmapDecoder;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->newSourceExecutor()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->obtain()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+			"Lcom/dylanvann/fastimage/GlideApp;->init()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getUsedMemory()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/drawee/backends/pipeline/Fresco;->initialize()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageView;->setControllerListener()" [color="#a991d4" fontcolor=white]
+			"Lorg/bouncycastle/asn1/StreamUtil;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" [color="#a991d4" fontcolor=white]
+			"Lcom/horcrux/svg/ImageView;->draw()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/drawee/backends/pipeline/PipelineDraweeControllerBuilderSupplier;-><init>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageView;->onSizeChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/cache/DefaultEncodedMemoryCacheParamsSupplier;->get()" [color="#a991d4" fontcolor=white]
+			"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMaxMemory()" [color="#a991d4" fontcolor=white]
+			"Lcom/reactnativenavigation/views/element/animators/ReactImageCornerRadiusAnimator;->create()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" [color="#a991d4" fontcolor=white]
+			"Lcom/stripe/android/stripe3ds2/utils/b;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lio/sentry/android/core/DefaultAndroidEventProcessor;->process()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/dylanvann/fastimage/FastImageViewModule$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventQueue$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventQueue$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/appevents/AppEventQueue$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/FacebookSdk$5;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/crashlytics/android/core/CrashlyticsController$7;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/crashlytics/android/core/CrashlyticsController$12;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/modules/image/ImageLoaderModule$4;->doInBackgroundGuarded()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/facebook" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/facebook" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->newAnimationExecutor()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/dylanvann/fastimage/FastImageViewModule$1;->run()" -> "Lcom/bumptech" [constraint=true]
+	Lkotlinx -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lkotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/bumptech/glide/manager/RequestManagerFragment;->onAttach()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;->buildLoadData()" -> "Lcom/bumptech" [constraint=true]
+	"Lkotlinx/coroutines/CommonPool;->getExecutor()" -> Lkotlinx [constraint=true]
+	"Lcom/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lio/fabric/sdk/android/services/concurrency/PriorityThreadPoolExecutor;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/crashlytics" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lkotlinx/coroutines/CommonPool;->dispatch()" -> Lkotlinx [constraint=true]
+	"Lcom/bumptech/glide/load/model/stream/MediaStoreImageThumbLoader;->buildLoadData()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->transform()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/manager/SupportRequestManagerFragment;->onAttach()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;->decode()" -> "Lcom/bumptech" [constraint=true]
+	"Lbolts/AndroidExecutors;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/crashlytics/android/core/CrashlyticsController$7;->call()" -> "Lcom/crashlytics" [constraint=true]
+	"Lcom/dylanvann/fastimage/FastImageViewManager;->createViewInstance()" -> "Lcom/dylanvann" [constraint=true]
+	"Lcom/dylanvann/fastimage/FastImageViewManager;->createViewInstance()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;-><init>()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/gif/GifDrawable;-><init>()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->newSourceExecutor()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/dylanvann/fastimage/GlideApp;->with()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/facebook/appevents/AppEventQueue$3;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;->transform()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;->transform()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/facebook/appevents/AppEventQueue$1;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lio/fabric/sdk/android/services/concurrency/AsyncTask;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/dylanvann/fastimage/GlideApp;->get()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/facebook/appevents/AppEventQueue$4;->run()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/FacebookSdk$5;->run()" -> Lcom [constraint=true]
+	Lcom -> "Lcom/facebook" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/bitmap/VideoBitmapDecoder;-><init>()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/crashlytics/android/core/CrashlyticsController$12;->call()" -> "Lcom/crashlytics" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->obtain()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/dylanvann/fastimage/GlideApp;->init()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getUsedMemory()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/learnium" -> "Ljava/lang/Runtime;->freeMemory()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/lang/Runtime;->totalMemory()" [constraint=true]
+	"Lcom/learnium" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/cache/DefaultEncodedMemoryCacheParamsSupplier;->get()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/drawee/backends/pipeline/Fresco;->initialize()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageView;->setControllerListener()" -> "Lcom/facebook" [constraint=true]
+	"Lorg/bouncycastle/asn1/StreamUtil;-><clinit>()" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/drawee/backends/pipeline/PipelineDraweeControllerBuilderSupplier;-><init>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/horcrux/svg/ImageView;->draw()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/stripe" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule$4;->doInBackgroundGuarded()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageView;->onSizeChanged()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMaxMemory()" -> "Lcom/learnium" [constraint=true]
+	"Lcom/reactnativenavigation/views/element/animators/ReactImageCornerRadiusAnimator;->create()" -> "Lcom/reactnativenavigation" [constraint=true]
+	"Lcom/reactnativenavigation" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/stripe/android/stripe3ds2/utils/b;-><clinit>()" -> "Lcom/stripe" [constraint=true]
+	"Lio/sentry" -> "Ljava/lang/Runtime;->totalMemory()" [constraint=true]
+	"Lio/sentry/android/core/DefaultAndroidEventProcessor;->process()" -> "Lio/sentry" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->newAnimationExecutor()" [color="#a991d4" fontcolor=white]
+		"Lkotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/manager/RequestManagerFragment;->onAttach()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;->buildLoadData()" [color="#a991d4" fontcolor=white]
+		"Lkotlinx/coroutines/CommonPool;->getExecutor()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lio/fabric/sdk/android/services/concurrency/PriorityThreadPoolExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lkotlinx/coroutines/CommonPool;->dispatch()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->transform()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/manager/SupportRequestManagerFragment;->onAttach()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;->decode()" [color="#a991d4" fontcolor=white]
+		"Lbolts/AndroidExecutors;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/model/stream/MediaStoreImageThumbLoader;->buildLoadData()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/FastImageViewManager;->createViewInstance()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->newSourceExecutor()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;->transform()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;->transform()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+		"Lio/fabric/sdk/android/services/concurrency/AsyncTask;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/gif/GifDrawable;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/GlideApp;->get()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/bitmap/VideoBitmapDecoder;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->newSourceExecutor()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->obtain()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/GlideApp;->with()" [color="#a991d4" fontcolor=white]
+		"Lcom/dylanvann/fastimage/GlideApp;->init()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getUsedMemory()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/drawee/backends/pipeline/Fresco;->initialize()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageView;->setControllerListener()" [color="#a991d4" fontcolor=white]
+		"Lorg/bouncycastle/asn1/StreamUtil;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" [color="#a991d4" fontcolor=white]
+		"Lcom/horcrux/svg/ImageView;->draw()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/drawee/backends/pipeline/PipelineDraweeControllerBuilderSupplier;-><init>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageView;->onSizeChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/cache/DefaultEncodedMemoryCacheParamsSupplier;->get()" [color="#a991d4" fontcolor=white]
+		"Lcom/learnium/RNDeviceInfo/RNDeviceModule;->getMaxMemory()" [color="#a991d4" fontcolor=white]
+		"Lcom/reactnativenavigation/views/element/animators/ReactImageCornerRadiusAnimator;->create()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" [color="#a991d4" fontcolor=white]
+		"Lcom/stripe/android/stripe3ds2/utils/b;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lio/sentry/android/core/DefaultAndroidEventProcessor;->process()" [color="#a991d4" fontcolor=white]
+	}
+}

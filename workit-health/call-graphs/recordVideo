@@ -1,0 +1,44 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/media/MediaRecorder;->start()" [color="#593196" fontcolor=white]
+	"Landroid/media/MediaRecorder;->setOutputFile()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/cameraview/Camera2;->record()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/av/AVManager;->startAudioRecording()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/cameraview/Camera1;->record()" [color="#a991d4" fontcolor=white]
+			"Lexpo/modules/av/AVManager;->prepareAudioRecorder()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google/android/cameraview/Camera2;->record()" -> "Landroid/media/MediaRecorder;->start()" [constraint=true]
+	"Lcom/google/android/cameraview/Camera2;->record()" -> "Lcom/google" [constraint=true]
+	"Lcom/google" -> "Landroid/media/MediaRecorder;->setOutputFile()" [constraint=true]
+	"Lexpo/modules/av/AVManager;->startAudioRecording()" -> "Landroid/media/MediaRecorder;->start()" [constraint=true]
+	"Lcom/google/android/cameraview/Camera1;->record()" -> "Landroid/media/MediaRecorder;->start()" [constraint=true]
+	"Lcom/google/android/cameraview/Camera1;->record()" -> "Lcom/google" [constraint=true]
+	"Lexpo/modules/av/AVManager;->prepareAudioRecorder()" -> "Landroid/media/MediaRecorder;->setOutputFile()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/google/android/cameraview/Camera2;->record()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/av/AVManager;->startAudioRecording()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/cameraview/Camera1;->record()" [color="#a991d4" fontcolor=white]
+		"Lexpo/modules/av/AVManager;->prepareAudioRecorder()" [color="#a991d4" fontcolor=white]
+	}
+}

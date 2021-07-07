@@ -1,0 +1,31 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/net/DatagramSocket;->send()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/lyft/kronos/internal/ntp/SntpServiceImpl$syncInBackground$1;->run()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/lyft/kronos/internal/ntp/SntpServiceImpl$syncInBackground$1;->run()" -> "Lcom/lyft" [constraint=true]
+	"Lcom/lyft" -> "Ljava/net/DatagramSocket;->send()" [constraint=true]
+	subgraph cluster_other_entrypoints {
+	}
+}

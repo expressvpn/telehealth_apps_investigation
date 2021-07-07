@@ -1,0 +1,131 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/location/Location;->getLatitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/Location;->getLongitude()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestSingleUpdate()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->getLastKnownLocation()" [color="#593196" fontcolor=white]
+	"Landroid/location/LocationManager;->requestSingleUpdate()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/GMSLocationController$GoogleApiClientListener;->onConnected()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/Localytics;->triggerRegion()" [color="#a991d4" fontcolor=white]
+			"Lcom/onesignal/HMSLocationController$2;->onSuccess()" [color="#a991d4" fontcolor=white]
+			"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/adapters/NewsfeedAdapter;->onCreateViewHolder()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzafa;->zzdn()" [color="#a991d4" fontcolor=white]
+			"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/localytics/android/LocationHandler$6$1;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$11;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/LocationHandler$2;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzafp;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/sobergrid/view/BaseLocationActivity;->onLocationChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/activity/main/MainActivity;->onLocationReady()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/BaseLocationActivity;->getCoordinatesNow()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/BaseLocationActivity;->requestLocation()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/BaseLocationActivity;->onRequestPermissionsResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/sobergrid/view/BaseLocationActivity;->onActivityResult()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_receiver {
+			label=Receiver
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/localytics/android/LocationUpdateReceiver;->onReceive()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/google" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/google" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/localytics" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/localytics" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/localytics/android/LocationHandler$6$1;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/onesignal/GMSLocationController$GoogleApiClientListener;->onConnected()" -> Lcom [constraint=true]
+	Lcom -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	Lcom -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/localytics/android/Localytics;->triggerRegion()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$11;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/onesignal/HMSLocationController$2;->onSuccess()" -> Lcom [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Landroidx/appcompat" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Lcom/localytics/android/LocationUpdateReceiver;->onReceive()" -> "Lcom/localytics" [constraint=true]
+	"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" -> "Landroidx/appcompat" [constraint=true]
+	"Lcom/sobergrid/adapters/NewsfeedAdapter;->onCreateViewHolder()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/sobergrid" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/sobergrid" -> "Landroid/location/LocationManager;->requestSingleUpdate()" [constraint=true]
+	"Lcom/sobergrid" -> "Landroid/location/LocationManager;->getLastKnownLocation()" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$3;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzafa;->zzdn()" -> "Lcom/google" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$4;->run()" -> "Lcom/localytics" [constraint=true]
+	"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/localytics/android/LocationHandler$2;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$5;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzafp;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/sobergrid/view/BaseLocationActivity;->onLocationChanged()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/sobergrid/view/BaseLocationActivity;->onLocationChanged()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/sobergrid/view/activity/main/MainActivity;->onLocationReady()" -> "Landroid/location/Location;->getLatitude()" [constraint=true]
+	"Lcom/sobergrid/view/activity/main/MainActivity;->onLocationReady()" -> "Landroid/location/Location;->getLongitude()" [constraint=true]
+	"Lcom/sobergrid/view/BaseLocationActivity;->getCoordinatesNow()" -> "Landroid/location/LocationManager;->requestSingleUpdate()" [constraint=true]
+	"Lcom/sobergrid/view/BaseLocationActivity;->requestLocation()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/BaseLocationActivity;->onRequestPermissionsResult()" -> "Lcom/sobergrid" [constraint=true]
+	"Lcom/sobergrid/view/BaseLocationActivity;->onActivityResult()" -> "Lcom/sobergrid" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/onesignal/GMSLocationController$GoogleApiClientListener;->onConnected()" [color="#a991d4" fontcolor=white]
+		"Lcom/localytics/android/Localytics;->triggerRegion()" [color="#a991d4" fontcolor=white]
+		"Lcom/onesignal/HMSLocationController$2;->onSuccess()" [color="#a991d4" fontcolor=white]
+		"Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->getApplyableNightMode()" [color="#a991d4" fontcolor=white]
+		"Lcom/sobergrid/adapters/NewsfeedAdapter;->onCreateViewHolder()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzafa;->zzdn()" [color="#a991d4" fontcolor=white]
+		"Landroidx/exifinterface/media/ExifInterface;->setGpsInfo()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/GraphRequest;->newPlacesSearchRequest()" [color="#a991d4" fontcolor=white]
+	}
+}

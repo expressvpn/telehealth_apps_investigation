@@ -1,0 +1,106 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->getAdvertisingIdInfo()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/onesignal/AdvertisingIdProviderGPS;->getIdentifier()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/internal/ads/zzafa;->zzdn()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/internal/ads/zzajf;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzch;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$11;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcj;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzck;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcm;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$13;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$3;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzca;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcg;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzcf;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/localytics/android/AnalyticsHandler$5;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzbw;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzbx;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzby;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzbz;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/android/gms/measurement/internal/zzci;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/measurement/internal/zzfe;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/localytics/android/AdidAsyncTask;->doInBackground()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/localytics" -> "Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->getAdvertisingIdInfo()" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzajf;->run()" -> "Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->getAdvertisingIdInfo()" [constraint=true]
+	"Lcom/google" -> "Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->getAdvertisingIdInfo()" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzch;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/onesignal/AdvertisingIdProviderGPS;->getIdentifier()" -> "Lcom/google/android/gms/ads/identifier/AdvertisingIdClient;->getAdvertisingIdInfo()" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$11;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzci;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/localytics/android/AdidAsyncTask;->doInBackground()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcj;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzfe;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzck;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcm;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$13;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/google/android/gms/internal/ads/zzafa;->zzdn()" -> "Lcom/google" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$3;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$4;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzca;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcg;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzcf;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/localytics/android/AnalyticsHandler$5;->run()" -> "Lcom/localytics" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzbw;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzbx;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzby;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/google/android/gms/measurement/internal/zzbz;->run()" -> "Lcom/google" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/onesignal/AdvertisingIdProviderGPS;->getIdentifier()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/gms/internal/ads/zzafa;->zzdn()" [color="#a991d4" fontcolor=white]
+	}
+}

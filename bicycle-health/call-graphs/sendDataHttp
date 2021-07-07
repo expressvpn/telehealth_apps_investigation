@@ -1,0 +1,156 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/net/HttpURLConnection;->setRequestMethod()" [color="#593196" fontcolor=white]
+	"Ljava/net/HttpURLConnection;->setRequestProperty()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/freshchat/consumer/sdk/service/c/aa;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/f;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/ab;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/p;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/v;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/e;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/s;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/g;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/z;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/datatransport/cct/CctTransportBackend$$Lambda$1;->apply()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/u;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/ac;->b()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/x;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/t;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/m;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/o;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/r;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/d;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/h;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/service/c/c;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/squareup/picasso/UrlConnectionDownloader;->load()" [color="#a991d4" fontcolor=white]
+			"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_thread {
+			label=Thread
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lio/sentry/transport/AsyncHttpTransport$EnvelopeSender;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/installations/FirebaseInstallations$$Lambda$4;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/freshchat/consumer/sdk/l/d;->run()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/android/gms/auth/api/signin/internal/zze;->run()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/installations/FirebaseInstallations$$Lambda$3;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/rumax/reactnative/pdfviewer/AsyncDownload;->doInBackground()" [color="#a991d4" fontcolor=white]
+			"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->doInBackground()" [color="#a991d4" fontcolor=white]
+			"Lcom/microsoft/codepush/react/CodePushNativeModule$3;->doInBackground()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lio/sentry" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lio/sentry" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/freshchat" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/freshchat" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->doInBackground()" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lio/branch/referral/BranchViewHandler$loadBranchViewTask;->doInBackground()" -> "Lio/branch" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/aa;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/f;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/x;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/ab;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lokhttp3/internal" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lokhttp3/internal" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/p;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/google" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/google" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/v;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/e;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/s;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/g;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/rumax/reactnative/pdfviewer/AsyncDownload;->doInBackground()" -> "Lcom/rumax" [constraint=true]
+	"Lcom/rumax" -> "Ljava/net/HttpURLConnection;->setRequestMethod()" [constraint=true]
+	"Lcom/rumax" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/z;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/google/android/datatransport/cct/CctTransportBackend$$Lambda$1;->apply()" -> "Lcom/google" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/ac;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/c;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lio/sentry/transport/AsyncHttpTransport$EnvelopeSender;->run()" -> "Lio/sentry" [constraint=true]
+	"Lcom/google/firebase/installations/FirebaseInstallations$$Lambda$4;->run()" -> "Lcom/google" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/l/d;->run()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/u;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" -> "Lokhttp3/internal" [constraint=true]
+	"Lcom/google/firebase/installations/FirebaseInstallations$$Lambda$3;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/t;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/m;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/o;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/r;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/d;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/freshchat/consumer/sdk/service/c/h;->b()" -> "Lcom/freshchat" [constraint=true]
+	"Lcom/microsoft/codepush/react/CodePushNativeModule$3;->doInBackground()" -> "Lcom/microsoft" [constraint=true]
+	"Lcom/microsoft" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/squareup/picasso/UrlConnectionDownloader;->load()" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lcom/google/android/gms/auth/api/signin/internal/zze;->run()" -> "Ljava/net/HttpURLConnection;->setRequestProperty()" [constraint=true]
+	"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" -> "Lokhttp3/internal" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/freshchat/consumer/sdk/service/c/aa;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/f;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/ab;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/p;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/v;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/e;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/s;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/g;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/z;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/google/android/datatransport/cct/CctTransportBackend$$Lambda$1;->apply()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/u;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/ac;->b()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestMethod()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/x;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/t;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/m;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/o;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/r;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/d;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/h;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/freshchat/consumer/sdk/service/c/c;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/squareup/picasso/UrlConnectionDownloader;->load()" [color="#a991d4" fontcolor=white]
+		"Lokhttp3/internal/huc/OkHttpsURLConnection;->setRequestProperty()" [color="#a991d4" fontcolor=white]
+	}
+}

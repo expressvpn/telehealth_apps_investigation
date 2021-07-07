@@ -1,0 +1,111 @@
+{
+  "application": {
+    "handle": "com.loosidapp",
+    "version_name": "3.8.20",
+    "version_code": "315",
+    "uaid": "0FEAFFB3887E30B643C26B861F93AFA8AF4D53D5",
+    "name": "LoosidApp",
+    "permissions": [
+      "com.loosidapp.permission.C2D_MESSAGE",
+      "com.htc.launcher.permission.UPDATE_SHORTCUT",
+      "android.permission.READ_CALENDAR",
+      "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "com.huawei.android.launcher.permission.WRITE_SETTINGS",
+      "android.permission.BLUETOOTH",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "com.majeur.launcher.permission.UPDATE_BADGE",
+      "com.oppo.launcher.permission.READ_SETTINGS",
+      "me.everything.badger.permission.BADGE_COUNT_WRITE",
+      "android.permission.MANAGE_OWN_CALLS",
+      "android.permission.USE_BIOMETRIC",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "android.permission.READ_CONTACTS",
+      "android.permission.INTERNET",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "com.google.android.c2dm.permission.RECEIVE",
+      "android.permission.STORAGE",
+      "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+      "android.permission.WAKE_LOCK",
+      "android.permission.USE_FINGERPRINT",
+      "me.everything.badger.permission.BADGE_COUNT_READ",
+      "com.sonyericsson.home.permission.BROADCAST_BADGE",
+      "android.permission.WRITE_CALENDAR",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "com.huawei.android.launcher.permission.CHANGE_BADGE",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_WIFI_STATE",
+      "com.huawei.android.launcher.permission.READ_SETTINGS",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "com.google.android.providers.gsf.permission.READ_GSERVICES",
+      "com.google.android.gms.permission.ACTIVITY_RECOGNITION",
+      "com.sec.android.provider.badge.permission.WRITE",
+      "android.permission.READ_APP_BADGE",
+      "android.permission.CAMERA",
+      "com.oppo.launcher.permission.WRITE_SETTINGS",
+      "android.permission.VIBRATE",
+      "com.android.vending.CHECK_LICENSE",
+      "com.anddoes.launcher.permission.UPDATE_COUNT",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "com.htc.launcher.permission.READ_SETTINGS",
+      "com.sec.android.provider.badge.permission.READ",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.FOREGROUND_SERVICE"
+    ],
+    "libraries": [
+      "org.apache.http.legacy",
+      "android.test.runner"
+    ]
+  },
+  "apk": {
+    "path": "../AndroCFG/apk/loosidapp_3.8.20.apk",
+    "checksum": "13aaec3f8c7c32c461041a20798726df06103b1993141ff1584a5081c2adc026"
+  },
+  "trackers": [
+    {
+      "name": "AppsFlyer",
+      "id": 12
+    },
+    {
+      "name": "Google CrashLytics",
+      "id": 27
+    },
+    {
+      "name": "Google Firebase Analytics",
+      "id": 49
+    },
+    {
+      "name": "Facebook Login",
+      "id": 67
+    },
+    {
+      "name": "Facebook Share",
+      "id": 70
+    },
+    {
+      "name": "MixPanel",
+      "id": 118
+    },
+    {
+      "name": "OneSignal",
+      "id": 193
+    },
+    {
+      "name": "Bugsnag",
+      "id": 207
+    },
+    {
+      "name": "Microsoft Visual Studio App Center Crashes",
+      "id": 238
+    },
+    {
+      "name": "Microsoft Visual Studio App Center Analytics",
+      "id": 243
+    },
+    {
+      "name": "Huawei Mobile Services (HMS) Core",
+      "id": 333
+    }
+  ]
+}

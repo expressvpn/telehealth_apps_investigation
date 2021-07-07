@@ -1,0 +1,213 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Ljava/lang/Runtime;->availableProcessors()" [color="#593196" fontcolor=white]
+	"Ljava/lang/Runtime;->maxMemory()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/helpscout/beacon/internal/presentation/ui/chat/header/ChatHeaderView;->b()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/f;->onBindViewHolder()" [color="#a991d4" fontcolor=white]
+			"Lbolts/AndroidExecutors;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/c$i;->onClick()" [color="#a991d4" fontcolor=white]
+			"Lio/realm/internal/async/RealmThreadPoolExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lkotlinx/coroutines/CommonPool;->dispatch()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/ui/conversations/b$a;->a()" [color="#a991d4" fontcolor=white]
+			"La/b/a/a/b/d/e/s/a$a;->invokeSuspend()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;->buildLoadData()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/b$c;->invoke()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/common/widget/ParticipantAvatarView;->renderOrHide()" [color="#a991d4" fontcolor=white]
+			"La/b/a/a/c/d/h/a$b;->invoke()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/model/stream/MediaStoreImageThumbLoader;->buildLoadData()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;->transform()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;->decode()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/c$k;->invoke()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/RequestManagerFragment;->onAttach()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;->transform()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/manager/SupportRequestManagerFragment;->onAttach()" [color="#a991d4" fontcolor=white]
+			"Lkotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/common/widget/GlideImageGetter;->getDrawable()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/ui/conversation/a$a$b;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->transform()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageView;->setControllerListener()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/cache/DefaultEncodedMemoryCacheParamsSupplier;->get()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setImage()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/AirMapManager;->setKmlSrc()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setIcon()" [color="#a991d4" fontcolor=white]
+			"Lcom/airbnb/android/react/maps/AirMapOverlayManager;->setImage()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/views/image/ReactImageView;->onSizeChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_callable {
+			label=Callable
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$6;->call()" [color="#a991d4" fontcolor=white]
+			"Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$14;->call()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_task {
+			label=Task
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/modules/image/ImageLoaderModule$4;->doInBackgroundGuarded()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/helpscout/beacon/internal/presentation/ui/home/HomeActivity;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/common/FullScreenImageActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/helpscout/beacon/internal/presentation/ui/message/SendMessageActivity;->a()" [color="#a991d4" fontcolor=white]
+			"Lcom/dynamicarehealth/rewards/MainActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_provider {
+			label=Provider
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/work/impl/WorkManagerInitializer;->onCreate()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Lcom/helpscout/beacon/internal/presentation/ui/conversation/a$a$b;->a()" -> "Lcom/helpscout" [constraint=true]
+	"Lcom/helpscout" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/ui/chat/header/ChatHeaderView;->b()" -> "Lcom/helpscout" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/b$c;->invoke()" -> "Lcom/helpscout" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/f;->onBindViewHolder()" -> "Lcom/helpscout" [constraint=true]
+	"Lcom/google" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/bumptech" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"La/b" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/datadog" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lbolts/AndroidExecutors;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;->buildLoadData()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/ui/home/HomeActivity;->a()" -> "Lcom/helpscout" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/c$i;->onClick()" -> "Lcom/helpscout" [constraint=true]
+	"Lio/realm/internal/async/RealmThreadPoolExecutor;-><clinit>()" -> "Lio/realm" [constraint=true]
+	"Lio/realm" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	Landroidx -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lkotlinx/coroutines/CommonPool;->dispatch()" -> Lkotlinx [constraint=true]
+	Lkotlinx -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/ui/conversations/b$a;->a()" -> "Lcom/helpscout" [constraint=true]
+	"La/b/a/a/b/d/e/s/a$a;->invokeSuspend()" -> "La/b" [constraint=true]
+	"Lcom/bumptech/glide/load/model/stream/MediaStoreImageThumbLoader;->buildLoadData()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$14;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/dynamicarehealth" -> "Lcom/datadog" [constraint=true]
+	"Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$6;->call()" -> "Lcom/google" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/ui/message/SendMessageActivity;->a()" -> "Lcom/helpscout" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/common/widget/ParticipantAvatarView;->renderOrHide()" -> "Lcom/helpscout" [constraint=true]
+	"La/b/a/a/c/d/h/a$b;->invoke()" -> "La/b" [constraint=true]
+	"Lcom/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;->transform()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;->decode()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/common/FullScreenImageActivity;->onCreate()" -> "Lcom/helpscout" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/c$k;->invoke()" -> "Lcom/helpscout" [constraint=true]
+	"Lcom/bumptech/glide/manager/RequestManagerFragment;->onAttach()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;->transform()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/bumptech/glide/manager/SupportRequestManagerFragment;->onAttach()" -> "Lcom/bumptech" [constraint=true]
+	"Lkotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt;-><clinit>()" -> "Ljava/lang/Runtime;->availableProcessors()" [constraint=true]
+	"Lcom/helpscout/beacon/internal/presentation/common/widget/GlideImageGetter;->getDrawable()" -> "Lcom/bumptech" [constraint=true]
+	"Landroidx/work/impl/WorkManagerInitializer;->onCreate()" -> Landroidx [constraint=true]
+	"Lcom/dynamicarehealth/rewards/MainActivity;->onCreate()" -> "Lcom/dynamicarehealth" [constraint=true]
+	"Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->transform()" -> "Lcom/bumptech" [constraint=true]
+	"Lcom/facebook" -> "Ljava/lang/Runtime;->maxMemory()" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageView;->setControllerListener()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/airbnb" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/cache/DefaultEncodedMemoryCacheParamsSupplier;->get()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setImage()" -> "Lcom/airbnb" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule$4;->doInBackgroundGuarded()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapManager;->setKmlSrc()" -> "Lcom/airbnb" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setIcon()" -> "Lcom/airbnb" [constraint=true]
+	"Lcom/airbnb/android/react/maps/AirMapOverlayManager;->setImage()" -> "Lcom/airbnb" [constraint=true]
+	"Lcom/facebook/react/views/image/ReactImageView;->onSizeChanged()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" -> "Lcom/facebook" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Lcom/helpscout/beacon/internal/presentation/ui/chat/header/ChatHeaderView;->b()" [color="#a991d4" fontcolor=white]
+		"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/f;->onBindViewHolder()" [color="#a991d4" fontcolor=white]
+		"Lbolts/AndroidExecutors;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/c$i;->onClick()" [color="#a991d4" fontcolor=white]
+		"Lio/realm/internal/async/RealmThreadPoolExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lkotlinx/coroutines/CommonPool;->dispatch()" [color="#a991d4" fontcolor=white]
+		"Lcom/helpscout/beacon/internal/presentation/ui/conversations/b$a;->a()" [color="#a991d4" fontcolor=white]
+		"La/b/a/a/b/d/e/s/a$a;->invokeSuspend()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/model/stream/MediaStoreVideoThumbLoader;->buildLoadData()" [color="#a991d4" fontcolor=white]
+		"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/b$c;->invoke()" [color="#a991d4" fontcolor=white]
+		"Lcom/helpscout/beacon/internal/presentation/common/widget/ParticipantAvatarView;->renderOrHide()" [color="#a991d4" fontcolor=white]
+		"La/b/a/a/c/d/h/a$b;->invoke()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/model/stream/MediaStoreImageThumbLoader;->buildLoadData()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/memory/DefaultFlexByteArrayPoolParams;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;->transform()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;->decode()" [color="#a991d4" fontcolor=white]
+		"Lcom/helpscout/beacon/internal/presentation/ui/chat/o/c$k;->invoke()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/manager/RequestManagerFragment;->onAttach()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;->transform()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/manager/SupportRequestManagerFragment;->onAttach()" [color="#a991d4" fontcolor=white]
+		"Lkotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/helpscout/beacon/internal/presentation/common/widget/GlideImageGetter;->getDrawable()" [color="#a991d4" fontcolor=white]
+		"Lcom/helpscout/beacon/internal/presentation/ui/conversation/a$a$b;->a()" [color="#a991d4" fontcolor=white]
+		"Lcom/bumptech/glide/load/resource/bitmap/DrawableTransformation;->transform()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageView;->setControllerListener()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/cache/DefaultEncodedMemoryCacheParamsSupplier;->get()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setImage()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageManager;->onAfterUpdateTransaction()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSize()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->initialize()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->prefetchImage()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/AirMapManager;->setKmlSrc()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/AirMapMarkerManager;->setIcon()" [color="#a991d4" fontcolor=white]
+		"Lcom/airbnb/android/react/maps/AirMapOverlayManager;->setImage()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/views/image/ReactImageView;->onSizeChanged()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->clearSensitiveData()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/memory/BitmapCounterProvider;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/fresco/FrescoModule;->onHostDestroy()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/modules/image/ImageLoaderModule;->getSizeWithHeaders()" [color="#a991d4" fontcolor=white]
+	}
+}

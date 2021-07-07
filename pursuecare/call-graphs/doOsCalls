@@ -1,0 +1,236 @@
+digraph {
+	graph [diredgeconstraints=true overlap=orthoxy splines=ortho]
+	node [color="#ece5f6" fontcolor="#593196" fontname="sans-serif" fontsize=10 shape=box style=filled]
+	edge [color="#593196"]
+	"Landroid/system/Os;->readlink()" [color="#593196" fontcolor=white]
+	"Landroid/system/Os;->stat()" [color="#593196" fontcolor=white]
+	"Landroid/system/OsConstants;->S_ISREG()" [color="#593196" fontcolor=white]
+	"Landroid/system/Os;->posix_fallocate()" [color="#593196" fontcolor=white]
+	subgraph cluster_entrypoints {
+		label=Entrypoints
+		shape=box
+		color="#593196"
+		fontcolor="#593196"
+		fontsize=14
+		margin=6
+		fontname="sans-serif"
+		labeljust=l
+		subgraph "cluster_*" {
+			label="*"
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromFontInfo()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/CatalystInstanceImpl;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/fabric/FabricUIManager;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/jni/CpuCapabilitiesJni;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/CxxModuleWrapperBase;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/soloader/ApplicationSoSource;->loadLibrary()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/CxxModuleWrapper;->makeDso()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/NativeArray;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/nativecode/NativeBlurFilter;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoder;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoder;->transcode()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/hermes/instrumentation/HermesSamplingProfiler;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/ProxyJavaScriptExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/jni/HybridData;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/JSCJavaScriptExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/turbomodule/core/TurboModuleManager;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/nativecode/Bitmaps;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/WritableNativeMap;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactFragment;->onBackPressed()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactFragment;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/fabric/events/EventEmitterWrapper;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/ReadableNativeArray;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/fabric/Binding;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/jscexecutor/JSCExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactFragment;->onDestroy()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/fabric/events/EventBeatManager;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/WritableNativeArray;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/Inspector;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/jni/ThreadScopeSupport;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/hermes/reactexecutor/HermesExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactFragment;->onKeyUp()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/NativeMap;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/jni/Countable;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/soloader/NativeLibrary;->ensureLoaded()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/fabric/StateWrapperImpl;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactFragment;->onPause()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/yoga/YogaNative;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/fabric/ComponentFactoryDelegate;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/turbomodule/core/JSCallInvokerHolderImpl;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactFragment;->onActivityResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/turbomodule/core/TurboModuleManagerDelegate;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/NativeDeltaClient;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/bridge/ReadableNativeMap;-><clinit>()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_activity {
+			label=Activity
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/ReactActivity;->onPause()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onResume()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->loadApp()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onWindowFocusChanged()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onActivityResult()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onBackPressed()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->getReactInstanceManager()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onCreate()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onDestroy()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onKeyUp()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onNewIntent()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/ReactActivity;->onKeyLongPress()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_provider {
+			label=Provider
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/modules/blob/BlobProvider;->openFile()" [color="#a991d4" fontcolor=white]
+		}
+		subgraph cluster_service {
+			label=Service
+			color="#ece5f6"
+			style=filled
+			margin=5
+			fontcolor="#593196"
+			fontsize=12
+			fontname="sans-serif"
+			labeljust=l
+			"Lcom/facebook/react/HeadlessJsTaskService;->onDestroy()" [color="#a991d4" fontcolor=white]
+			"Lcom/facebook/react/HeadlessJsTaskService;->onStartCommand()" [color="#a991d4" fontcolor=white]
+		}
+	}
+	"Landroidx/core" -> "Landroid/system/Os;->readlink()" [constraint=true]
+	"Landroidx/core" -> "Landroid/system/Os;->stat()" [constraint=true]
+	"Landroidx/core" -> "Landroid/system/OsConstants;->S_ISREG()" [constraint=true]
+	"Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromFontInfo()" -> "Landroidx/core" [constraint=true]
+	"Lcom/facebook/react/bridge/CatalystInstanceImpl;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook" -> "Landroid/system/Os;->posix_fallocate()" [constraint=true]
+	"Lcom/facebook/react/fabric/FabricUIManager;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/jni/CpuCapabilitiesJni;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/CxxModuleWrapperBase;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onPause()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/HeadlessJsTaskService;->onDestroy()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/HeadlessJsTaskService;->onStartCommand()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/soloader/ApplicationSoSource;->loadLibrary()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/CxxModuleWrapper;->makeDso()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/NativeArray;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/nativecode/NativeBlurFilter;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onResume()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoder;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->loadApp()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoder;->transcode()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onWindowFocusChanged()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onActivityResult()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/hermes/instrumentation/HermesSamplingProfiler;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/modules/blob/BlobProvider;->openFile()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onBackPressed()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/ProxyJavaScriptExecutor;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/jni/HybridData;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/JSCJavaScriptExecutor;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->getReactInstanceManager()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/turbomodule/core/TurboModuleManager;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/nativecode/Bitmaps;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onCreate()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/WritableNativeMap;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactFragment;->onBackPressed()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactFragment;->onResume()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/fabric/events/EventEmitterWrapper;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/ReadableNativeArray;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/fabric/Binding;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/jscexecutor/JSCExecutor;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onDestroy()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactFragment;->onDestroy()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/fabric/events/EventBeatManager;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onKeyUp()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/WritableNativeArray;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/Inspector;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/jni/ThreadScopeSupport;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/hermes/reactexecutor/HermesExecutor;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactFragment;->onKeyUp()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/NativeMap;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/jni/Countable;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/soloader/NativeLibrary;->ensureLoaded()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/fabric/StateWrapperImpl;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactFragment;->onPause()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/yoga/YogaNative;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/fabric/ComponentFactoryDelegate;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/turbomodule/core/JSCallInvokerHolderImpl;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onNewIntent()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactActivity;->onKeyLongPress()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactFragment;->onActivityResult()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/turbomodule/core/TurboModuleManagerDelegate;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/NativeDeltaClient;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/bridge/ReadableNativeMap;-><clinit>()" -> "Lcom/facebook" [constraint=true]
+	"Lcom/facebook/react/ReactFragment;->onCreateView()" -> "Lcom/facebook" [constraint=true]
+	subgraph cluster_other_entrypoints {
+		"Landroidx/core/graphics/TypefaceCompatApi21Impl;->createFromFontInfo()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/CatalystInstanceImpl;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/fabric/FabricUIManager;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/jni/CpuCapabilitiesJni;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/CxxModuleWrapperBase;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/soloader/ApplicationSoSource;->loadLibrary()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/CxxModuleWrapper;->makeDso()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/NativeArray;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/nativecode/NativeBlurFilter;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoder;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoder;->transcode()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/hermes/instrumentation/HermesSamplingProfiler;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/ProxyJavaScriptExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/jni/HybridData;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/JSCJavaScriptExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/turbomodule/core/TurboModuleManager;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/nativecode/Bitmaps;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/WritableNativeMap;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/ReactFragment;->onBackPressed()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/ReactFragment;->onResume()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/fabric/events/EventEmitterWrapper;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/ReadableNativeArray;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/fabric/Binding;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/jscexecutor/JSCExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/ReactFragment;->onDestroy()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/fabric/events/EventBeatManager;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/WritableNativeArray;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/Inspector;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/jni/ThreadScopeSupport;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/hermes/reactexecutor/HermesExecutor;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/ReactFragment;->onKeyUp()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/NativeMap;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/jni/Countable;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/soloader/NativeLibrary;->ensureLoaded()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/fabric/StateWrapperImpl;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/ReactFragment;->onPause()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/yoga/YogaNative;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/fabric/ComponentFactoryDelegate;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/turbomodule/core/JSCallInvokerHolderImpl;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/ReactFragment;->onActivityResult()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/turbomodule/core/TurboModuleManagerDelegate;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/NativeDeltaClient;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/bridge/ReadableNativeMap;-><clinit>()" [color="#a991d4" fontcolor=white]
+		"Lcom/facebook/react/ReactFragment;->onCreateView()" [color="#a991d4" fontcolor=white]
+	}
+}

@@ -1,0 +1,75 @@
+{
+  "application": {
+    "handle": "com.workithealth.workitapp",
+    "version_name": "1.8.0",
+    "version_code": "180",
+    "uaid": "6E8841356A13F5E2BD5D18475E516E540AD196BB",
+    "name": "Workit",
+    "permissions": [
+      "android.permission.ACCESS_WIFI_STATE",
+      "com.htc.launcher.permission.UPDATE_SHORTCUT",
+      "android.permission.INTERNET",
+      "com.sec.android.provider.badge.permission.READ",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "com.sec.android.provider.badge.permission.WRITE",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.USE_BIOMETRIC",
+      "android.permission.USE_FINGERPRINT",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.RECORD_AUDIO",
+      "com.anddoes.launcher.permission.UPDATE_COUNT",
+      "android.permission.READ_INTERNAL_STORAGE",
+      "android.permission.READ_APP_BADGE",
+      "com.huawei.android.launcher.permission.CHANGE_BADGE",
+      "com.google.android.c2dm.permission.RECEIVE",
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WAKE_LOCK",
+      "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+      "com.sonymobile.home.permission.PROVIDER_INSERT_BADGE",
+      "com.sonyericsson.home.permission.BROADCAST_BADGE",
+      "com.google.android.providers.gsf.permission.READ_GSERVICES",
+      "com.majeur.launcher.permission.UPDATE_BADGE",
+      "android.permission.MANAGE_DOCUMENTS",
+      "android.permission.CAMERA",
+      "android.permission.VIBRATE",
+      "android.permission.WRITE_INTERNAL_STORAGE",
+      "me.everything.badger.permission.BADGE_COUNT_READ",
+      "me.everything.badger.permission.BADGE_COUNT_WRITE"
+    ],
+    "libraries": [
+      "org.apache.http.legacy"
+    ]
+  },
+  "apk": {
+    "path": "../AndroCFG/apk/workit_1.8.0.apk",
+    "checksum": "65b2be1f591d372987f5bd88a51dddf629ceef9f9ac9c3ee92ee99d7d4e16961"
+  },
+  "trackers": [
+    {
+      "name": "AppsFlyer",
+      "id": 12
+    },
+    {
+      "name": "Google Firebase Analytics",
+      "id": 49
+    },
+    {
+      "name": "Facebook Analytics",
+      "id": 66
+    },
+    {
+      "name": "Facebook Login",
+      "id": 67
+    },
+    {
+      "name": "Facebook Places",
+      "id": 69
+    },
+    {
+      "name": "Facebook Share",
+      "id": 70
+    }
+  ]
+}
